@@ -8,8 +8,8 @@
     "about": "About"
   },
   "homepage": {
-    "heroTitle": "Expert Walkingpad Reviews & Testing",
-    "heroSubtitle": "Independent reviews from certified fitness professionals who test every machine for performance, durability, and value.",
+    "heroTitle": "Honest Reviews - Real User Feedback Smart Buying Decisions",
+    "heroSubtitle": "Looking for the best walking pad for Home, Office, or Small spaces? At Walkingpad Comparison, we combine in-depth testing, Real User Experiences, and Expert analysis to help you choose the Walking pad that truly fits your lifestyle.",
     "expertOverview": {
       "title": "Expert Overview",
       "content": "Our team of certified fitness professionals has spent over 1,200 hours testing Walkingpad in real-world conditions. We evaluate each machine through rigorous performance tests, long-term durability assessments, and user experience analysis. Every review is backed by data, ensuring you get honest, reliable information to make the best purchase decision for your fitness goals."
@@ -19,26 +19,26 @@
       "Subtitle":"Trusted by the most respected fitness brands in the industry."
     },
     "testingProcess": {
-      "title": "Our Testing Process",
+      "title": "How We Test Walking Pads",
       "speedTest": {
-        "title": "Speed Test",
-        "description": "We test speed accuracy, acceleration smoothness, and maximum performance across all speed ranges."
+        "title": "Speed & Performance ",
+        "description": "How smooth and accurate the speed levels really are."
       },
       "inclineTest": {
-        "title": "Incline Test",
-        "description": "Comprehensive incline functionality testing including angle accuracy and motor performance under load."
+        "title": "Smart Features",
+        "description": "App connectivity, Tracking, Remote controls, or Incline options."
       },
       "durabilityTest": {
         "title": "Durability Test",
-        "description": "Long-term stress testing with continuous operation to evaluate build quality and component longevity."
+        "description": "Long-term usage checks to ensure reliability."
       },
       "noiseTest": {
-        "title": "Noise Level Test",
-        "description": "Decibel measurements at various speeds and inclines to assess noise levels for home use."
+        "title": "Noise Level",
+        "description": "We measure motor and belt sound, crucial for office or apartment use."
       },
       "comfortTest": {
-        "title": "Comfort Assessment",
-        "description": "Evaluation of belt cushioning, deck stability, and overall user comfort during extended use."
+        "title": "Comfort & Cushioning",
+        "description": "Shock absorption, belt size, and joint-friendly performance."
       },
       "passed": "Passed"
     },
@@ -75,83 +75,80 @@
     },
     
       "customerReviews": {
-        "title": "Customer Reviews",
+        "title": "User Reviews",
         "reviews": [
           {
-            "description": "Excellent testing methodology and honest reviews. Helped me choose the perfect Walkingpad for my home gym. The Sportstech F15 they recommended has been fantastic!"
+            "description": "The comparison tables made it easy to see pros and cons at a glance. Saved me hours of research."
           },
           {
-            "description": "Very thorough reviews with real performance data. I appreciate the detailed testing process and honest pros/cons for each model."
+            "description": "I wanted something quiet for my apartment. Thanks to these reviews, I found a walking pad that’s both compact and whisper-quiet."
           },
           {
-            "description": "Great resource for Walkingpad comparisons. The buying guide was especially helpful for understanding what features matter most."
+            "description": "I was worried about assembly, but the model I picked was ready to use right out of the box. Super convenient and easy to move around."
           },
           {
-            "description": "Professional and unbiased reviews. The team clearly knows what they're talking about. Saved me from buying the wrong Walkingpad!"
+            "description": "Working from home had me sitting all day. With the walking pad I chose here, I can now walk while answering emails — I feel more active and focused."
           },
           {
-            "description": "Comprehensive testing and easy-to-understand explanations. The noise level tests were particularly useful for my apartment living situation."
+            "description": "The durability test results gave me confidence. After 6 months of daily use, my walking pad still feels as smooth as day one."
           }
         ]
       }
     },
 
   "guide": {
-    "title": "Walkingpad Buying Guide",
-    "introduction": "Our comprehensive guide helps you choose the perfect Walkingpad for your fitness goals, space, and budget.",
+    "title": "The Ultimate Walking Pad Buying Guide 2025",
+    "introduction": "Discover the best walking pad for your lifestyle. Whether it's for your home office, small apartment, or daily fitness routine, here’s everything you should know before buying.",
     "keyFeatures": {
-      "title": "Key Features to Consider",
+      "title": "What to Look For: Key Buying Criteria",
       "motorPower": {
-        "title": "Motor Power",
-        "description": "Look for continuous duty horsepower (CHP) rating. 2.5+ CHP for walking, 3.0+ CHP for running."
+        "title": "Size & Portability",
+        "description": "Make sure the walking pad fits under your desk. Lightweight models with foldable designs and wheels offer the most flexibility"
       },
       "inclineSettings": {
-        "title": "Incline Settings",
-        "description": "Manual or automatic incline adjustment. Look for 10-15% maximum incline for variety."
+        "title": "Speed & Incline Options",
+        "description": "Most pads max out between 2–4 mph. For more intense sessions, look for models with adjustable incline- few include this, but it boosts calorie burn and workout versatility"
       },
       "beltSize": {
-        "title": "Running Belt Size",
-        "description": "Minimum 55\" length for running. Width should be 20\" or more for comfortable movement."
+        "title": "Belt Size & Deck Length",
+        "description": "Aim for a belt wide and long enough for a natural stride- especially important if you're taller or walk at a fast pace"
       },
       "weightCapacity": {
-        "title": "Weight Capacity",
-        "description": "Choose a Walkingpad rated for at least 50 lbs more than the heaviest intended user."
+        "title": "Weight Capacity & Build Quality",
+        "description": "A higher weight rating typically means a more durable, strengthened frame- something to prioritize in long-term use"
       },
       "display": {
-        "title": "Display Features",
-        "description": "Look for clear, easy-to-read displays with essential metrics and program options."
+        "title": "Noise Level",
+        "description": "If you plan to walk while working or during video calls, choose a pad with a motor rated under 60dB-quiet operation is key"
       },
       "foldability": {
-        "title": "Foldability",
-        "description": "Space-saving design with hydraulic lift assist for easy storage and setup."
-      },
-      "cushioning": {
-        "title": "Cushioning & Comfort",
-        "description": "Multi-zone cushioning systems reduce joint impact while maintaining stability."
+        "title": "Ease of Use & Controls",
+        "description": "Look for tools with user-friendly interfaces- remote control, LED display, or smart app integration help make workouts seamless"
       }
+
     },
     "useCase": {
-      "title": "Recommendations by Use Case",
+      "title": "Expert Quick Recommendations",
       "beginners": {
         "title": "For Beginners",
-        "description": "Focus on ease of use, safety features, and pre-programmed workouts."
+        "description": "Start with a lightweight, foldable walking pad with simple controls and a max speed around 3–4 km/h. Focus on comfort and ease of use rather than advanced features."
       },
       "runners": {
-        "title": "For Runners",
-        "description": "Prioritize motor power, belt size, and advanced cushioning systems."
+        "title": "For Fast Walkers",
+        "description": "Opt for a longer belt (at least 45 inches / 115 cm) and slightly higher top speed (up to 6–7 km/h) for natural strides without feeling restricted."
       },
       "seniors": {
         "title": "For Seniors",
-        "description": "Emphasize safety rails, easy controls, and joint-friendly cushioning."
+        "description": " Choose a walking pad with strong cushioning, quiet operation, and a stable deck. Look for safety features like auto-stop, non-slip belts, and handrail compatibility."
       },
       "homeGym": {
-        "title": "Home Gym Users",
-        "description": "Consider space requirements, noise levels, and multi-user features."
+        "title": "For Small Apartments",
+        "description": "Go for an ultra-slim, foldable design with transport wheels so it can easily slide under a bed or sofa after use."
       }
     },
     "comparisonTips": {
-      "title": "Our Testing Process",
-      "description": "We evaluate each Walkingpad through comprehensive testing including speed accuracy, incline functionality, noise levels, durability, and user comfort. Our systematic approach ensures objective, reliable comparisons."
+      "title": "How We Tested Walking Pads",
+      "description": "Real-world testing is at the heart of our reviews. Inspired by leading review sites, we evaluate each pad across: Assembly ease, portability, foldability,Speed and incline accuracy,Noise levels during use,Comfort, cushioning, and build quality,User experience: Comfort, Usability, and Value."
     },
     "faq": {
       "title": "Frequently Asked Questions"
@@ -163,10 +160,13 @@
     "readMore": "Read More"
   },
   "about": {
-    "title": "About Us",
+    "abouthero": {
+      "title": "About Us — Your Walking Pad Experts",
+      "description": "At Walking Pad Comparison, we’re more than just another review site. We’re passionate movers, fitness enthusiasts, and tech lovers committed to helping you find the right walking pad for your lifestyle- whether at home, work, or on the move."
+    },
     "howWeReview": {
       "title": "How We Do Reviews",
-      "description": "Our expert team conducts comprehensive testing of every Walkingpad through standardized protocols including performance benchmarks, durability assessments, user experience evaluation, and long-term reliability testing to provide you with honest, data-driven recommendations."
+      "description": "Every walking pad is tested for noise, durability, design, and comfort—because numbers on a spec sheet aren’t enough.From under-desk office setups to home workout spaces, we test walkingpads where you’ll actually use them.We highlight both strengths and weaknesses, so you can make an informed choice without hidden surprises.We include insights from real users, combining expert analysis with everyday experiences."
     },
     "reviewStandards": {
       "title": "Our Review Standards",
@@ -178,7 +178,7 @@
     },
     "whoWeAre": {
       "title": "Who We Are",
-      "description": "Founded in 2020 by a team of certified fitness professionals, WalkingpadReviews was created to address the lack of comprehensive, unbiased Walkingpad testing in the market. Our mission is to help consumers make informed decisions by providing thorough, professional evaluations of fitness equipment."
+      "description": "To simplify fitness tech: We turn complex features into simple, understandable insights.To empower you: Whether you're starting out or making a seasoned upgrade, we're here to guide confident choices.To stay independent: No brand affiliations. We evaluate strictly based on performance, quality, and usability."
     },
     "ourTeam": {
       "title": "Our Team"

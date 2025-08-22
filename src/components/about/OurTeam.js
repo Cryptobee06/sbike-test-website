@@ -6,7 +6,7 @@ const teamMembers = [
     name: 'Steve Austin',
     role: {
       en: 'Lead Fitness Specialist',
-      de: 'Leitender Fitness-Spezialist'
+      de: 'Lead Fitness Specialist'
     },
     description: {
       en: 'NASM certified trainer with 12+ years experience testing fitness equipment.',
@@ -19,7 +19,7 @@ const teamMembers = [
     name: 'Sarah Mitchell',
     role: {
       en: 'Biomechanics Expert',
-      de: 'Biomechanik-Expertin'
+      de: 'Biomechanics Expert'
     },
     description: {
       en: 'PhD in Exercise Science, specializing in gait analysis and injury prevention.',
@@ -32,11 +32,11 @@ const teamMembers = [
     name: 'Mike Rodriguez',
     role: {
       en: 'Technical Engineer',
-      de: 'Technischer Ingenieur'
+      de: 'Technical Engineer'
     },
     description: {
       en: 'Mechanical engineer focused on motor performance and durability testing.',
-      de: 'Maschinenbauingenieur mit Fokus auf Motorleistung und Haltbarkeitstests.'
+      de: 'Experte in Motorentechnologie und Haltbarkeitstests'
     },
     image: '/images/team3.png'
   },
@@ -45,11 +45,11 @@ const teamMembers = [
     name: 'Emily Chen',
     role: {
       en: 'User Experience Analyst',
-      de: 'Benutzererfahrungs-Analystin'
+      de: 'User Experience Analyst'
     },
     description: {
       en: 'Certified personal trainer specializing in home fitness solutions.',
-      de: 'Zertifizierte Personal Trainerin, spezialisiert auf Heimfitness-Lösungen.'
+      de: 'Zertifizierte Fitnesstrainerin mit Fokus auf Home-Fitness-Lösungen und Nutzerfreundlichkeit'
     },
     image: '/images/team4.png'
   }

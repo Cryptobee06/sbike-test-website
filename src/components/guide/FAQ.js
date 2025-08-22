@@ -7,66 +7,66 @@
       id: 1,
       question: {
         en: "1. Are walking pads healthy?",
-        de: "1. Ist ein Walking Pad gesund?"
+        de: "1. Sind Walking Pads gesund?"
       },
       answer: {
         en: "Yes, regular walking during work improves circulation, posture, and helps prevent back pain.",
-        de: "Ja, regelmäßiges Gehen während der Arbeit verbessert Kreislauf und Haltung und beugt Rückenschmerzen vor."
+        de: "Ja — regelmäßiges Gehen im Office verbessert Durchblutung, Haltung und beugt Rückenschmerzen vor."
       }
     },
     {
       id: 2,
       question: {
         en: "2. How loud should a walking pad be for office use?",
-        de: "2. Wie laut sollte ein Walking Pad fürs Büro sein?"
+        de: "2. Wie leise sollte ein Walking Pad für’s Büro sein?"
       },
       answer: {
         en: "Below 60 dB, so it doesn’t interfere with work.",
-        de: "Unter 60 dB, damit es beim Arbeiten nicht stört "
+        de: "Max. 60 dB — so arbeitet es leise genug, um Konzentration und Telefonate nicht zu stören. "
       }
     },
     {
       id: 3,
       question: {
         en: "3. Will a walking pad fit under any desk?",
-        de: "3. Passt ein Walking Pad unter jeden Schreibtisch?"
+        de: "3. Passt es unter jeden Schreibtisch?"
       },
       answer: {
         en: "Only flat models under 12 cm height will fit easily under most desks.",
-        de: "Nur flache Modelle unter 12 cm Höhe passen problemlos unter gängige Bürotische."
+        de: "Nur flache Modelle (≤ 12 cm Höhe) lassen sich mühelos unter Schreibtische oder Sofas schieben."
       }
     },
     {
       id: 4,
       question: {
         en: "4.What are the benefits of good cushioning?",
-        de: "4. Welche Vorteile bringt eine gute Dämpfung?"
+        de: "4.Warum ist gute Dämpfung wichtig?"
       },
       answer: {
         en: "Soft cushioning protects joints, reduces fatigue, and allows longer walking sessions.",
-        de: "Sanfte Dämpfung schützt die Gelenke, reduziert Ermüdung und ermöglicht längere Gehzeiten."
+        de: "Weiche Polsterung schützt Gelenke, reduziert Ermüdung und ermöglicht längere Sessions — ein Muss bei Walking Pad Vergleich & Test."
       }
     },
     {
       id: 5,
       question: {
         en: "5. Which walking pads are best for the home office?",
-        de: "5. Welche Walking Pads sind fürs Homeoffice am besten geeignet?"
+        de: "5. Welche Modelle eignen sich fürs Home-Office?"
       },
       answer: {
         en: "Quiet, compact models with app + remote control, e.g., Sportstech.",
-        de: "Leise, kompakte Modelle mit App- und Fernbedienung, z. B. Sportstech."
+        de: "Empfohlen: leise, kompakte Walking Pads mit App-Unterstützung, z. B. Sportstech oder Citysports."
       }
     },
     {
       id: 6,
       question: {
         en: "6. Do I need an app to control it?",
-        de: "6. Brauche ich zwingend eine App zur Steuerung?"
+        de: "6. Sind Walking Pads für leichtes Jogging geeignet?"
       },
       answer: {
         en: "No, a remote is enough – but the app is useful for stats and motivation.",
-        de: "Nein, eine Fernbedienung reicht – die App ist praktisch für Statistiken und Motivation."
+        de: "Nur robuste Modelle mit hoher Geschwindigkeit – z. B. UREVO – sind dafür geeignet.Einsteiger-Modelle wie sWalk Lite eignen sich eher für gesundes Gehen."
       }
     },
     {
@@ -95,11 +95,11 @@
       id: 9,
       question: {
         en: "9. What should I look for when buying a walking pad?",
-        de: "9. Worauf sollte man beim Kauf eines Walking Pads achten?"
+        de: "9. Worauf solltest du besonders achten beim Kauf?"
       },
       answer: {
         en: "Height ≤ 12 cm, quiet motor (< 60 dB), good cushioning, app + remote control, and solid build quality.",
-        de: "Höhe ≤ 12 cm, Leiser Motor (< 60 dB), Gute Dämpfung, App + Fernbedienung, Stabile Verarbeitung"
+        de: "Entscheidend sind: flache Bauweise (< 12 cm), leiser Motor (< 60 dB), gute Dämpfung, App + Fernsteuerung und stabile Bauqualität – alles berücksichtigt in unserer Walking Pad Kaufberatung."
       }
     },
   ];

@@ -2,7 +2,7 @@
 import { useTranslations } from '@/contexts/LanguageContext';
 
 export default function AboutHero() {
-  const t = useTranslations('about');
+  const t = useTranslations('about.abouthero');
 
   return (
     // <section className="relative py-24 sm:py-32 bg-gradient-to-br from-primary-50 to-primary-100 overflow-hidden">
@@ -26,7 +26,7 @@ export default function AboutHero() {
           {t('title')}
         </h1>
         <p className="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed">
-          Professional Walkingpad testing and in-depth reviews by certified fitness & equipment experts.
+          {t('description')}
         </p>
       </div>
     </section>

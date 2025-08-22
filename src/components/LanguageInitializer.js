@@ -9,7 +9,7 @@ export default function LanguageInitializer() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const savedLocale = localStorage.getItem('treadmill-locale') || 'de';
+    const savedLocale = sessionStorage.getItem('Treadmill-locale') || 'de';
     const currentLocale = pathname?.startsWith('/de') ? 'de' : 'en';
 
     // ✅ If German is savedLocale but URL has no /de prefix → redirect

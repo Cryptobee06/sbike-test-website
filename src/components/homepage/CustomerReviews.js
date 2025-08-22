@@ -5,15 +5,15 @@ import { useTranslations } from '@/contexts/LanguageContext';
 const reviewsData = [
   {
     id: 1,
-    name: 'Sarah Johnson',
+    name: 'Michael Chen',
     rating: 5,
     review:
-      'Excellent testing methodology and honest reviews. Helped me choose the perfect treadmill for my home gym. The Sportstech sWalk they recommended has been fantastic!',
+      'Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk war ein Volltreffer!',
     avatar: '/images/customer/cus1.jpg',
   },
   {
     id: 2,
-    name: 'Michael Chen',
+    name: ' Sarah Johnson',
     rating: 5,
     review:
       'Very thorough reviews with real performance data. I appreciate the detailed testing process and honest pros/cons for each model.',
@@ -29,7 +29,7 @@ const reviewsData = [
   },
   {
     id: 4,
-    name: 'David Rodriguez',
+    name: 'David',
     rating: 5,
     review:
       "Professional and unbiased reviews. The team clearly knows what they're talking about. Saved me from buying the wrong treadmill!",
@@ -37,7 +37,7 @@ const reviewsData = [
   },
   {
     id: 5,
-    name: 'Lisa Thompson',
+    name: 'Thompson',
     rating: 4.9,
     review:
       'Comprehensive testing and easy-to-understand explanations. The noise level tests were particularly useful for my apartment living situation.',

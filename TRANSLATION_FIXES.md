@@ -4,9 +4,9 @@
 
 ### 1. **Global Language Persistence**
 - **Problem**: Language choice was not persisting across page navigation
-- **Solution**: Implemented localStorage-based language preference system that remembers user choice
+- **Solution**: Implemented sessionStorage-based language preference system that remembers user choice
 - **Implementation**:
-  - Language preference stored in `localStorage.setItem('treadmill-locale', locale)`
+  - Language preference stored in `sessionStorage.setItem('treadmill-locale', locale)`
   - Automatic redirection to correct language URL when saved preference doesn't match current path
   - `LanguageInitializer` component handles seamless language switching
 
@@ -58,7 +58,7 @@ treadmill-reviews-fixed/
 │   │   ├── Header.js (UPDATED - single component with dynamic paths)
 │   │   └── Footer.js (UPDATED - single component with dynamic paths)
 │   └── contexts/
-│       └── LanguageContext.js (MAJOR REWRITE - localStorage + dynamic loading)
+│       └── LanguageContext.js (MAJOR REWRITE - sessionStorage + dynamic loading)
 ```
 
 ### Key Components
@@ -66,7 +66,7 @@ treadmill-reviews-fixed/
 #### 1. **LanguageContext.js - Core Translation System**
 ```javascript
 // Features:
-- localStorage-based language persistence
+- sessionStorage-based language persistence
 - Dynamic translation loading from /public/locales/
 - Immediate locale detection from pathname
 - Fallback translations for reliability
@@ -97,7 +97,7 @@ treadmill-reviews-fixed/
 - **German**: `/de/` `/de/about` `/de/guide` `/de/blog` `/de/reviews` `/de/brands/sportstech`
 
 ### Persistence Logic
-1. **User clicks language toggle** → Language saved to localStorage
+1. **User clicks language toggle** → Language saved to sessionStorage
 2. **User navigates to new page** → LanguageInitializer checks if URL matches saved preference
 3. **Mismatch detected** → Automatic redirect to correct language URL
 4. **Page loads** → Content displays in correct language immediately

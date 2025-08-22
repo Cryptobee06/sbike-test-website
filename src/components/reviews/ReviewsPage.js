@@ -17,7 +17,7 @@ const treadmillsData = [
     badgeColor: 'bg-green-500',
     image: '/images/treadmills/sportstech-treadmill.jpg',
     summary: {
-      en: 'Excellent value with advanced shock absorption and smart connectivity features.',
+      en: 'Best-in-class shock absorption & smart connectivity. Outstanding value for home fitness.',
       de: 'Hervorragender Wert mit fortschrittlicher Stoßdämpfung und intelligenten Konnektivitätsfeatures.'
     }
   },
@@ -34,7 +34,7 @@ const treadmillsData = [
     badgeColor: 'bg-blue-500',
     image: '/CITYSPORTS/city04.png',
     summary: {
-      en: 'Premium Walkingpad with interactive training and commercial-grade construction.',
+      en: 'Built to last with premium design and interactive training features.',
       de: 'Premium-Walkingpad mit interaktivem Training und kommerzieller Konstruktion.'
     }
   },
@@ -51,7 +51,7 @@ const treadmillsData = [
     badgeColor: 'bg-gray-500',
     image: '/Kiddoza/kiddoza04.png',
     summary: {
-      en: 'Feature-rich Walkingpad with iFit integration and powerful motor performance.',
+      en: 'Compact and feature-rich—powered by iFit, perfect for busy professionals.',
       de: 'Funktionsreiches Walkingpad mit iFit-Integration und leistungsstarker Motorleistung.'
     }
   },
@@ -68,7 +68,7 @@ const treadmillsData = [
     badgeColor: 'bg-green-500',
     image: '/Superun Raceable Walking Pad/superun04.png',
     summary: {
-      en: 'Reliable mid-range Walkingpad with excellent build quality and warranty.',
+      en: 'Dependable mid-range option with excellent build quality and reliable warranty.',
       de: 'Zuverlässiges Mittelklasse-Walkingpad mit ausgezeichneter Bauqualität und Garantie.'
     }
   },
@@ -85,7 +85,7 @@ const treadmillsData = [
     badgeColor: 'bg-purple-500',
     image: '/UREVO/ureo04.png',
     summary: {
-      en: 'Commercial-grade home Walkingpad with superior build quality and whisper-quiet operation.',
+      en: 'Whisper-quiet commercial-grade pad for serious walkers looking for long-term performance.',
       de: 'HeimWalkingpad in kommerzieller Qualität mit überlegener Bauqualität und flüsterleisem Betrieb.'
     }
   }
@@ -138,7 +138,7 @@ export default function ReviewsPage() {
       de: 'Walkingpad Tests 2025'
     },
     subtitle: {
-      en: 'Expert testing and comprehensive reviews of the best Walkingpads available today.',
+      en: 'Expert testing and comprehensive reviews of top walking pads available today',
       de: 'Experten-Tests und umfassende Bewertungen der besten heute verfügbaren Laufbänder.'
     },
     readReview: {

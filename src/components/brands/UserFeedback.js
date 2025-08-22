@@ -2,116 +2,371 @@
 import { useTranslations, useLocale } from '@/contexts/LanguageContext';
 import { useState } from 'react';
 
-// Sample user feedback data
-const generateUserFeedback = (brandName, locale) => {
-  const feedbackData = {
+// ✅ Brand-specific feedback data (all in one place)
+const feedbackData = {
+  sportstech: {
     en: [
       {
         id: 1,
-        name: 'Michael Thompson',
-        avatar: 'MT',
+        name: 'Lena M',
+        avatar: 'LM',
         rating: 5,
-        comment: `Just received my ${brandName} and I'm absolutely thrilled! The build quality exceeded my expectations and setup was straightforward. The motor runs incredibly smooth and quiet.`,
-        date: '2025-01-10',
-        replies: [
-          {
-            id: 11,
-            name: 'Sarah K.',
-            avatar: 'SK',
-            comment: 'Completely agree! Mine has been running perfectly for 6 months now.',
-            date: '2025-01-12'
-          }
-        ]
+        comment: 'Just received mine—and it is top-tier! Build quality is excellent, and the motor runs smooth and silent.!',
+        date: '5 min ago',
+
       },
       {
         id: 2,
-        name: 'Jennifer Martinez',
-        avatar: 'JM',
-        rating: 4,
-        comment: 'Really solid Walkingpad overall. The cushioning system is fantastic for my knees. Only minor complaint is the assembly instructions could be clearer.',
-        date: '2025-01-08',
-        replies: []
+        name: 'Markus R',
+        avatar: 'MR',
+        rating: 5,
+        comment: 'Comfort levels are outstanding—very gentle on my knees. The setup guide could be clearer, though.',
+        date: 'a day ago',
+
       },
       {
         id: 3,
-        name: 'David Chen',
-        avatar: 'DC',
+        name: 'Sabine K',
+        avatar: 'SK',
         rating: 5,
-        comment: 'Outstanding performance! Been using it daily for 3 months. The incline feature works perfectly and the belt tracking has remained stable.',
-        date: '2025-01-05',
-        replies: [
-          {
-            id: 31,
-            name: 'Lisa R.',
-            avatar: 'LR',
-            comment: 'How\'s the noise level? I live in an apartment.',
-            date: '2025-01-06'
-          },
-          {
-            id: 32,
-            name: 'David Chen',
-            avatar: 'DC',
-            comment: 'Very quiet! My downstairs neighbor hasn\'t complained once.',
-            date: '2025-01-07'
-          }
-        ]
+        comment: 'Three months of daily use, and it performs flawlessly. The incline works great, and the belt remains smooth.',
+        date: ' 3 days ago',
+
+      },
+      {
+        id: 4,
+        name: 'Jonas P',
+        avatar: 'JP',
+        rating: 5,
+        comment: 'High-quality build and great value for money. I use it almost daily and feel fitter.',
+        date: 'a week ago',
+
+      },
+      {
+        id: 5,
+        name: 'Claudia W',
+        avatar: 'CM',
+        rating: 5,
+        comment: 'I was surprised by how stable the walking pad is. It feels secure even when I train on it for longer periods.',
+        date: 'a month ago',
+
       }
     ],
     de: [
       {
         id: 1,
-        name: 'Michael Thompson',
-        avatar: 'MT',
+        name: 'Lena M',
+        avatar: 'LM',
         rating: 5,
-        comment: `Habe gerade mein ${brandName} erhalten und bin absolut begeistert! Die Bauqualität übertraf meine Erwartungen und der Aufbau war unkompliziert. Der Motor läuft unglaublich ruhig und leise.`,
-        date: '2025-01-10',
-        replies: [
-          {
-            id: 11,
-            name: 'Sarah K.',
-            avatar: 'SK',
-            comment: 'Stimme vollkommen zu! Meins läuft seit 6 Monaten perfekt.',
-            date: '2025-01-12'
-          }
-        ]
+        comment: 'Das Walking Pad ist super leise und passt perfekt unter meinen Schreibtisch.Endlich kann ich mich auch im Home-Office mehr bewegen!',
+        date: 'Vor 5 Minuten',
+
       },
       {
         id: 2,
-        name: 'Jennifer Martinez',
-        avatar: 'JM',
-        rating: 4,
-        comment: 'Insgesamt sehr solides Walkingpad. Das Dämpfungssystem ist fantastisch für meine Knie. Einzige kleine Beschwerde: Die Aufbauanleitung könnte klarer sein.',
-        date: '2025-01-08',
-        replies: []
+        name: 'Markus R',
+        avatar: 'MR',
+        rating: 5,
+        comment: 'Sehr platzsparend, einfach zusammenzuklappen und schnell verstaut. Genau das richtige Fitnessgerät für meine kleine Wohnung.',
+        date: 'vor einem Tag',
+
       },
       {
         id: 3,
-        name: 'David Chen',
-        avatar: 'DC',
+        name: 'Sabine K',
+        avatar: 'SK',
         rating: 5,
-        comment: 'Hervorragende Leistung! Benutze es seit 3 Monaten täglich. Die Steigungsfunktion funktioniert perfekt und die Bandführung ist stabil geblieben.',
-        date: '2025-01-05',
-        replies: [
-          {
-            id: 31,
-            name: 'Lisa R.',
-            avatar: 'LR',
-            comment: 'Wie ist der Geräuschpegel? Ich wohne in einer Wohnung.',
-            date: '2025-01-06'
-          },
-          {
-            id: 32,
-            name: 'David Chen',
-            avatar: 'DC',
-            comment: 'Sehr leise! Mein Nachbar unten hat sich noch nie beschwert.',
-            date: '2025-01-07'
-          }
-        ]
+        comment: 'Die App-Steuerung motiviert mich, meine Schritte im Blick zu behalten. Tolle Kombination aus Technik und Bewegung.',
+        date: 'Vor 3 Tagen',
+
+      },
+      {
+        id: 4,
+        name: 'Jonas P',
+        avatar: 'JP',
+        rating: 5,
+        comment: 'Hochwertige Verarbeitung und gutes Preis-Leistungs-Verhältnis. Ich nutze es fast täglich und fühle mich fitter.',
+        date: 'vor einer Woche',
+
+      },
+      {
+        id: 5,
+        name: 'Claudia W',
+        avatar: 'CM',
+        rating: 5,
+        comment: 'Ich war überrascht, wie stabil das Walking Pad ist. Es fühlt sich sicher an, auch wenn ich länger darauf trainiere.',
+        date: 'vor einem Monat',
+
       }
     ]
-  };
-  
-  return feedbackData[locale] || feedbackData.en;
+  },
+  citysports: {
+    en: [
+      {
+        id: 6,
+        name: 'Clara',
+        avatar: 'C',
+        rating: 4,
+        comment: 'Set it up in under five minutes and started walking during my Zoom meetings. Totally discreet and boosts my step count!',
+        date: '2 hours ago',
+
+      },
+      {
+        id: 7,
+        name: 'Charlie',
+        avatar: 'C',
+        rating: 4.1,
+        comment: 'Even after months of daily use, it’s still whisper-quiet. A great productivity & fitness combo.',
+        date: ' a day ago',
+
+      },
+      {
+        id: 8,
+        name: 'Americo',
+        avatar: 'A',
+        rating: 3,
+        comment: 'I appreciate how compact it is—slides effortlessly under my couch when not in use.',
+        date: ' 5 days ago',
+
+      },
+      {
+        id: 9,
+        name: 'Django',
+        avatar: 'D',
+        rating: 4,
+        comment: 'There are no training programs or heart rate monitoring – I miss the motivation from automated workouts.',
+        date: ' a month ago',
+
+      },
+    ],
+    de: [
+      {
+        id: 6,
+        name: 'Clara',
+        avatar: 'C',
+        rating: 4,
+        comment: 'Das Citysports WP6 ist superleise – ideal fürs Home-Office. Ich kann während meiner Meetings trainieren, ohne den Besprechungspartner zu stören.',
+        date: 'Vor 2 Stunden',
+
+      },
+      {
+        id: 7,
+        name: 'Charlie',
+        avatar: 'C',
+        rating: 3,
+        comment: 'Der Motor reicht nur bis 6 km/h. Für ernsthafte Läufer ist das Gerät zu langsam.',
+        date: 'vor einem Tag',
+
+      },
+      {
+        id: 8,
+        name: 'Americo',
+        avatar: 'A',
+        rating: 3,
+        comment: 'Die Lauffläche ist zu klein, besonders für größere Nutzer nicht bequem. Ich stoße regelmäßig mit den Füßen an den Rand.',
+        date: 'Vor 5 Tagen',
+
+      },
+      {
+        id: 9,
+        name: 'Django',
+        avatar: 'D',
+        rating: 4,
+        comment: ' Keine Trainingsprogramme oder Pulsmessung vorhanden – ich vermisse die Motivation durch automatisierte Workouts.',
+        date: 'vor einem Monat',
+
+      },
+    ]
+  },
+  kiddoza: {
+    en: [
+      {
+        id: 10,
+        name: 'Emma K',
+        avatar: 'EK',
+        rating: 3,
+        comment: 'Setup was instant—no tools, no hassle, and I started walking during my morning calls right away.',
+        date: '3 days ago',
+
+      },
+      {
+        id: 11,
+        name: 'David R',
+        avatar: 'DR',
+        rating: 4,
+        comment: 'The pad feels sturdy and quiet, even with incline turned on. Perfect for small living spaces.',
+        date: ' a week ago',
+
+      },
+      {
+        id: 12,
+        name: 'Jonas M',
+        avatar: 'JM',
+        rating: 2,
+        comment: 'The shock absorption is next-level. My knees thank me after each walk session.',
+        date: ' 2 months ago',
+
+      }
+    ],
+    de: [
+      {
+        id: 10,
+        name: 'Emma K',
+        avatar: 'EK',
+        rating: 3,
+        comment: 'Superun ist klasse – Steigung läuft zuverlässig und der Laufgurt bleibt stabil.',
+        date: ' Vor 3 Tagen',
+
+      },
+      {
+        id: 11,
+        name: 'David R',
+        avatar: 'DR',
+        rating: 4,
+        comment: 'Tolles Dämpfungssystem – perfekt für meine Gelenke."Anleitung könnte besser sein.',
+        date: 'vor 10 Tagen',
+
+      },
+      {
+        id: 12,
+        name: 'Jonas M',
+        avatar: 'JM',
+        rating: 2,
+        comment: 'Habe es 3 Monate täglich genutzt – Steigung läuft zuverlässig, der Laufgurt ist stabil.',
+        date: 'vor einer Woche',
+
+      }
+    ]
+  },
+  superun: {
+    en: [
+      {
+        id: 13,
+        name: 'Lukas',
+        avatar: 'L',
+        rating: 3,
+        comment: 'Great for working from home, quiet, compact, and remote-ready. I can walk during Zoom calls without disturbing my family.',
+        date: ' 1 day ago',
+
+      },
+      {
+        id: 14,
+        name: 'Maria',
+        avatar: 'M',
+        rating: 2,
+        comment: 'I had mine for over a year still running smoothly. Lightweight, portable, and quiet. Excellent value for staying active.',
+        date: ' 6 days ago',
+
+      },
+      {
+        id: 15,
+        name: 'Paul',
+        avatar: 'P',
+        rating: 4,
+        comment: 'The motor stopped working after a year. Tried basic fixes without success. It is frustrating, especially with limited customer service follow-up. ',
+        date: ' a week ago',
+
+      },
+    ],
+    de: [
+      {
+        id: 13,
+        name: 'Lukas',
+        avatar: 'L',
+        rating: 3,
+        comment: 'Qualität und Aufbau sind top.unglaublich ruhig – total begeistert!',
+        date: 'vor 1 Tag',
+
+      },
+      {
+        id: 14,
+        name: 'Maria',
+        avatar: 'M',
+        rating: 2,
+        comment: 'Tolles Dämpfungssystem, super für meine Gelenke."Anleitung könnte übersichtlicher sein.',
+        date: 'Vor 6 Tagen',
+
+      },
+      {
+        id: 15,
+        name: 'Paul',
+        avatar: 'p',
+        rating: 4,
+        comment: 'Seit drei Monaten täglich genutzt – Steigung arbeitet zuverlässig, Laufband-toleranz top.',
+        date: 'vor einer Woche',
+
+      },
+    ]
+  },
+  urevo: {
+    en: [
+      {
+        id: 16,
+        name: 'Tim',
+        avatar: 'T',
+        rating: 4,
+        comment: 'Compact and quiet—ideal for dense workdays — A hands-on review highlighting its home-office utility',
+        date: '3 hours ago',
+
+      },
+      {
+        id: 17,
+        name: 'Felix',
+        avatar: 'F',
+        rating: 3,
+        comment: 'Rock-solid frame, silent motor. Perfect combination for multitasking — Tech reviewers praised its reliable build and quiet operation.',
+        date: ' 2 days ago',
+
+      },
+      {
+        id: 18,
+        name: 'Emilia',
+        avatar: 'E',
+        rating: 3,
+        comment: 'Incline adds real intensity. The CyberPad is a game-changer — Media reviews lauded its incline capabilities for busy users.',
+        date: '5 days ago',
+
+      }
+    ],
+    de: [
+      {
+        id: 16,
+        name: 'Tim',
+        avatar: 'T',
+        rating: 4,
+        comment: 'Der Motor läuft reibungslos und extrem leise – die Gerätequalität übertraf meine Erwartungen.',
+        date: 'gerade eben',
+
+      },
+      {
+        id: 17,
+        name: 'Felix',
+        avatar: 'F',
+        rating: 3,
+        comment: 'Sehr solide Dämpfungsleistung – meine Knie danken es mir täglich. Aufbauanleitung könnte klarer sein.',
+        date: 'vor 2 Tagen',
+
+      },
+      {
+        id: 18,
+        name: 'Emilia',
+        avatar: 'E',
+        rating: 3,
+        comment: 'Tägliche Nutzung seit 3 Monaten – die automatische Steigung funktioniert perfekt, und der Laufgurt läuft extrem stabil.',
+        date: 'Vor 5 Tagen',
+
+      }
+    ]
+  },
+};
+// ✅ Helper to pick feedback dynamically
+const generateUserFeedback = (brandName, locale) => {
+  const key = brandName.toLowerCase();
+  // console.log(brandName, locale, key);
+  if (feedbackData[key] && feedbackData[key][locale]) {
+    return feedbackData[key][locale];
+  }
+  return feedbackData[key]?.en || [];
 };
 
 const StarRating = ({ rating }) => {
@@ -126,14 +381,14 @@ const StarRating = ({ rating }) => {
   );
 };
 
-const formatDate = (dateString, locale) => {
-  const date = new Date(dateString);
-  return new Intl.DateTimeFormat(locale, {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  }).format(date);
-};
+// const formatDate = (dateString, locale) => {
+//   const date = new Date(dateString);
+//   return new Intl.DateTimeFormat(locale, {
+//     year: 'numeric',
+//     month: 'short',
+//     day: 'numeric'
+//   }).format(date);
+// };
 
 export default function UserFeedback({ brand }) {
   const t = useTranslations('brands');
@@ -177,7 +432,7 @@ export default function UserFeedback({ brand }) {
                         {feedback.name}
                       </h4>
                       <span className="text-sm text-gray-500">
-                        {formatDate(feedback.date, locale)}
+                        {feedback.date}
                       </span>
                     </div>
                     
@@ -191,7 +446,7 @@ export default function UserFeedback({ brand }) {
                 </p>
                 
                 {/* Reply Button */}
-                {feedback.replies.length > 0 && (
+                {expandedComments.has(feedback.id) && feedback.replies.length > 0 && (
                   <button
                     onClick={() => toggleExpanded(feedback.id)}
                     className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center"
@@ -224,7 +479,7 @@ export default function UserFeedback({ brand }) {
                                 {reply.name}
                               </h5>
                               <span className="text-xs text-gray-500">
-                                {formatDate(reply.date, locale)}
+                                {reply.date}
                               </span>
                             </div>
                             
@@ -241,26 +496,6 @@ export default function UserFeedback({ brand }) {
             </div>
           ))}
         </div>
-        
-        {/* Add Comment Section */}
-        {/* <div className="max-w-4xl mx-auto mt-8">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              {locale === 'en' ? 'Share Your Experience' : 'Teilen Sie Ihre Erfahrung'}
-            </h3>
-            
-            <p className="text-gray-600 text-sm">
-              {locale === 'en' 
-                ? 'Have you used this treadmill? Share your thoughts to help other buyers make informed decisions.'
-                : 'Haben Sie dieses Laufband benutzt? Teilen Sie Ihre Gedanken, um anderen Käufern bei informierten Entscheidungen zu helfen.'
-              }
-            </p>
-            
-            <button className="mt-4 bg-primary-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-              {locale === 'en' ? 'Write a Review' : 'Eine Bewertung schreiben'}
-            </button>
-          </div>
-        </div> */}
       </div>
     </section>
   );

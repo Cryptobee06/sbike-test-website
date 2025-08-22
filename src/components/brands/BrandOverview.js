@@ -25,7 +25,7 @@ export default function BrandOverview({ brand }) {
                    font-extrabold mb-4 sm:mb-6 drop-shadow-lg leading-tight">
       {brand.name}{' '}
       <span className="text-blue-200">{brand.model}</span>{' '}
-      {t('title')}
+      {/* {t('title')} */}
     </h1>
 
     <p className="text-sm sm:text-base md:text-lg lg:text-xl 

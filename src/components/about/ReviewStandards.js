@@ -1,42 +1,68 @@
 'use client';
-import { useTranslations } from '@/contexts/LanguageContext';
+import { useTranslations,useLocale } from '@/contexts/LanguageContext';
 
 const standards = [
   {
     id: 'performanceTesting',
     icon: '⚡',
     color: 'bg-yellow-100 text-yellow-700',
-     content:"We run intensive speed, power, and responsiveness tests to ensure each product performs to its full potential under real-world conditions."
+     content:{
+       en: 'We run intensive speed, power, and responsiveness tests to ensure each product performs to its full potential under real-world conditions.',
+      de: 'Wir messen realistisch die Geschwindigkeit, Motorleistung und Reaktionsfähigkeit – das A und O für fundierte Walkingpad Testberichte.'
+
+     }
+      
   },
   {
     id: 'durabilityChecks',
     icon: '🔧',
     color: 'bg-blue-100 text-blue-700',
-     content:"Products are evaluated over time for wear, stability, and consistency—so you know they’ll last beyond the initial shine."
+    content:{
+      en: 'Products are evaluated over time for wear, stability, and consistency—so you know they’ll last beyond the initial shine',
+     de: 'Geräte werden auf Langzeithaltbarkeit getestet. So stellen wir sicher, dass jedes Laufband das „Test-Potenzial“ für echte Käufer übertrifft.'
+
+    }
+    //  content:"Products are evaluated over time for wear, stability, and consistency—so you know they’ll last beyond the initial shine."
   },
   {
     id: 'userFeedback',
     icon: '💬',
     color: 'bg-green-100 text-green-700',
-     content:"We collect insights from real users to understand actual experiences, ensuring our reviews reflect practical performance and satisfaction."
+    content:{
+      en: 'We collect insights from real users to understand actual experiences, ensuring our reviews reflect practical performance and satisfaction.',
+     de: 'Feedback eines breiten Nutzerkreises, z. B. in Kategorien wie Walkingpad leise, Under-Desk Treadmills, Laufband Vergleich,fließt in unsere Bewertung ein.'
+
+    }
+    //  content:""
   },
   {
     id: 'expertVerified',
     icon: '✓',
     color: 'bg-purple-100 text-purple-700',
-     content:"Every test is validated by industry experts to ensure accuracy, reliability, and transparency in our review process."
+    content:{
+      en: 'Every test is validated by industry experts to ensure accuracy, reliability, and transparency in our review process.',
+     de: 'Jedes Review wird abschließend von Fachleuten geprüft – für maximal unabhängige Laufband-Vergleiche.'
+
+    }
+    //  content:""
   },
   {
     id: 'transparentScoring',
     icon: '📈',
     color: 'bg-red-100 text-red-700',
-    content:"Our scoring is data-backed, clearly explained, and free from bias—so you can make confident decisions with full clarity."
+    content:{
+      en: 'Our scoring is data-backed, clearly explained, and free from bias—so you can make confident decisions with full clarity.',
+     de: 'Unsere Bewertung basiert auf Daten, ist klar erklärt und frei von Voreingenommenheit – so können Sie sichere Entscheidungen mit voller Klarheit treffen.Desc'
+
+    }
+    // content:""
   }
 ];
 
 export default function ReviewStandards() {
   // const t = useTranslations('about.reviewStandards');
   const t = useTranslations('');
+  const locale = useLocale();
   return (
       <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +91,7 @@ export default function ReviewStandards() {
                   {t(standard.id)}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  {t(`${standard.content}Desc`)}
+                  {standard.content[locale]}
                 </p>
               </div>
             </div>

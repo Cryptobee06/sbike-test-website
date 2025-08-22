@@ -8,8 +8,8 @@
     "about": "Über uns"
   },
   "homepage": {
-    "heroTitle": "Experten Walkingpad Tests & Bewertungen",
-    "heroSubtitle": "Unabhängige Bewertungen von zertifizierten Fitness-Profis, die jedes Gerät auf Leistung, Haltbarkeit und Wert testen.",
+    "heroTitle": "Experten-Test & Vergleiche – Walkingpad",
+    "heroSubtitle": "Gründlich geprüft. Ehrlich bewertet. Finde die beste Lösung für dein Home-Gym.",
     "expertOverview": {
       "title": "Experten Übersicht",
       "content": "Unser Team zertifizierter Fitness-Profis hat über 1.200 Stunden damit verbracht, walkingpad unter realen Bedingungen zu testen. Wir bewerten jedes Gerät durch rigorose Leistungstests, Langzeit-Haltbarkeitsbewertungen und Benutzererfahrungsanalysen. Jede Bewertung ist datengestützt und gewährleistet ehrliche, zuverlässige Informationen für die beste Kaufentscheidung."
@@ -23,23 +23,23 @@
       "title": "Unser Testverfahren",
       "speedTest": {
         "title": "Geschwindigkeitstest",
-        "description": "Wir testen Geschwindigkeitsgenauigkeit, Beschleunigungsglätte und maximale Leistung in allen Geschwindigkeitsbereichen."
+        "description": "Wir messen, wie schnell das Gerät wirklich läuft – gemessen in realen Trainingseinheiten."
       },
       "inclineTest": {
         "title": "Steigungstest",
-        "description": "Umfassende Steigungsfunktionalitätstests einschließlich Winkelgenauigkeit und Motorleistung unter Last."
+        "description": "Für echte Herausforderung: Wie gut arbeitet die Steigungsfunktion?"
       },
       "durabilityTest": {
         "title": "Haltbarkeitstest",
-        "description": "Langzeit-Stresstests mit kontinuierlichem Betrieb zur Bewertung der Bauqualität und Komponentenhaltbarkeit."
+        "description": "Langzeiterfahrung auf den Punkt gebracht – wir prüfen Verschleiß und Stabilität."
       },
       "noiseTest": {
-        "title": "Geräuschpegeltest",
-        "description": "Dezibel-Messungen bei verschiedenen Geschwindigkeiten und Steigungen zur Bewertung der Geräuschpegel für den Heimgebrauch."
+        "title": "Geräuschmessung",
+        "description": "Leise im Betrieb – ideal für Wohnungen oder Arbeitsumgebungen."
       },
       "comfortTest": {
-        "title": "Komfortbewertung",
-        "description": "Bewertung der Bandpolsterung, Deckstabilität und des allgemeinen Benutzerkomforts bei längerem Gebrauch."
+        "title": "Komfortprüfung",
+        "description": "Laufgefühl, Dämpfung und Ergonomie – getestet für deine Gelenke."
       },
       "passed": "Bestanden"
     },
@@ -51,79 +51,79 @@
       "testedCount": "Getestet: 18 walkingpad"
     },
     "bestTreadmills": {
-      "title": "Beste walkingpad 2025",
+      "title": "Beste Walkingpad-Modelle im Vergleich",
       "sportstech": {
-        "name": "Sportstech sWalk Lite",
-        "description": "Professionelles Walkingpad mit fortschrittlicher Stoßdämpfung und Smartphone-Integration.",
+        "name": "Sportstech sWalk ",
+        "description": "Hochwertiges Gerät mit überzeugender Leistung.",
         "badge": "Testsieger"
       },
       "Citysports": {
-        "name": "Citysports Commercial 1750",
-        "description": "Premium-Walkingpad mit interaktivem Training und Steigungstechnologie.",
+        "name": "Citysports CS-WP6",
+        "description": "Funktional und verlässlich für den Alltag.",
         "badge": "Beste Wahl"
       },
       "kiddoza": {
-        "name": "kiddoza Pro 2000",
-        "description": "Funktionsreiches Walkingpad mit iFit-Integration und leistungsstarkem Motor.",
+        "name": "kiddoza Under DeskPad",
+        "description": "Ultrakompakt, ideal fürs Büro.",
         "badge": "Redaktions-Tipp"
       },
       "Superun": {
-        "name": "Superun 7.8 AT",
-        "description": "Zuverlässiges Mittelklasse-Walkingpad mit ausgezeichneter Bauqualität und Garantie.",
+        "name": "Superun B A06-С",
+        "description": "Gutes Preis-Leistungs-Verhältnis.",
         "badge": "Bester Wert"
       },
       "buyNow": "Jetzt kaufen"
     },
    "customerReviews": {
-  "title": "Kundenbewertungen",
+  "title": "Stimmen unserer Leser",
   "reviews": [
     {
-      "description": "Ausgezeichnete Testmethodik und ehrliche Bewertungen. Hat mir geholfen, das perfekte Walkingpad für mein Home-Gym zu finden. Das empfohlene Sportstech F15 ist fantastisch!"
+      "description": "Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk war ein Volltreffer!"
     },
     {
-      "description": "Sehr gründliche Bewertungen mit echten Leistungsdaten. Ich schätze den detaillierten Testprozess und die ehrliche Darstellung von Vor- und Nachteilen jedes Modells."
+      "description": "Die echten Leistungsdaten und ehrlichen Vor-/Nachteile haben mir sehr geholfen."
     },
     {
-      "description": "Großartige Ressource für Walkingpadvergleiche. Der Kaufratgeber war besonders hilfreich, um zu verstehen, welche Funktionen wirklich wichtig sind."
+      "description": "Besonders die umfassende Kaufberatung hat mir die wichtigsten Funktionen verständlich erklärt."
     },
     {
-      "description": "Professionelle und unparteiische Bewertungen. Das Team weiß offensichtlich, wovon es spricht. Hat mich davor bewahrt, das falsche Walkingpad zu kaufen!"
+      "description": "Professionell und unvoreingenommen. Hat mich davor bewahrt, die falsche Entscheidung zu treffen!"
     },
     {
-      "description": "Umfassende Tests und leicht verständliche Erklärungen. Die Geräuschpegeltests waren besonders hilfreich für meine Wohnsituation in einer Wohnung."
+      "description": "Tests zur Lautstärke waren bei mir im Apartment super hilfreich."
     }
   ]
 }
 
   },
   "guide": {
-    "title": "Walkingpad Kaufratgeber",
+    "title": "Kaufberatung: Das perfekte Walking Pad finden",
     "introduction": "Unser umfassender Ratgeber hilft Ihnen, das perfekte Walkingpad für Ihre Fitnessziele, Ihren Platz und Ihr Budget zu wählen.",
     "keyFeatures": {
       "title": "Wichtige Eigenschaften",
       "motorPower": {
-        "title": "Motorleistung",
-        "description": "Achten Sie auf die Dauerleistung (CHP). 2,5+ CHP zum Gehen, 3,0+ CHP zum Laufen."
+        "title": " Motorkraft & Geschwindigkeit",
+        "description": "Ein leistungsstarker Motor (min. 2 PS) sorgt für geschmeidiges Training. Achte auf Walking Pad Modelle, die Geschwindigkeiten bis 6 km/h (oder mehr) ermöglichen – ideal für Walk-to-Earn, Home-Training oder Büro-Gänge."
       },
       "inclineSettings": {
-        "title": "Steigungseinstellungen",
-        "description": "Manuelle oder automatische Steigungsverstellung. Suchen Sie nach 10-15% maximaler Steigung für Abwechslung."
+        "title": "Steigungsfunktion",
+        "description": "Walking Pads mit verstellbarer Steigung (z. B. 4 % bis 14 %) bieten effektiveres Training – besonders relevant bei Themen wie Walking Pad Fitness-Steigerung und Kalorienverbrennung."
       },
       "beltSize": {
-        "title": "Walkingpadgröße",
-        "description": "Mindestens 140 cm Länge zum Laufen. Breite sollte 50 cm oder mehr für bequeme Bewegung sein."
+        "title": "Lauffläche & Bandgröße",
+        "description": "Eine breite Lauffläche (mind. 40 cm Breite, 120 cm Länge) sorgt für sicheren Schritt und ist wichtig beim Vergleich: Walking Pad mit großer Lauffläche."
       },
       "weightCapacity": {
         "title": "Gewichtskapazität",
-        "description": "Wählen Sie ein Walkingpad mit mindestens 25 kg mehr als der schwerste vorgesehene Benutzer."
+        "description": "Stabile Walking Pad Modelle tragen bis 120–160 kg – entscheidend für zuverlässige Nutzung und langlebige Leistung."
       },
       "display": {
-        "title": "Display-Funktionen",
-        "description": "Suchen Sie nach klaren, gut lesbaren Displays mit wesentlichen Metriken und Programmoptionen."
+        "title": "Display & Steuerung",
+        "description": "LCD-Displays mit Faktoren wie Zeit, Geschwindigkeit und Kalorien, sowie App-Integration (zymlich beliebt bei Smart-Home-Fitness Fans) erhöhen Motivation und Tracking-Funktion."
       },
       "foldability": {
-        "title": "Klappbarkeit",
-        "description": "Platzsparendes Design mit hydraulischer Hebehilfe für einfache Aufbewahrung und Aufbau."
+        "title": " Faltbarkeit & Transport Barkeit",
+        "description": "Für effektives Home-Office Training braucht dein Walking Pad ein flaches Design (< 12 cm Höhe) und Rollen für leichtes Verstauen – perfekt für kompakte Räume."
       },
       "cushioning": {
         "title": "Polsterung & Komfort",
@@ -131,22 +131,22 @@
       }
     },
     "useCase": {
-      "title": "Empfehlungen nach Anwendungsfall",
+      "title": "Für welche Zielgruppe eignet sich welches Walking Pad?",
       "beginners": {
-        "title": "Für Anfänger",
-        "description": "Fokus auf Benutzerfreundlichkeit, Sicherheitsmerkmale und vorprogrammierte Workouts."
+        "title": "Für Einsteiger",
+        "description": "Stabiles, geräuscharmes Walking Pad unter 60 dB"
       },
       "runners": {
-        "title": "Für Läufer",
-        "description": "Priorisieren Sie Motorleistung, Bandgröße und fortschrittliche Polsterungssysteme."
+        "title": "Fitness-Fans",
+        "description": "Walking Pad mit Steigung & längerer Lauffläche"
       },
       "seniors": {
-        "title": "Für Senioren",
-        "description": "Betonen Sie Sicherheitsgriffe, einfache Bedienelemente und gelenkschonende Polsterung."
+        "title": "Ältere Nutzer ",
+        "description": "Modell mit besonders guter Dämpfung & niedriger Höchstgeschwindigkeit"
       },
       "homeGym": {
-        "title": "Heimstudio-Nutzer",
-        "description": "Berücksichtigen Sie Platzanforderungen, Geräuschpegel und Multi-User-Funktionen."
+        "title": "Büro & Home-Gym ",
+        "description": "Faltbar mit App+Fernsteuerung – für Office-Workouts ideal"
       }
     },
     "comparisonTips": {
@@ -154,7 +154,7 @@
       "description": "Wir bewerten jedes Walkingpad durch umfassende Tests einschließlich Geschwindigkeitsgenauigkeit, Steigungsfunktionalität, Geräuschpegel, Haltbarkeit und Benutzerkomfort."
     },
     "faq": {
-      "title": "Häufig gestellte Fragen"
+      "title": "Häufige Fragen (FAQ – Themen wie Walking Pad Nutzen & Dämpfung)"
     }
   },
   "blog": {
@@ -163,10 +163,13 @@
     "readMore": "Weiterlesen"
   },
   "about": {
-    "title": "Über uns",
+    "abouthero": {
+      "title": "Über uns — Ihre Walking Pad Experten",
+      "description": "Bei Walking Pad Vergleich sind wir mehr als nur eine weitere Bewertungsseite. Wir sind leidenschaftliche Bewegungsliebhaber, Fitnessbegeisterte und Technikfans, die sich dafür einsetzen, Ihnen zu helfen, das richtige Walking Pad für Ihren Lebensstil zu finden – ob zu Hause, bei der Arbeit oder unterwegs."
+    },
     "howWeReview": {
       "title": "Wie wir testen",
-      "description": "Unser Expertenteam führt umfassende Tests jedes Walkingpads durch standardisierte Protokolle durch, einschließlich Leistungs-Benchmarks, Haltbarkeitsbewertungen, Benutzererfahrungsevaluierung und Langzeit-Zuverlässigkeitstests."
+      "description": "Bei Walkingpad-Vergleich stehen Transparenz, Qualität und Fachkompetenz an erster Stelle."
     },
     "reviewStandards": {
       "title": "Unsere Test-Standards",
@@ -185,14 +188,14 @@
     }
   },
   "brands": {
-    "title": "Marken-Bewertungen",
+    "title": "",
     "overview": "Überblick",
     "productDetails": "Produktdetails",
-    "prosAndCons": "Vor- & Nachteile",
-    "whatWeLike": "Was uns gefällt",
-    "whatWeDontLike": "Was uns nicht gefällt",
-    "finalVerdict": "Fazit",
-    "userFeedback": "Nutzer-Feedback",
+    "prosAndCons": "Vorteile & Anwendungsbereiche",
+    "whatWeLike": "Was uns überzeugt ",
+    "whatWeDontLike": "Was kritisch bleibt",
+    "finalVerdict": "Fazit & Bewertung",
+    "userFeedback": "Nutzerfeedback",
     "buyNow": "Jetzt kaufen"
   },
   "common": {

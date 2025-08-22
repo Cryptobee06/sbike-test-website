@@ -40,7 +40,7 @@ const loadTranslations = async () => {
           about: "About"
         },
         homepage: {
-          heroTitle: "Expert walkingpad Reviews & Testing",
+          heroTitle: "Honest Reviews. Real User Feedback. Smart Buying Decisions.",
           heroSubtitle: "Independent reviews from certified fitness professionals who test every machine for performance, durability, and value."
         }
       },
@@ -82,7 +82,7 @@ export function LanguageProvider({ children, initialLocale = 'en' }) {
       if (pathname?.startsWith('/de')) return 'de';
 
       if (typeof window !== 'undefined') {
-        const savedLocale = localStorage.getItem('Treadmill-locale');
+        const savedLocale = sessionStorage.getItem('Treadmill-locale');
         if (savedLocale && ['en', 'de'].includes(savedLocale)) {
           return savedLocale;
         }
@@ -93,12 +93,12 @@ export function LanguageProvider({ children, initialLocale = 'en' }) {
 
     const locale = determineLocale();
     setCurrentLocale(locale);
-    localStorage.setItem('Treadmill-locale', locale);
+    sessionStorage.setItem('Treadmill-locale', locale);
   }, [pathname]);
 
   const switchLanguage = (newLocale) => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('Treadmill-locale', newLocale);
+      sessionStorage.setItem('Treadmill-locale', newLocale);
       setCurrentLocale(newLocale);
 
       const currentPath = window.location.pathname;

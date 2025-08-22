@@ -47,7 +47,7 @@ const brandData = {
     logo: '/images/brands/treadmill1.jpg',
     description: {
       en: 'Sportstech is a German fitness equipment manufacturer known for innovative home fitness solutions. The F15 treadmill represents their flagship model, combining advanced shock absorption technology with smart connectivity features.',
-      de: 'Sportstech ist ein deutscher Fitnessgeräte-Hersteller, bekannt für innovative Heimfitness-Lösungen. Das F15 Walkingpad repräsentiert ihr Flaggschiff-Modell und kombiniert fortschrittliche Stoßdämpfungstechnologie mit intelligenten Konnektivitätsfeatures.'
+      de: 'Die innovativen Fitnessgeräte von Sportstech, insbesondere das sWalk Walkingpad, stehen für durchdachtes Home-Fitness-Design. Mit smarten Funktionen wie App-Konnektivität, leiser Performance und platzsparender Bauweise gehört Sportstech zu den beliebtesten Marken im Walking Pad-Vergleich.'
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
     bannerImage: '/images/treadmills/sportstech-banner.webp',
@@ -64,11 +64,10 @@ const brandData = {
         'Good value for money'
       ],
       de: [
-        'Hervorragendes Stoßdämpfungssystem',
-        'Leistungsstarker und leiser Motor',
-        'Smart App-Integration',
-        'Platzsparendes Klappdesign',
-        'Gutes Preis-Leistungs-Verhältnis'
+        'Leiser Motor & Stoßdämpfung',
+        'Smarte App-Integration  ',
+        'Klappbar & mobil  ',
+        'LED & Steigung '
       ]
     },
     cons: {
@@ -78,14 +77,15 @@ const brandData = {
         'App interface could be improved'
       ],
       de: [
-        'Aufbau kann anspruchsvoll sein',
-        'Begrenzte voreingestellte Programme',
-        'App-Interface könnte verbessert werden'
+        'Verarbeitungsqualität variabel',
+        'Bluetooth-Verbindung instabil',
+        'Manuelle Steigung wenig komfortabel',
+        'Kundenservice nicht immer agil'
       ]
     },
     verdict: {
       en: 'The Sportstech sWalk delivers exceptional value with its advanced cushioning system and solid build quality. While it may lack some premium features, it excels in the fundamentals that matter most for home fitness.',
-      de: 'Das Sportstech sWalk bietet außergewöhnlichen Wert mit seinem fortschrittlichen Dämpfungssystem und solider Bauqualität. Obwohl es einige Premium-Features fehlen mögen, glänzt es in den Grundlagen, die für Heimfitness am wichtigsten sind.'
+      de: 'Das Sportstech sWalk Walkingpad überzeugt als kompakter und leiser Homefitness-Trainer,ideal für das tägliche Training im Büro oder Zuhause. Mit robuster Dämpfung, Smart-App-Integration, platzsparendem Design und einem leisen Motor erreicht es eine Bewertung von 4,9 von 5 – Spitzenklasse im Walkingpad Test.'
     },
     rating: 4.9,
     buyLink: 'https://www.sportstech.de/laufband/swalk-grau'
@@ -130,7 +130,7 @@ const brandData = {
     logo: '/images/brands/nordictrack-logo.png',
     description: {
       en: 'Citysports is an American fitness equipment company renowned for interactive training technology. The Commercial 1750 is their premium home treadmill featuring iFit integration and professional-grade construction.',
-      de: 'Citysports ist ein amerikanisches Fitnessgeräte-Unternehmen, berühmt für interaktive Trainingstechnologie. Das Commercial 1750 ist ihr Premium-HeimWalkingpad mit iFit-Integration und professioneller Konstruktion.'
+      de: 'Das Citysports CS-WP6 bietet als Under-Desk Walkingpad eine praktische und günstige Einstiegslösung für tägliche Bewegung. Es überzeugt durch leisen Betrieb, einfache Bedienbarkeit und transportfreundliches Design. Wer gelegentlich und platzsparend trainieren will, findet hier eine solide Lösung – auch wenn Profis oder intensivere Nutzer ggf. ein Laufband mit längerer Lauffläche oder mehr Speed bevorzugen.'
     },
 
     bannerImage: '/images/treadmills/nor-banner.jpg',
@@ -144,11 +144,10 @@ const brandData = {
         'Excellent build quality'
       ],
       de: [
-        'Leistungsstarker Motor in kommerzieller Qualität',
-        'Großes HD-Touchscreen-Display',
-        'Gefälle-Funktion für abwechslungsreiches Training',
-        'Umfangreiche iFit-Workout-Bibliothek',
-        'Ausgezeichnete Bauqualität'
+        'Geräuscharmer Betrieb',
+        'Kompakte Maße ',
+        'Bluetooth & Display ',
+        'Guter Preis ',
       ]
     },
     cons: {
@@ -158,14 +157,15 @@ const brandData = {
         'Large footprint requires space'
       ],
       de: [
-        'iFit-Abonnement für alle Features erforderlich',
-        'Höherer Preispunkt',
-        'Große Stellfläche benötigt Platz'
+        'Ideal für Homeoffice & leises Training',
+        'Perfekt für kleine Räume & Wohnbereiche',
+        'Komfort & Motivation beim Training',
+        'Top Budget-Option im Walkingpad-Test'
       ]
     },
     verdict: {
       en: 'The Citysports Walking Pad is an excellent choice for serious runners who want gym-quality equipment at home. The iFit integration provides unmatched workout variety, though the subscription cost should be considered.',
-      de: 'Das Citysports Walking Pad ist eine ausgezeichnete Wahl für ernsthafte Läufer, die Studio-Qualität zu Hause wollen. Die iFit-Integration bietet unvergleichliche Workout-Vielfalt, obwohl die Abonnementkosten berücksichtigt werden sollten.'
+      de: 'Das Citysports CS-WP6 bietet als Under-Desk Walkingpad eine praktische und günstige Einstiegslösung für tägliche Bewegung. Es überzeugt durch leisen Betrieb, einfache Bedienbarkeit und transportfreundliches Design. Wer gelegentlich und platzsparend trainieren will, findet hier eine solide Lösung – auch wenn Profis oder intensivere Nutzer ggf. ein Laufband mit längerer Lauffläche oder mehr Speed bevorzugen.'
     },
     rating: 4.5,
     // buyLink: 'https://www.city-sports.eu/collections/treadmill/products/citysports-under-desk-treadmill-citysports-laufband-citysports-treadmill-citysports-tapis-roulant-citysports-tapis-de-course?spm=..collection_c6816f06-4986-4263-97d0-4377c49999a8.collection_detail_1.9&spm_prev=..index.header_1.1'
@@ -220,7 +220,7 @@ const brandData = {
     logo: '/images/brands/proform-logo.png',
     description: {
       en: 'kiddoza,  focuses on providing premium features at accessible prices. The Pro 2000 offers professional-grade performance with smart connectivity and iFit compatibility.',
-      de: 'kiddoza, eine Schwestermarke von NordicTrack, konzentriert sich darauf, Premium-Features zu zugänglichen Preisen anzubieten. Das Pro 2000 bietet professionelle Leistung mit intelligenter Konnektivität und iFit-Kompatibilität.'
+      de: 'Das Kiddoza Under desk walking pad, ist das optimale Walking Pad für Zuhause, das hochwertige Ausstattung zum fairen Preis bietet. Mit iFit-Kompatibilität, smarter Steuerung und starker Leistung ist es eine Top-Wahl für alle, die ein leises Laufband unter dem Schreibtisch suchen.'
     },
 
         bannerImage: '/images/treadmills/proform-banner.webp',
@@ -235,11 +235,9 @@ const brandData = {
         'Competitive pricing'
       ],
       de: [
-        'Starke Motorleistung',
-        'Gefälle- und Steigungsfähigkeit',
-        'Gutes Dämpfungssystem',
-        'iFit-Integration enthalten',
-        'Wettbewerbsfähige Preisgestaltung'
+        'Leistungsstarker, leiser Motor',
+        'Steigungsfunktion & gute Dämpfung',
+        'iFit-Integration inklusive',
       ]
     },
     cons: {
@@ -249,14 +247,14 @@ const brandData = {
         'Limited warranty coverage'
       ],
       de: [
-        'Kleinerer Touchscreen als Premium-Modelle',
-        'Bauqualität nicht so robust wie kommerzielle Qualität',
-        'Begrenzte Garantieabdeckung'
+        'Kleiner Touchscreen im Vergleich zu Premium-Modellen',
+        'Verarbeitung nicht auf kommerziellem Niveau',
+        'Eingeschränkte Garantie'
       ]
     },
     verdict: {
       en: 'The kiddoza Walking Pad strikes an excellent balance between features and price. It provides many premium capabilities without the premium price tag, making it ideal for budget-conscious fitness enthusiasts.',
-      de: 'Das kiddoza Walking Pad findet eine ausgezeichnete Balance zwischen Features und Preis. Es bietet viele Premium-Fähigkeiten ohne den Premium-Preis und ist damit ideal für budgetbewusste Fitness-Enthusiasten.'
+      de: 'Das Kiddoza Under-Desk Walking Pad bietet ein beeindruckendes Preis-Leistungs-Verhältnis. Es kombiniert Walking-Pad-Essentials wie Neigungsfunktion,App-Anbindung und Kompaktheit – perfekt für alle, die nach einem qualitativ hochwertigen,budgetfreundlichen Walking Pad für das Home-Gym suchen.'
     },
     rating: 4.6,
     // buyLink: 'https://www.hometreadmills.uk/products/under-desk-treadmill-2-5hp-incline-running-machine'
@@ -322,11 +320,10 @@ const brandData = {
         'Strong warranty support'
       ],
       de: [
-        'Ausgezeichnete Bauqualität und Zuverlässigkeit',
-        'Glatter und leiser Betrieb',
-        'Gutes Dämpfungssystem',
-        'Einfach zu bedienende Steuerung',
-        'Starke Garantieunterstützung'
+        'Hervorragende Verarbeitungsqualität',
+        'Ruhiger und stabiler Lauf ',
+        'Effektive Dämpfung',
+        'Lange Garantie',
       ]
     },
     cons: {
@@ -336,14 +333,14 @@ const brandData = {
         'Fewer preset programs'
       ],
       de: [
-        'Begrenzte Smart-Features',
-        'Kein Touchscreen-Display',
-        'Weniger voreingestellte Programme'
+        'Keine Touchscreen-Steuerung',
+        'Wenige vorgefertigte Programme',
+        'Eingeschränkte Smart-Funktionalität'
       ]
     },
     verdict: {
       en: 'The Superun Walking Pad excels in reliability and build quality. While it may lack some modern smart features, it delivers consistent performance and represents excellent value for those prioritizing durability.',
-      de: 'Das Superun Walking Pad glänzt in Zuverlässigkeit und Bauqualität. Obwohl es einige moderne Smart-Features fehlen mögen, liefert es konsistente Leistung und repräsentiert ausgezeichneten Wert für diejenigen, die Haltbarkeit priorisieren.'
+      de: 'Das Superun B-A06-C überzeugt im Walking Pad Vergleich mit zuverlässiger Technik,hochwertiger Verarbeitung und klarer Benutzerführung. Es ist eine ausgezeichnete Wahl für Fitness-Nutzer, die ein langlebiges, geräuscharmes Gerät ohne überflüssigen Schnickschnack suchen.'
     },
     rating: 4.5,
     // buyLink: 'https://superuntreadmill.com/products/superun%C2%AE-ba04-ultra-walking-pad-with-remote-control'
@@ -430,7 +427,7 @@ const brandData = {
     },
     verdict: {
       en: 'The Urevo Walking Pad Track Connect represents the pinnacle of home treadmill quality. While expensive, it offers unmatched durability and performance for serious fitness enthusiasts.',
-      de: 'Das Urevo Walking Pad Track Connect repräsentiert den Höhepunkt der HeimWalkingpad-Qualität. Obwohl teuer, bietet es unvergleichliche Haltbarkeit und Leistung für ernsthafte Fitness-Enthusiasten.'
+      de: 'Urevo Track Connect (SpaceWalk E1L) belegt einen Spitzenplatz im Walkingpad Vergleich für hochwertige Home-Laufbänder. Mit einer Bewertung von 4,5/5 überzeugt es durch hervorragende Verarbeitung, Trainingstiefe und Komfort – ideal für Fitnessenthusiasten mit hohen Ansprüchen.'
     },
     rating: 4.5,
     // buyLink: 'https://www.urevo.com/collections/foldable-treadmill/products/urevo-foldi-3s-treadmill'
