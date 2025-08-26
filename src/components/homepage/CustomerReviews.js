@@ -8,7 +8,7 @@ const reviewsData = [
     name: 'Michael Chen',
     rating: 5,
     review:
-      'Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk war ein Volltreffer!',
+      'Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk Lite war ein Volltreffer!',
     avatar: '/images/customer/cus1.jpg',
   },
   {

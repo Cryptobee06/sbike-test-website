@@ -1,5 +1,6 @@
 
 import ReviewsPage from '@/components/reviews/ReviewsPage';
+// import WalkingPadComparison from '../comparison/page';
 
 export async function generateMetadata() {
   return {
@@ -10,5 +11,8 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
-  return <ReviewsPage />;
+  return(
+    <>
+     <ReviewsPage />;</>
+  )
 }

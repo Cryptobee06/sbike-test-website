@@ -32,10 +32,10 @@
 //           <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-10 border border-gray-100">
 //             <h2 className="text-xl font-bold text-black mb-4">1. Introduction and Scope of Policy</h2>
 //             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
-//               At TreadmillReviews, we value the trust our visitors place in us and are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, store, and protect your personal data when you visit or interact with our website. Whether you're browsing treadmill comparisons, reading fitness advice, or signing up for newsletters, your privacy is important to us. We understand that you may be concerned about how the information you provide is being used. This policy applies to all users of TreadmillReviews and governs data collection and usage practices in compliance with applicable data protection laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
+//               At WalkingpadReviews, we value the trust our visitors place in us and are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, store, and protect your personal data when you visit or interact with our website. Whether you're browsing treadmill comparisons, reading fitness advice, or signing up for newsletters, your privacy is important to us. We understand that you may be concerned about how the information you provide is being used. This policy applies to all users of WalkingpadReviews and governs data collection and usage practices in compliance with applicable data protection laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
 //             </p>
 //             <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-//               We only collect information that is necessary for us to provide services, enhance your user experience, and ensure the website's functionality. By using TreadmillReviews, you acknowledge and accept the practices outlined in this Privacy Policy. If you do not agree to the terms herein, we encourage you not to use our services. This policy applies to all visitors, users, and anyone who accesses the site. Please note that this policy does not apply to any third-party websites, services, or applications that may be linked from our platform, and we recommend reviewing their policies individually. We reserve the right to update or change this policy at any time, and we will notify you of significant changes by updating this page. Continued use of the website following such changes indicates your consent to the updated terms.
+//               We only collect information that is necessary for us to provide services, enhance your user experience, and ensure the website's functionality. By using WalkingpadReviews, you acknowledge and accept the practices outlined in this Privacy Policy. If you do not agree to the terms herein, we encourage you not to use our services. This policy applies to all visitors, users, and anyone who accesses the site. Please note that this policy does not apply to any third-party websites, services, or applications that may be linked from our platform, and we recommend reviewing their policies individually. We reserve the right to update or change this policy at any time, and we will notify you of significant changes by updating this page. Continued use of the website following such changes indicates your consent to the updated terms.
 //             </p>
 
 //             <h2 className="text-xl font-bold text-black mb-4">2. Information We Collect</h2>
@@ -67,10 +67,10 @@
 
 //             <h2 className="text-xl font-bold text-black mb-4">5. Your Rights and Contact Information</h2>
 //             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
-//               Depending on your location, you may have rights under data protection laws like GDPR or CCPA. This includes access, correction, deletion, or limiting the use of your data. To exercise these rights or ask questions, email us at privacy@treadmillreviews.com.
+//               Depending on your location, you may have rights under data protection laws like GDPR or CCPA. This includes access, correction, deletion, or limiting the use of your data. To exercise these rights or ask questions, email us at privacy@WalkingpadReviews.com.
 //             </p>
 //             <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-//               We will notify users of major updates to this policy via this page or direct communication. Your continued use of the site implies consent to any updates. Thank you for trusting TreadmillReviews.
+//               We will notify users of major updates to this policy via this page or direct communication. Your continued use of the site implies consent to any updates. Thank you for trusting WalkingpadReviews.
 //             </p>
 //           </div>
 //         </div>
@@ -89,8 +89,8 @@ export default function PrivacySection() {
       id: 'introduction',
       title: 'Einführung und Geltungsbereich der Richtlinie',
       paragraphs: [
-        "Bei TreadmillReviews schätzen wir das Vertrauen, das unsere Besucher in uns setzen, und verpflichten uns zum Schutz Ihrer Privatsphäre. Diese Datenschutzerklärung beschreibt, wie wir Ihre personenbezogenen Daten erfassen, verwenden, speichern und schützen, wenn Sie unsere Website besuchen oder mit ihr interagieren. Ob Sie Walkingpad-Vergleiche durchstöbern, Fitness-Ratschläge lesen oder sich für Newsletter anmelden - Ihre Privatsphäre ist uns wichtig. Wir verstehen, dass Sie möglicherweise besorgt darüber sind, wie die von Ihnen bereitgestellten Informationen verwendet werden. Diese Richtlinie gilt für alle Nutzer von TreadmillReviews und regelt die Datenerfassung und -nutzung in Übereinstimmung mit den geltenden Datenschutzgesetzen, einschließlich der Datenschutz-Grundverordnung (DSGVO) und des California Consumer Privacy Act (CCPA).",
-        "Wir erfassen nur Informationen, die notwendig sind, um Ihnen Dienstleistungen zu erbringen, Ihre Benutzererfahrung zu verbessern und die Funktionalität der Website zu gewährleisten. Durch die Nutzung von TreadmillReviews erkennen Sie die in dieser Datenschutzerklärung beschriebenen Praktiken an und akzeptieren sie."
+        "Bei WalkingpadReviews schätzen wir das Vertrauen, das unsere Besucher in uns setzen, und verpflichten uns zum Schutz Ihrer Privatsphäre. Diese Datenschutzerklärung beschreibt, wie wir Ihre personenbezogenen Daten erfassen, verwenden, speichern und schützen, wenn Sie unsere Website besuchen oder mit ihr interagieren. Ob Sie Walkingpad-Vergleiche durchstöbern, Fitness-Ratschläge lesen oder sich für Newsletter anmelden - Ihre Privatsphäre ist uns wichtig. Wir verstehen, dass Sie möglicherweise besorgt darüber sind, wie die von Ihnen bereitgestellten Informationen verwendet werden. Diese Richtlinie gilt für alle Nutzer von WalkingpadReviews und regelt die Datenerfassung und -nutzung in Übereinstimmung mit den geltenden Datenschutzgesetzen, einschließlich der Datenschutz-Grundverordnung (DSGVO) und des California Consumer Privacy Act (CCPA).",
+        "Wir erfassen nur Informationen, die notwendig sind, um Ihnen Dienstleistungen zu erbringen, Ihre Benutzererfahrung zu verbessern und die Funktionalität der Website zu gewährleisten. Durch die Nutzung von WalkingpadReviews erkennen Sie die in dieser Datenschutzerklärung beschriebenen Praktiken an und akzeptieren sie."
       ]
     },
     {
@@ -123,7 +123,7 @@ export default function PrivacySection() {
       title: 'Ihre Wahlmöglichkeiten und Verpflichtungen',
       paragraphs: [
         "Je nach Ihrem Standort haben Sie möglicherweise Rechte gemäß Datenschutzgesetzen wie der DSGVO oder CCPA. Dies umfasst Zugang, Berichtigung oder Löschung Ihrer Daten.",
-        "Um diese Rechte auszuüben oder Fragen zu stellen, senden Sie uns eine E-Mail an privacy@treadmillreviews.com."
+        "Um diese Rechte auszuüben oder Fragen zu stellen, senden Sie uns eine E-Mail an privacy@walkingpadreviews.com."
       ]
     },
     {
@@ -185,7 +185,7 @@ export default function PrivacySection() {
             <div>
               <h2 className="text-xl font-semibold text-gray-900 mb-2">Ihre Privatsphäre ist wichtig</h2>
               <p className="text-gray-700 text-base mb-2">
-                TreadmillReviews verpflichtet sich zu Transparenz über die Daten, die wir über Sie erfassen, wie sie verwendet werden und mit wem sie geteilt werden.
+                WalkingpadReviews verpflichtet sich zu Transparenz über die Daten, die wir über Sie erfassen, wie sie verwendet werden und mit wem sie geteilt werden.
               </p>
               <p className="text-gray-700 text-base">
                 Diese Datenschutzerklärung gilt, wenn Sie unsere Dienste nutzen. Wir bieten Nutzern Wahlmöglichkeiten über die Daten, die wir erfassen, verwenden und teilen, wie in dieser Richtlinie, unserer Cookie-Richtlinie und unseren Nutzungsbedingungen beschrieben.

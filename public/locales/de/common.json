@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "logo": "WalkingpadTests",
+    "logo": "/logo.png",
     "treadmillReviews": "Walkingpad Tests",
     "brands": "Marken",
     "guide": "Ratgeber",
@@ -53,7 +53,7 @@
     "bestTreadmills": {
       "title": "Beste Walkingpad-Modelle im Vergleich",
       "sportstech": {
-        "name": "Sportstech sWalk ",
+        "name": "Sportstech sWalk Lite ",
         "description": "Hochwertiges Gerät mit überzeugender Leistung.",
         "badge": "Testsieger"
       },
@@ -78,7 +78,7 @@
   "title": "Stimmen unserer Leser",
   "reviews": [
     {
-      "description": "Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk war ein Volltreffer!"
+      "description": "Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk Lite war ein Volltreffer!"
     },
     {
       "description": "Die echten Leistungsdaten und ehrlichen Vor-/Nachteile haben mir sehr geholfen."

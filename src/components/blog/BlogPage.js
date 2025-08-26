@@ -105,7 +105,7 @@ export default function BlogPage() {
               href={`${getBasePath()}/blog/${post.slug}`}
               className="block overflow-hidden"
             >
-              <div className="aspect-[16/9]">
+              <div className="aspect-[8/9]">
                 <img
                   src={post.image}
                   alt={post.title[locale]}

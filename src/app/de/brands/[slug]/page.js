@@ -16,38 +16,49 @@ const brandData = {
     ],
     features: {
       en: [
-        'App: Sportstech Live',
-        'Display: 21.5"',
-        'Color: black',
-        'Dimensions: 182 x 87.5 x 177 cm',
-        'User weight: up to 150 kg',
-        'Speed up to 20 km/h',
-       ' 15 gradient levels up to a maximum of 15%',
-       ' 7 colors LEDs according to speed or pulse',
-        'rotatable 21.5" touch display',
-        'Folding function and transport wheels'
-      ],
+      "Dimensions: 127 x 56.5 x 11.5 cm",
+      "Weight: 23 kg",
+      "Max user weight: 120 kg",
+      "Includes transport wheels for easy movement",
+      "No assembly required",
+      "Speed range: 1-8 km/h",
+      "LED lights change color depending on speed (7 colors)",
+      "Manual incline of 11.5%",
+      "4 preset workout programs (P01–P04)",
+      "Modern LCD display",
+      "Works with the Sportstech Live app",
+      "Can adjust speed, change programs, and turn LEDs on/off using the app",
+      "Shows real-time training data like speed, steps, and heart rate",
+      "Personalized workouts with trainers available in the app",
+      "Outdoor and landscape workout videos in the app",
+     
+    ],
       de: [
-        'App: Sportstech Live',
-        'Display: 21,5"',
-        'Farbe: Schwarz',
-        'Maße: 182 x 87,5 x 177 cm',
-        'Benutzergewicht: bis zu 150 kg',
-        'Geschwindigkeit: bis zu 20 km/h',
-        '15 Steigungsstufen bis maximal 15 %',
-        '7-farbige LEDs je nach Geschwindigkeit oder Puls',
-        'Drehbares 21,5"-Touchdisplay',
-        'Klappfunktion und Transportrollen'
-      ]
+      "Abmessungen: 127 x 56,5 x 11,5 cm",
+      "Gewicht: 23 kg",
+      "Maximales Benutzergewicht: 120 kg",
+      "Inklusive Transportrollen für einfachen Transport",
+      "Keine Montage erforderlich",
+      "Geschwindigkeitsbereich: 1–8 km/h",
+      "LED-Leuchten ändern je nach Geschwindigkeit ihre Farbe (7 Farben)",
+      "Manuelle Steigung von 11,5 %",
+      "4 voreingestellte Trainingsprogramme (P01–P04)",
+      "Modernes LCD-Display",
+      "Kompatibel mit der Sportstech Live App",
+      "Geschwindigkeit einstellen, Programme ändern und LEDs über die App ein-/ausschalten",
+      "Zeigt Trainingsdaten wie Geschwindigkeit, Schritte und Herzfrequenz in Echtzeit an",
+      "Personalisierte Workouts mit Trainern in der App verfügbar",
+      "Outdoor- und Landschafts-Workout-Videos in der App",
+    ]
     },
      
     
     // name: 'Sportstech',
-    model: 'sWalk',
+    model: 'sWalk Lite',
     logo: '/images/brands/treadmill1.jpg',
     description: {
       en: 'Sportstech is a German fitness equipment manufacturer known for innovative home fitness solutions. The F15 treadmill represents their flagship model, combining advanced shock absorption technology with smart connectivity features.',
-      de: 'Die innovativen Fitnessgeräte von Sportstech, insbesondere das sWalk Walkingpad, stehen für durchdachtes Home-Fitness-Design. Mit smarten Funktionen wie App-Konnektivität, leiser Performance und platzsparender Bauweise gehört Sportstech zu den beliebtesten Marken im Walking Pad-Vergleich.'
+      de: 'Die innovativen Fitnessgeräte von Sportstech, insbesondere das sWalk Lite Walkingpad, stehen für durchdachtes Home-Fitness-Design. Mit smarten Funktionen wie App-Konnektivität, leiser Performance und platzsparender Bauweise gehört Sportstech zu den beliebtesten Marken im Walking Pad-Vergleich.'
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
     bannerImage: '/images/treadmills/sportstech-banner.webp',
@@ -84,11 +95,11 @@ const brandData = {
       ]
     },
     verdict: {
-      en: 'The Sportstech sWalk delivers exceptional value with its advanced cushioning system and solid build quality. While it may lack some premium features, it excels in the fundamentals that matter most for home fitness.',
-      de: 'Das Sportstech sWalk Walkingpad überzeugt als kompakter und leiser Homefitness-Trainer,ideal für das tägliche Training im Büro oder Zuhause. Mit robuster Dämpfung, Smart-App-Integration, platzsparendem Design und einem leisen Motor erreicht es eine Bewertung von 4,9 von 5 – Spitzenklasse im Walkingpad Test.'
+      en: 'The Sportstech sWalk Lite delivers exceptional value with its advanced cushioning system and solid build quality. While it may lack some premium features, it excels in the fundamentals that matter most for home fitness.',
+      de: 'Das Sportstech sWalk Lite Walkingpad überzeugt als kompakter und leiser Homefitness-Trainer,ideal für das tägliche Training im Büro oder Zuhause. Mit robuster Dämpfung, Smart-App-Integration, platzsparendem Design und einem leisen Motor erreicht es eine Bewertung von 4,9 von 5 – Spitzenklasse im Walkingpad Test.'
     },
     rating: 4.9,
-    buyLink: 'https://www.sportstech.de/laufband/swalk-grau'
+    buyLink: 'https://www.sportstech.de/laufband/swalk-lite'
   },
   'Citysports': {
 
@@ -173,7 +184,7 @@ const brandData = {
   },
   'kiddoza': {
 
-    name: 'kiddoza',
+    name: 'Kiddoza',
     images: [
       '/Kiddoza/kiddoza05.png',
       '/Kiddoza/kiddoza04.png',
@@ -219,7 +230,7 @@ const brandData = {
     model: 'Under desk walking pad',
     logo: '/images/brands/proform-logo.png',
     description: {
-      en: 'kiddoza,  focuses on providing premium features at accessible prices. The Pro 2000 offers professional-grade performance with smart connectivity and iFit compatibility.',
+      en: 'Kiddoza,  focuses on providing premium features at accessible prices. The Pro 2000 offers professional-grade performance with smart connectivity and iFit compatibility.',
       de: 'Das Kiddoza Under desk walking pad, ist das optimale Walking Pad für Zuhause, das hochwertige Ausstattung zum fairen Preis bietet. Mit iFit-Kompatibilität, smarter Steuerung und starker Leistung ist es eine Top-Wahl für alle, die ein leises Laufband unter dem Schreibtisch suchen.'
     },
 

@@ -45,7 +45,7 @@ const feedbackData = {
       {
         id: 5,
         name: 'Claudia W',
-        avatar: 'CM',
+        avatar: 'CW',
         rating: 5,
         comment: 'I was surprised by how stable the walking pad is. It feels secure even when I train on it for longer periods.',
         date: 'a month ago',

@@ -16,7 +16,7 @@ export default function Footer() {
   // Show minimal loading state while translations are loading
   if (!isLoaded) {
     return (
-      <footer className="bg-gray-900 text-white">
+      <footer className="bg-[#2e2f46] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">Loading...</div>
         </div>
@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="text-2xl font-bold text-primary-400 mb-4">
-              {t('logo')}
+             <img src= '/logo.png' className='xl:w-[50%] lg:w-[50%] md:w-[40%] w-[60%]'></img>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               {locale === 'en' 
@@ -123,7 +123,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} {t('logo')}. {locale === 'en' ? 'All rights reserved.' : 'Alle Rechte vorbehalten.'}
+              © {currentYear} Walkingpad Test. {locale === 'en' ? 'All rights reserved.' : 'Alle Rechte vorbehalten.'}
             </p>
             <p className="text-gray-400 text-sm mt-2 md:mt-0">
               {locale === 'en' 

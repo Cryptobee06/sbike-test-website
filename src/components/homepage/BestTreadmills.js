@@ -11,12 +11,12 @@ const treadmillsData = [
   {
     id: 'sportstech',       
     brand: 'Sportstech',
-    model: 'sWalk',
+    model: 'sWalk Lite',
     image: '/images/products/treadmill-sportstech.webp',
     rating: 4.9,
     badge: 'testWinner',
     badgeColor: 'bg-yellow-500',
-    link: 'https://www.sportstech.de/laufband/swalk-grau'
+    link: 'https://www.sportstech.de/laufband/swalk-lite'
   },
   {
     id: 'Citysports',
@@ -52,12 +52,12 @@ const treadmillsData = [
   {
     id: 'sportstech',
     brand: 'Sportstech',
-    model: 'sWalk',
+    model: 'sWalk Lite',
     image: '/images/products/treadmill-sportstech.webp',
     rating: 4.9,
     badge: 'testWinner',
     badgeColor: 'bg-yellow-500',
-   link: 'https://www.sportstech.de/laufband/swalk-grau'
+   link: 'https://www.sportstech.de/laufband/swalk-lite'
   },
   {
     id: 'Citysports',

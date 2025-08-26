@@ -1,28 +1,89 @@
 'use client';
+import React from 'react';
 import { useLocale } from '@/contexts/LanguageContext';
 import Link from 'next/link';
+import { Star, Award } from 'lucide-react';
 
-// Unified treadmill data for both languages
-const treadmillsData = [
+// Unified walking pad data
+const walkingPadsData = [
   {
     id: 'sportstech',
     brand: 'Sportstech',
-    model: 'sWalk',
+    model: 'sWalk Lite',
     slug: 'sportstech',
     rating: 4.9,
     badge: {
-      en: 'Test Winner',
-      de: 'Testsieger'
+      en: 'Test Winner 2025',
+      de: 'Testsieger 2025'
     },
     badgeColor: 'bg-green-500',
     image: '/images/treadmills/sportstech-treadmill.jpg',
-    summary: {
-      en: 'Best-in-class shock absorption & smart connectivity. Outstanding value for home fitness.',
-      de: 'Hervorragender Wert mit fortschrittlicher Stoßdämpfung und intelligenten Konnektivitätsfeatures.'
-    }
-  },
+    price: '599.00',
+    originalPrice: null,
+    
+      features: {
+        display: {
+          "en": "Modern LCD display",
+          "de": "Modernes LCD-Display"
+        },
+        dimensions: {
+          "en": "127 x 56.5 x 11.5 cm",
+          "de": "127 x 56,5 x 11,5 cm"
+        },
+        weight: {
+          "en": "up to 120 kg",
+          "de": "bis 120 kg"
+        },
+        resistance: {
+          "en": "Manual incline of 11.5%",
+          "de": "Manuelle Steigung von 11,5%"
+        },
+        programs: {
+          "en": "4 pre-installed programs (P01–P04)",
+          "de": "4 vorinstallierte Programme (P01–P04)"
+        },
+        heartRate: {
+          "en": "Hand Pulse Sensors + App",
+          "de": "Handpulssensoren + App"
+        },
+        motor: {
+          "en": "2.5 HP Motor",
+          "de": "2.5 HP Motor"
+        },
+        speed: {
+          "en": "1-8 km/h",
+          "de": "1-8 km/h"
+        },
+        // ledColor: {
+        //   "en": "7 color LEDs depending on speed or pulse",
+        //   "de": "7 Farb-LEDs je nach Geschwindigkeit oder Puls"
+        // },
+        // appCompatibility: {
+        //   "en": "Works with the Sportstech Live app",
+        //   "de": "Kompatibel mit der Sportstech Live App"
+        // },
+        // control: {
+        //   "en": "Speed adjustment, program switching, and LED control via app",
+        //   "de": "Geschwindigkeitsanpassung, Programmwechsel und LED-Steuerung über die App"
+        // },
+        // realTimeData: {
+        //   "en": "Shows real-time training data like speed, steps, and heart rate",
+        //   "de": "Zeigt Echtzeit-Trainingsdaten wie Geschwindigkeit, Schritte und Herzfrequenz an"
+        // },
+        // workouts: {
+        //   "en": "Personalized workouts with trainers in the app",
+        //   "de": "Personalisierte Workouts mit Trainern in der App"
+        // },
+        // videos: {
+        //   "en": "Outdoor and landscape workout videos in the app",
+        //   "de": "Outdoor- und Landschafts-Workout-Videos in der App"
+        // },
+      }
+    },
+    
+
   {
-    id: 'Citysports',
+    id: 'citysports',
     brand: 'Citysports',
     model: 'CS-WP6',
     slug: 'Citysports',
@@ -33,47 +94,143 @@ const treadmillsData = [
     },
     badgeColor: 'bg-blue-500',
     image: '/CITYSPORTS/city04.png',
-    summary: {
-      en: 'Built to last with premium design and interactive training features.',
-      de: 'Premium-Walkingpad mit interaktivem Training und kommerzieller Konstruktion.'
+    price: '299.00',
+    originalPrice: '349.00',
+    features: {
+      display: {
+        en: 'LED Console',
+        de: 'LED Konsole'
+      },
+      dimensions: {
+        en: 'Compact Foldable',
+        de: 'Kompakt faltbar'
+      },
+      weight: {
+        en: 'up to 100kg',
+        de: 'bis 100kg'
+      },
+      resistance: {
+        en: 'No Incline',
+        de: 'Keine Neigung'
+      },
+      programs: {
+        en: '2 Programs',
+        de: '2 Programme'
+      },
+      heartRate: {
+        en: 'Remote Control',
+        de: 'Fernbedienung'
+      },
+      motor: {
+        en: '440W Motor',
+        de: '440W Motor'
+      },
+      speed: {
+        en: '1-8 km/h',
+        de: '1-8 km/h'
+      }
     }
   },
   {
     id: 'kiddoza',
-    brand: 'kiddoza',
-    model: 'Under desk walking pad',
+    brand: 'Kiddoza',
+    model: 'Under Desk Walking Pad',
     slug: 'kiddoza',
     rating: 4.2,
     badge: {
       en: '',
       de: ''
     },
-    badgeColor: 'bg-gray-500',
+    badgeColor: 'bg-purple-500',
     image: '/Kiddoza/kiddoza04.png',
-    summary: {
-      en: 'Compact and feature-rich—powered by iFit, perfect for busy professionals.',
-      de: 'Funktionsreiches Walkingpad mit iFit-Integration und leistungsstarker Motorleistung.'
+    price: '449.00',
+    originalPrice: '499.00',
+    features: {
+      display: {
+        en: 'LCD Display',
+        de: 'LCD Display'
+      },
+      dimensions: {
+        en: '20kg Weight',
+        de: '20kg Gewicht'
+      },
+      weight: {
+        en: 'up to 120kg',
+        de: 'bis 120kg'
+      },
+      resistance: {
+        en: '4% Incline',
+        de: '4% Neigung'
+      },
+      programs: {
+        en: '3 Programs',
+        de: '3 Programme'
+      },
+      heartRate: {
+        en: 'Mobile App',
+        de: 'Mobile App'
+      },
+      motor: {
+        en: '2.5 HP Motor',
+        de: '2.5 HP Motor'
+      },
+      speed: {
+        en: '1-6 km/h',
+        de: '1-6 km/h'
+      }
     }
   },
   {
-    id: 'Superun',
+    id: 'superun',
     brand: 'Superun',
-    model: 'B,A06-С',
+    model: 'B.A06-C',
     slug: 'Superun',
     rating: 4.5,
     badge: {
       en: '',
       de: ''
     },
-    badgeColor: 'bg-green-500',
+    badgeColor: 'bg-orange-500',
     image: '/Superun Raceable Walking Pad/superun04.png',
-    summary: {
-      en: 'Dependable mid-range option with excellent build quality and reliable warranty.',
-      de: 'Zuverlässiges Mittelklasse-Walkingpad mit ausgezeichneter Bauqualität und Garantie.'
+    price: '399.00',
+    originalPrice: null,
+    features: {
+      display: {
+        en: 'Basic LCD',
+        de: 'Basic LCD'
+      },
+      dimensions: {
+        en: '86 lbs Weight',
+        de: '86 lbs Gewicht'
+      },
+      weight: {
+        en: 'up to 159kg',
+        de: 'bis 159kg'
+      },
+      resistance: {
+        en: '0-6% Manual',
+        de: '0-6% manuell'
+      },
+      programs: {
+        en: '4 Programs',
+        de: '4 Programme'
+      },
+      heartRate: {
+        en: 'PitPat App',
+        de: 'PitPat App'
+      },
+      motor: {
+        en: '3 HP Brushless',
+        de: '3 HP Brushless'
+      },
+      speed: {
+        en: '0.6-16 km/h',
+        de: '0.6-16 km/h'
+      }
     }
   },
   {
-    id: 'Urevo',
+    id: 'urevo',
     brand: 'Urevo',
     model: 'SpaceWalk E1L',
     slug: 'Urevo',
@@ -82,81 +239,157 @@ const treadmillsData = [
       en: '',
       de: ''
     },
-    badgeColor: 'bg-purple-500',
+    badgeColor: 'bg-teal-500',
     image: '/UREVO/ureo04.png',
-    summary: {
-      en: 'Whisper-quiet commercial-grade pad for serious walkers looking for long-term performance.',
-      de: 'HeimWalkingpad in kommerzieller Qualität mit überlegener Bauqualität und flüsterleisem Betrieb.'
+    price: '379.00',
+    originalPrice: '429.00',
+    features: {
+      display: {
+        en: 'Smart Display',
+        de: 'Smart Display'
+      },
+      dimensions: {
+        en: 'Fold-flat Design',
+        de: 'Fold-flat Design'
+      },
+      weight: {
+        en: 'up to 120kg',
+        de: 'bis 120kg'
+      },
+      resistance: {
+        en: '14% Auto-Incline',
+        de: '14% Auto-Neigung'
+      },
+      programs: {
+        en: '1 Programs',
+        de: '1 Programme'
+      },
+      heartRate: {
+        en: 'UREVO App + Sensors',
+        de: 'UREVO App + Sensoren'
+      },
+      motor: {
+        en: 'Ultra-quiet Brushless',
+        de: 'Ultra-leise Brushless'
+      },
+      speed: {
+        en: '1-8 km/h',
+        de: '1-8 km/h'
+      }
     }
   }
 ];
 
-const StarRating = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-
-  return (
-    <div className="flex items-center space-x-1">
-      {[...Array(fullStars)].map((_, i) => (
-        <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-        </svg>
-      ))}
-      {hasHalfStar && (
-        <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-          <defs>
-            <linearGradient id="half-star-reviews">
-              <stop offset="50%" stopColor="currentColor"/>
-              <stop offset="50%" stopColor="#e5e7eb"/>
-            </linearGradient>
-          </defs>
-          <path fill="url(#half-star-reviews)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-        </svg>
-      )}
-      {[...Array(emptyStars)].map((_, i) => (
-        <svg key={i} className="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-        </svg>
-      ))}
-      <span className="text-sm text-gray-600 ml-2">{rating}</span>
-    </div>
-  );
-};
-
 export default function ReviewsPage() {
   const locale = useLocale();
 
-  // Get base path for links
-  const getBasePath = () => {
-    return locale === 'de' ? '/de' : '';
+  const renderStars = (rating) => {
+    return (
+      <div className="flex items-center justify-center gap-1">
+        {[...Array(5)].map((_, i) => (
+          <Star
+            key={i}
+            className={`w-4 h-4 ${
+              i < Math.floor(rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+            }`}
+          />
+        ))}
+        <span className="ml-1 text-sm font-semibold text-gray-700">{rating}</span>
+      </div>
+    );
   };
 
-  const pageTexts = {
+  const featureRows = [
+    { 
+      label: {
+        en: 'Display',
+        de: 'Display'
+      }, 
+      key: 'display' 
+    },
+    { 
+      label: {
+        en: 'Dimensions',
+        de: 'Abmessungen'
+      }, 
+      key: 'dimensions' 
+    },
+    { 
+      label: {
+        en: 'Max Weight Capacity',
+        de: 'bis Körpergewicht'
+      }, 
+      key: 'weight' 
+    },
+    { 
+      label: {
+        en: 'Incline/Resistance',
+        de: 'Widerstand'
+      }, 
+      key: 'resistance' 
+    },
+    { 
+      label: {
+        en: 'Training Programs',
+        de: 'Trainingsprogramme'
+      }, 
+      key: 'programs' 
+    },
+    { 
+      label: {
+        en: 'Heart Rate Monitoring',
+        de: 'Pulsmessung'
+      }, 
+      key: 'heartRate' 
+    },
+    { 
+      label: {
+        en: 'Motor',
+        de: 'Motor'
+      }, 
+      key: 'motor' 
+    },
+    { 
+      label: {
+        en: 'Speed Range',
+        de: 'Geschwindigkeit'
+      }, 
+      key: 'speed' 
+    }
+  ];
+
+  const pageText = {
     title: {
-      en: 'Walkingpad Reviews 2025',
-      de: 'Walkingpad Tests 2025'
+      en: 'Walking Pad Comparison 2025',
+      de: 'Walking Pad Vergleich 2025'
     },
     subtitle: {
-      en: 'Expert testing and comprehensive reviews of top walking pads available today',
-      de: 'Experten-Tests und umfassende Bewertungen der besten heute verfügbaren Laufbänder.'
+      en: 'Compare the best walking pads to find your perfect home fitness solution',
+      de: 'Die besten Walking Pads im direkten Vergleich'
+    },
+    model: {
+      en: 'Model',
+      de: 'Model'
     },
     readReview: {
       en: 'Read Review',
       de: 'Test lesen'
     },
-    needHelpTitle: {
-      en: 'Need Help Choosing?',
-      de: 'Brauchen Sie Hilfe bei der Auswahl?'
-    },
-    needHelpText: {
-      en: 'Check out our comprehensive buying guide for expert advice on selecting the perfect Walkingpad.',
-      de: 'Schauen Sie sich unseren umfassenden Kaufratgeber für Expertenberatung bei der Auswahl des perfekten Walkingpads an.'
-    },
-    viewGuide: {
-      en: 'View Buying Guide',
-      de: 'Kaufratgeber ansehen'
+    recommendation: {
+      title: {
+        en: 'Our Recommendation: Sportstech sWalk Lite - Winner 2025',
+        de: 'Empfehlung: Sportstech sWalk Lite - Testsieger 2025'
+      },
+      text: {
+        en: 'The Sportstech sWalk Lite stands out with the best features, highest quality, and most comprehensive functionality. With 15 incline levels, 21.5" touch display, and speeds up to 20 km/h, it\'s the premium choice for demanding users seeking professional-grade home fitness equipment.',
+        de: 'Das Sportstech sWalk Lite überzeugt mit der besten Ausstattung, höchster Qualität und umfangreichsten Features. Mit 15 Neigungsstufen, 21.5" Touch-Display und bis zu 20 km/h ist es die Premium-Wahl für anspruchsvolle Nutzer.'
+      }
     }
+  };
+
+  // Get base path for links
+  const getBasePath = () => {
+    return locale === 'de' ? '/de' : '';
   };
 
   return (
@@ -166,92 +399,208 @@ export default function ReviewsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-xl-5">
           <div className="text-center margin-banner mt-xl-5">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {pageTexts.title[locale]}
+              {pageText.title[locale]}
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              {pageTexts.subtitle[locale]}
+              {pageText.subtitle[locale]}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Reviews Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {treadmillsData.map((treadmill) => (
-              <div key={treadmill.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div className="flex flex-col md:flex-row">
-                  {/* Image */}
-                  <div className="md:w-2/5 relative">
-                  <div className="w-full h-68 sm:h-56 md:h-64 lg:h-72 overflow-hidden rounded-lg">
-                    <img
-                      src={treadmill.image}
-                      alt={`${treadmill.brand} ${treadmill.model}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                    {/* Badge */}
-                    {treadmill.badge[locale] && (
-                      <div className={`absolute top-4 left-4 ${treadmill.badgeColor} text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg`}>
-                        {treadmill.badge[locale]}
+      {/* Comparison Table Section */}
+      <section className="py-12">
+        <div className="min-h-screen bg-gray-50 py-4 sm:py-6 lg:py-8 px-2 sm:px-4 lg:px-6">
+          <div className="max-w-7xl mx-auto">
+            
+            {/* Mobile Cards View (< 768px) */}
+            <div className="md:hidden space-y-4 mb-6">
+              {walkingPadsData.map((brand, index) => (
+                <div 
+                  key={brand.id} 
+                  className={`bg-white rounded-lg shadow-lg p-4 border transform transition-all duration-500 ease-out hover:scale-105 hover:shadow-xl hover:-translate-y-1 ${
+                    brand.id === 'sportstech' ? 'border-green-500 ring-1 ring-green-200 hover:ring-2 hover:ring-green-300' : 'border-gray-200 hover:border-gray-300'
+                  }`}
+                  style={{
+                    animationDelay: `${index * 100}ms`
+                  }}
+                >
+                  {/* Badge for mobile */}
+                  {brand.id === 'sportstech' && brand.badge[locale] && (
+                    <div className="flex justify-between items-start mb-3">
+                      <div className="bg-green-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                        {brand.badge[locale]}
                       </div>
-                    )}
-                  </div>
-
-                  {/* Content */}
-                  <div className="md:w-3/5 p-6">
-                    <div className="h-full flex flex-col">
-                      {/* Title and Rating */}
-                      <div className="mb-4">
-                        <h2 className="text-xl font-bold text-gray-900 mb-2">
-                          {treadmill.brand} {treadmill.model}
-                        </h2>
-                        <StarRating rating={treadmill.rating} />
-                      </div>
-
-                      {/* Summary */}
-                      <p className="text-gray-600 text-sm mb-6 flex-grow">
-                        {treadmill.summary[locale]}
-                      </p>
-
-                      {/* Actions */}
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <Link 
-                          href={`${getBasePath()}/brands/${treadmill.slug}`}
-                          className="flex-1 bg-primary-600 text-white text-center py-2 px-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
-                        >
-                          {pageTexts.readReview[locale]}
-                        </Link>
+                      <div className="bg-green-500 text-white p-1 rounded-full">
+                        <Award className="w-4 h-4" />
                       </div>
                     </div>
+                  )}
+                  
+                  {/* Product Info */}
+                  <div className="text-center mb-4">
+                    <div className="w-full h-32 mb-3 bg-gray-50 rounded-md flex items-center justify-center overflow-hidden">
+                      <img 
+                        src={brand.image} 
+                        alt={`${brand.brand} ${brand.model}`}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">
+                      {brand.brand} {brand.model}
+                    </h3>
+                    <div className="mb-3">
+                      {renderStars(brand.rating)}
+                    </div>
+                  </div>
+
+                  {/* Features List for Mobile */}
+                  <div className="space-y-3 mb-4">
+                    {featureRows.map((feature) => (
+                      <div key={feature.key} className="flex justify-between items-start py-2 border-b border-gray-100 last:border-b-0">
+                        <span className="font-medium text-gray-700 text-sm flex-1 pr-3">
+                          {feature.label[locale]}
+                        </span>
+                        <span className={`text-sm text-right flex-1 ${
+                          brand.id === 'sportstech' ? 'text-green-800 font-medium' : 'text-gray-700'
+                        }`}>
+                          {brand.features[feature.key][locale]}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Review Button for Mobile */}
+                  <div className="mt-4">
+                    <Link 
+                      href={`${getBasePath()}/brands/${brand.slug}`}
+                      className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                        brand.id === 'sportstech' 
+                          ? 'bg-green-600 text-white hover:bg-green-700' 
+                          : 'bg-primary-600 text-white hover:bg-primary-700'
+                      }`}
+                    >
+                      {pageText.readReview[locale]}
+                    </Link>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              ))}
+            </div>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            {pageTexts.needHelpTitle[locale]}
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            {pageTexts.needHelpText[locale]}
-          </p>
-          <Link 
-            href={`${getBasePath()}/guide`}
-            className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors"
-          >
-            {pageTexts.viewGuide[locale]}
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+            {/* Tablet/Desktop Table View (>= 768px) */}
+            <div className="hidden md:block bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="w-full">
+                <table className="w-full table-fixed">
+                  {/* Product Cards Header */}
+                  <thead>
+                    <tr className="bg-gray-100">
+                      <th className="p-3 lg:p-4 text-center font-semibold text-gray-700 w-1/5">
+                        <span className="text-sm lg:text-base">{pageText.model[locale]}</span>
+                      </th>
+                      {walkingPadsData.map((brand, index) => (
+                        <th key={brand.id} className="p-2 lg:p-4 text-center w-1/5">
+                          <div 
+                            className={`relative bg-white rounded-lg p-3 lg:p-4 shadow-md border transform transition-all duration-500 ease-out hover:scale-105 hover:shadow-xl hover:-translate-y-2 ${
+                              brand.id === 'sportstech' ? 'border-green-500 ring-1 ring-green-200 hover:ring-2 hover:ring-green-300' : 'border-gray-200 hover:border-gray-300'
+                            }`}
+                            style={{
+                              animationDelay: `${(index + 1) * 100}ms`
+                            }}
+                          >
+                            {/* Badge only for Sportstech */}
+                            {brand.id === 'sportstech' && brand.badge[locale] && (
+                              <>
+                                <div className="absolute -top-2 lg:-top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white text-xs px-2 lg:px-3 py-1 rounded-full font-semibold z-10">
+                                  {brand.badge[locale]}
+                                </div>
+                                <div className="absolute -top-2 -right-2 bg-green-500 text-white p-1 rounded-full">
+                                  <Award className="w-3 lg:w-4 h-3 lg:h-4" />
+                                </div>
+                              </>
+                            )}
+                            
+                            <div className="pt-1 lg:pt-2">
+                              <div className="w-full h-24 lg:h-32 mb-2 lg:mb-3 bg-gray-50 rounded-md flex items-center justify-center overflow-hidden">
+                                <img 
+                                  src={brand.image} 
+                                  alt={`${brand.brand} ${brand.model}`}
+                                  className="max-w-full max-h-full object-contain"
+                                />
+                              </div>
+                              <h3 className="font-bold text-xs lg:text-sm mb-2 text-gray-800 leading-tight">
+                                {brand.brand} {brand.model}
+                              </h3>
+                              <div className="mb-2 lg:mb-3">
+                                {renderStars(brand.rating)}
+                              </div>
+                              
+                              {/* Review Button */}
+                              <Link 
+                                href={`${getBasePath()}/brands/${brand.slug}`}
+                                className={`inline-block w-full text-center py-2 px-3 rounded-lg font-semibold text-xs lg:text-sm transition-colors ${
+                                  brand.id === 'sportstech' 
+                                    ? 'bg-green-600 text-white hover:bg-green-700' 
+                                    : 'bg-primary-600 text-white hover:bg-primary-700'
+                                }`}
+                              >
+                                {pageText.readReview[locale]}
+                              </Link>
+                            </div>
+                          </div>
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+
+                  {/* Feature Rows */}
+                  <tbody>
+                    {featureRows.map((feature, index) => (
+                      <tr key={feature.key} className={`border-t ${
+                        index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
+                      }`}>
+                        <td className="p-3 lg:p-4 font-semibold text-gray-700 bg-gray-100 border-r w-1/5">
+                          <span className="text-xs lg:text-sm">{feature.label[locale]}</span>
+                        </td>
+                        {walkingPadsData.map((brand) => (
+                          <td key={brand.id} className={`p-2 lg:p-4 text-center text-xs lg:text-sm w-1/5 ${
+                            brand.id === 'sportstech' ? 'bg-green-50 font-medium' : ''
+                          }`}>
+                            <div className={`${brand.id === 'sportstech' ? 'text-green-800' : 'text-gray-700'}`}>
+                              {brand.features[feature.key][locale]}
+                            </div>
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Bottom Summary */}
+              <div className="bg-gradient-to-r from-green-50 to-green-100 p-4 lg:p-6 border-t">
+                <div className="text-center">
+                  <h3 className="text-base lg:text-lg font-bold text-green-800 mb-2">
+                    {pageText.recommendation.title[locale]}
+                  </h3>
+                  <p className="text-green-700 text-sm lg:text-base max-w-3xl mx-auto">
+                    {pageText.recommendation.text[locale]}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Summary */}
+            <div className="md:hidden bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-4 border">
+              <div className="text-center">
+                <h3 className="text-base font-bold text-green-800 mb-2">
+                  {pageText.recommendation.title[locale]}
+                </h3>
+                <p className="text-green-700 text-sm">
+                  {pageText.recommendation.text[locale]}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

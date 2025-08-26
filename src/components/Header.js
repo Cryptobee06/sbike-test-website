@@ -64,11 +64,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <Link href={`${getBasePath()}/`} className="flex items-center">
             <div className="text-2xl font-bold text-primary-600">
-              {t('logo')}
+               <img src= {t('logo')} className='xl:w-[90%] lg:w-[80%] md:w-[90%] w-[60%]'></img>
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             <Link 
               href={`${getBasePath()}/reviews`}
               className={`px-3 py-2 text-sm font-medium transition-colors ${
