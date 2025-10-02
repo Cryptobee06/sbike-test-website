@@ -13,27 +13,27 @@ const testData = [
   {
     id: 'speedTest',
     icon: Gauge,
-    image: '/images/testing/speed.jpg',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/speed.jpg',
   },
   {
     id: 'durabilityTest',
     icon: Wrench,
-    image: '/images/testing/durability-test.jpeg',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/durability-test.jpeg',
   },
   {
     id: 'inclineTest',
     icon: Mountain,
-    image: '/images/testing/incline.webp',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/incline.webp',
   },
   {
     id: 'noiseTest',
     icon: Volume2,
-    image: '/images/testing/noise-test.jpg',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/noise-test.jpg',
   },
   {
     id: 'comfortTest',
     icon: Sparkles,
-    image: '/images/testing/comforthome.jpg',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/comforthome.jpg',
   },
 ];
 

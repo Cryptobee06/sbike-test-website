@@ -12,8 +12,12 @@ export async function generateMetadata() {
     title: 'Treadmill Buying Guide 2025 - Expert Tips & Advice',
     description: 'Complete treadmill buying guide with expert tips on motor power, belt size, incline settings, and more. Make the right choice for your fitness goals.',
     keywords: 'treadmill buying guide, treadmill features, motor power, belt size, incline settings, home treadmill advice',
+    icons: {
+      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+        },
   };
 }
+
 
 export default function GuidePage() {
   return (

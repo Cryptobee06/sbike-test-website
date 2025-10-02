@@ -12,7 +12,7 @@ const teamMembers = [
       en: 'NASM certified trainer with 12+ years experience testing fitness equipment.',
       de: 'NASM zertifizierter Trainer mit 12+ Jahren Erfahrung im Testen von Fitnessgeräten.'
     },
-    image: '/images/trainer-1.jpg'
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/trainer-1.jpg'
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const teamMembers = [
       en: 'PhD in Exercise Science, specializing in gait analysis and injury prevention.',
       de: 'PhD in Sportwissenschaft, spezialisiert auf Ganganalyse und Verletzungsprävention.'
     },
-    image: '/images/team1.png'
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/team1.png'
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const teamMembers = [
       en: 'Mechanical engineer focused on motor performance and durability testing.',
       de: 'Experte in Motorentechnologie und Haltbarkeitstests'
     },
-    image: '/images/team3.png'
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/team3.png'
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const teamMembers = [
       en: 'Certified personal trainer specializing in home fitness solutions.',
       de: 'Zertifizierte Fitnesstrainerin mit Fokus auf Home-Fitness-Lösungen und Nutzerfreundlichkeit'
     },
-    image: '/images/team4.png'
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/team4.png'
   }
 ];
 

@@ -12,7 +12,7 @@ const brands = [
 
 const testData = {
   Sportstech: {
-      image: '/images/sporstechtest.png',
+      image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/sporstechtest.png',
       overallScore: 4.86,
       status: 'Bestanden',
     features: [
@@ -107,7 +107,7 @@ const testData = {
     
   },
   Citysports: {
-      image: '/CITYSPORTS/citysportstest.png',
+      image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/citysportstest.png',
       overallScore: 3.84,
       status: 'Bestanden',
     features: [
@@ -196,7 +196,7 @@ const testData = {
     
   },
   Kiddoza: {
-    image: '/images/kiddozatest.png',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/kiddozatest.png',
     overallScore: 3.48,
     status: 'Bestanden',
     features: [
@@ -284,7 +284,7 @@ const testData = {
     }
   },
   Superun: {
-    image: '/images/superuntest.png',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/superuntest.png',
     overallScore: 4.04,
     status: 'Bestanden',
     features: [
@@ -373,7 +373,7 @@ const testData = {
     }
   },
   Urevo: {
-    image: '/images/urevotest.jpg',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/urevotest.jpg',
     overallScore: 4.15,
     status: 'Bestanden',
     features: [
@@ -514,7 +514,7 @@ export default function TestingProcessPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img
-                src="/images/trainer-1.jpg"
+                src="https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/trainer-1.jpg"
                 alt="Steve Austin"
                 className="rounded-lg shadow-lg w-96 h-96 object-cover"
               />
@@ -977,7 +977,7 @@ entscheidend sind.
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-8">
               <div className="flex items-start space-x-4">
                 <img
-                  src="/images/trainer-1.jpg"
+                  src="https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/trainer-1.jpg"
                   alt="Steve Austin"
                   className="w-16 h-16 rounded-full object-cover"
                 />

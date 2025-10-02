@@ -8,7 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 .treadmill-bacgroundimage{
-  background-image: url('/images/treadmills/nor-banner.jpg') !important;
+  background-image: url('https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/treadmills/nor-banner.jpg') !important;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -79,6 +79,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+.background-banner {
+  background-image: url('https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Banner+2.png');
+  background-repeat: no-repeat;
+  background-size: cover;       /* scales image proportionally to always cover */
+  background-position: center;  /* keeps image centered on all screens */
 }
 
 @media (prefers-color-scheme: dark) {

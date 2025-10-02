@@ -19,7 +19,7 @@ const blogPosts = [
       en: 'Jan 15, 2025',
       de: '15. Jan 2025'
     },
-    image: '/images/blog/blog1.webp'
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/blog/blog1.webp'
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const blogPosts = [
       en: 'Jan 10, 2025',
       de: '10. Jan 2025'
     },
-    image: '/images/blog/blog2.webp'
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/blog/blog2.webp'
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const blogPosts = [
       en: 'Jan 5, 2025',
       de: '5. Jan 2025'
     },
-    image: '/images/blog/blog3.jpg'
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/blog/blog3.jpg'
   }
 ];
 

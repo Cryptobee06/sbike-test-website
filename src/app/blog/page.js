@@ -7,6 +7,9 @@ export async function generateMetadata() {
       'Expert insights, training tips, and the latest news in fitness technology and treadmill innovation. Stay updated with professional advice.',
     keywords:
       'fitness blog, treadmill training, workout tips, fitness technology, running advice',
+      icons: {
+        icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+          },
   };
 }
 

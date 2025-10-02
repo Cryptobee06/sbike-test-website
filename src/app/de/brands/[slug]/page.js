@@ -8,11 +8,11 @@ const brandData = {
   'sportstech': {
     name: 'Sportstech',
     images: [
-      '/sporstech/100-Sportstech-Laufband-sTreadPro (1).jpg',
-      '/sporstech/create (1).jpeg',
-      '/sporstech/create (2).jpeg',
-      '/sporstech/create (3).jpeg',
-      '/sporstech/create.jpeg',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/sporstech/100-Sportstech-Laufband-sTreadPro+(1).jpg',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/sporstech/create+(1).jpeg',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/sporstech/create+(2).jpeg',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/sporstech/create+(3).jpeg',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/sporstech/create.jpeg',
     ],
     features: {
       en: [
@@ -61,7 +61,7 @@ const brandData = {
       de: 'Die innovativen Fitnessgeräte von Sportstech, insbesondere das sWalk Lite Walkingpad, stehen für durchdachtes Home-Fitness-Design. Mit smarten Funktionen wie App-Konnektivität, leiser Performance und platzsparender Bauweise gehört Sportstech zu den beliebtesten Marken im Walking Pad-Vergleich.'
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
-    bannerImage: '/images/treadmills/sportstech-banner.webp',
+    bannerImage: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/treadmills/sportstech-banner.webp',
     // features: {
     //   en: 'The Sportstech F15 features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface. The advanced cushioning system reduces joint impact by up to 40%. Smart features include Bluetooth connectivity, heart rate monitoring, and compatibility with fitness apps.The Sportstech F15 features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface.The advanced cushioning system reduces joint impact by up to 40%.',
     //   de: 'Das Sportstech F15 verfügt über einen leistungsstarken 2,5 PS Motor, 15% maximale Steigung und eine geräumige 125x40cm Lauffläche. Das fortschrittliche Dämpfungssystem reduziert die Gelenkbelastung um bis zu 40%. Smart-Features umfassen Bluetooth-Konnektivität, Herzfrequenzüberwachung und Kompatibilität mit Fitness-Apps.'
@@ -105,11 +105,11 @@ const brandData = {
 
     name: 'Citysports',
     images: [
-      '/CITYSPORTS/city04.png',
-      '/CITYSPORTS/city03.png',
-      '/CITYSPORTS/city01.png',
-      '/CITYSPORTS/city02.png',
-      '/CITYSPORTS/city05.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city04.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city03.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city01.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city02.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city05.png',
     ],
     features: {
       en: [
@@ -144,7 +144,7 @@ const brandData = {
       de: 'Das Citysports CS-WP6 bietet als Under-Desk Walkingpad eine praktische und günstige Einstiegslösung für tägliche Bewegung. Es überzeugt durch leisen Betrieb, einfache Bedienbarkeit und transportfreundliches Design. Wer gelegentlich und platzsparend trainieren will, findet hier eine solide Lösung – auch wenn Profis oder intensivere Nutzer ggf. ein Laufband mit längerer Lauffläche oder mehr Speed bevorzugen.'
     },
 
-    bannerImage: '/images/treadmills/nor-banner.jpg',
+    bannerImage: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/treadmills/nor-banner.jpg',
 
     pros: {
       en: [
@@ -186,11 +186,11 @@ const brandData = {
 
     name: 'Kiddoza',
     images: [
-      '/Kiddoza/kiddoza05.png',
-      '/Kiddoza/kiddoza04.png',
-      '/Kiddoza/kiddoza01.png',
-      '/Kiddoza/kiddoza02.png',
-      '/Kiddoza/kiddoza03.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza05.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza04.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza01.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza02.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza03.png',
   
 
     ],
@@ -234,7 +234,7 @@ const brandData = {
       de: 'Das Kiddoza Under desk walking pad, ist das optimale Walking Pad für Zuhause, das hochwertige Ausstattung zum fairen Preis bietet. Mit iFit-Kompatibilität, smarter Steuerung und starker Leistung ist es eine Top-Wahl für alle, die ein leises Laufband unter dem Schreibtisch suchen.'
     },
 
-        bannerImage: '/images/treadmills/proform-banner.webp',
+        bannerImage: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/treadmills/proform-banner.webp',
 
 
     pros: {
@@ -273,11 +273,11 @@ const brandData = {
   'Superun': {
     name: 'Superun',
   images: [
-    '/Superun Raceable Walking Pad/superun04.png',
-    '/Superun Raceable Walking Pad/superun05.png',
-    '/Superun Raceable Walking Pad/superun01.png',
-    '/Superun Raceable Walking Pad/superun02.png',
-    '/Superun Raceable Walking Pad/superun03.png',
+    'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun04.png',
+    'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun05.png',
+    'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun01.png',
+    'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun02.png',
+    '',
 
   ],
   features: {
@@ -319,7 +319,7 @@ const brandData = {
       de: 'Superun ist bekannt für zuverlässige, gut gebaute Laufbänder, die sich auf Einfachheit und Haltbarkeit konzentrieren. Das 7.8 AT repräsentiert ihr Engagement für Qualitätskonstruktion und benutzerfreundliches Design.'
     },
 
-        bannerImage: '/images/treadmills/horizon-banner.avif',
+        bannerImage: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/treadmills/horizon-banner.avif',
 
 
     pros: {
@@ -359,7 +359,7 @@ const brandData = {
   'Urevo': {
     name: 'Urevo',
     images: [
-      '/UREVO/ureo04.png',
+      'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/UREVO/ureo04.png',
       '/UREVO/ureo03.png', 
       '/UREVO/ureo01.png',
       '/UREVO/ureo02.png',
@@ -461,7 +461,10 @@ export async function generateMetadata({ params }) {
   if (!brand) {
     return {
       title: 'Brand Not Found',
-      description: 'The requested brand page could not be found.'
+      description: 'The requested brand page could not be found.',
+      icons: {
+        icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+          },
     };
   }
   
@@ -469,7 +472,12 @@ export async function generateMetadata({ params }) {
     title: `${brand.name} ${brand.model} Review - Expert Testing & Analysis`,
     description: brand.description[locale],
     keywords: `${brand.name}, ${brand.model}, treadmill review, fitness equipment test`,
+    icons: {
+      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+        },
+
   };
+  
 }
 
 export default function BrandPage({ params }) {

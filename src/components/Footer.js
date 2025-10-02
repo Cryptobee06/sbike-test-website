@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="text-2xl font-bold text-primary-400 mb-4">
-             <img src= '/logo.png' className='xl:w-[50%] lg:w-[50%] md:w-[40%] w-[60%]'></img>
+             <img src= 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/logo.png' className='xl:w-[50%] lg:w-[50%] md:w-[40%] w-[60%]'></img>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               {locale === 'en' 

@@ -9,7 +9,7 @@ const reviewsData = [
     rating: 5,
     review:
       'Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk Lite war ein Volltreffer!',
-    avatar: '/images/customer/cus1.jpg',
+    avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus1.jpg',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const reviewsData = [
     rating: 5,
     review:
       'Very thorough reviews with real performance data. I appreciate the detailed testing process and honest pros/cons for each model.',
-      avatar: '/images/customer/cus2.webp',
+      avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus2.webp',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const reviewsData = [
     rating: 4.8,
     review:
       'Great resource for treadmill comparisons. The buying guide was especially helpful for understanding what features matter most.',
-      avatar: '/images/customer/cus3.webp',
+      avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus3.webp',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const reviewsData = [
     rating: 5,
     review:
       "Professional and unbiased reviews. The team clearly knows what they're talking about. Saved me from buying the wrong treadmill!",
-      avatar: '/images/customer/cus4.webp',
+      avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus4.webp',
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const reviewsData = [
     rating: 4.9,
     review:
       'Comprehensive testing and easy-to-understand explanations. The noise level tests were particularly useful for my apartment living situation.',
-      avatar: '/images/customer/cus5.jpg',
+      avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus5.jpg',
   },
 ];
 

@@ -3,11 +3,11 @@ import { useTranslations } from '@/contexts/LanguageContext';
 import Image from 'next/image';
 
 const brands = [
-  { name: 'Sportstech', logo: '/images/products/sportstech.png' },
-  { name: 'NordicTrack', logo: '/images/citysports.png' },
-  { name: 'ProForm', logo: '/images/superun.png' },
-  { name: 'Horizon Fitness', logo: '/images/urevo.webp' },
-  { name: 'Life Fitness', logo: '/images/kiddoza.jpg' },
+  { name: 'Sportstech', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/products/sportstech.png' },
+  { name: 'NordicTrack', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/citysports.png' },
+  { name: 'ProForm', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/superun.png' },
+  { name: 'Horizon Fitness', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/urevo.webp' },
+  { name: 'Life Fitness', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/kiddoza.jpg' },
 ];
 
 export default function PopularBrands() {

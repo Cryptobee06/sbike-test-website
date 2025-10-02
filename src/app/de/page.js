@@ -19,6 +19,9 @@ export async function generateMetadata() {
       description: 'Unabhängige Laufband-Bewertungen von zertifizierten Fitness-Profis',
       type: 'website',
     },
+    icons: {
+      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+        },
   };
 }
 

@@ -7,6 +7,9 @@ export async function generateMetadata() {
     title: 'Walkingpad Reviews 2025 - Expert Testing & Ratings',
     description: 'Comprehensive Walkingpad reviews and ratings from fitness experts. Compare top brands and models to find the perfect Walkingpad for your home gym.',
     keywords: 'Walkingpad reviews 2025, best Walkingpads, Walkingpad comparison, fitness equipment reviews',
+    icons: {
+      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+        },
   };
 }
 

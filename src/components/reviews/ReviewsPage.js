@@ -17,7 +17,7 @@ const walkingPadsData = [
       de: 'Testsieger 2025'
     },
     badgeColor: 'bg-green-500',
-    image: '/images/treadmills/sportstech-treadmill.jpg',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/treadmills/sportstech-treadmill.jpg',
     price: '599.00',
     originalPrice: null,
     
@@ -93,7 +93,7 @@ const walkingPadsData = [
       de: ''
     },
     badgeColor: 'bg-blue-500',
-    image: '/CITYSPORTS/city04.png',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city04.png',
     price: '299.00',
     originalPrice: '349.00',
     features: {
@@ -142,7 +142,7 @@ const walkingPadsData = [
       de: ''
     },
     badgeColor: 'bg-purple-500',
-    image: '/Kiddoza/kiddoza04.png',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza04.png',
     price: '449.00',
     originalPrice: '499.00',
     features: {
@@ -191,7 +191,7 @@ const walkingPadsData = [
       de: ''
     },
     badgeColor: 'bg-orange-500',
-    image: '/Superun Raceable Walking Pad/superun04.png',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun04.png',
     price: '399.00',
     originalPrice: null,
     features: {
@@ -240,7 +240,7 @@ const walkingPadsData = [
       de: ''
     },
     badgeColor: 'bg-teal-500',
-    image: '/UREVO/ureo04.png',
+    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/UREVO/ureo04.png',
     price: '379.00',
     originalPrice: '429.00',
     features: {

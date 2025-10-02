@@ -8,10 +8,10 @@ export default function HeroSection() {
   const t = useTranslations('homepage');
 
   return (
-    <section className="relative w-full py-28 sm:py-36 bg-primary-herobg text-white overflow-hidden">
+    <section className="relative w-full py-28 sm:py-36 background-banner text-white overflow-hidden">
       {/* Animated SVG Circles Background */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <svg
+        {/* <svg
           className="w-full h-full animate-pulse"
           preserveAspectRatio="xMidYMid slice"
           xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ export default function HeroSection() {
           <circle cx="30%" cy="40%" r="320" fill="rgba(255,255,255,0.03)" />
           <circle cx="70%" cy="30%" r="260" fill="rgba(255,255,255,0.05)" />
           <circle cx="50%" cy="75%" r="200" fill="rgba(255,255,255,0.04)" />
-        </svg>
+        </svg> */}
       </div>
 
       {/* Main Content */}

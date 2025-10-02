@@ -9,6 +9,9 @@ export async function generateMetadata() {
     title: 'Über uns - Experten Walkingpad-Test Team & Bewertungsstandards',
     description: 'Erfahren Sie mehr über unser Expertenteam, rigorose Testmethodik und transparente Bewertungsstandards. Professionelle Laufband-Bewertungen, denen Sie vertrauen können.',
     keywords: 'über Walkingpad-Bewertungen, Experten-Test Team, Bewertungsmethodik, Fitnessgeräte Standards',
+    icons: {
+      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+        },
   };
 }
 
