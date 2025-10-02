@@ -64,7 +64,7 @@ export default function LayoutWrapper({ children }) {
 
   return (
     <html lang={safeLocale}>
-      <head>
+      <Head>
         <title>{safeMetadata.title}</title>
         <meta name="description" content={safeMetadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -79,7 +79,7 @@ export default function LayoutWrapper({ children }) {
             })(window,document,'script','dataLayer','GTM-PWCLHL2K');`
           }}
         />
-      </head>
+      </Head>
       <body className={inter.className}>
           {/* Google Tag Manager (noscript) in Body */}
           <noscript>
