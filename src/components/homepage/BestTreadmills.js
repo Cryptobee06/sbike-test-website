@@ -1,82 +1,82 @@
-'use client';
-import { useTranslations, useLocale } from '@/contexts/LanguageContext';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import Link from 'next/link';
+"use client";
+import { useTranslations, useLocale } from "@/contexts/LanguageContext";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Link from "next/link";
 
 const treadmillsData = [
   {
-    id: 'sportstech',       
-    brand: 'Sportstech',
-    model: 'sWalk Lite',
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/products/treadmill-sportstech.webp',
+    id: "sportstech",
+    brand: "Sportstech",
+    model: "sWalk Lite",
+    image:
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/products/treadmill-sportstech.webp",
     rating: 4.9,
-    badge: 'testWinner',
-    badgeColor: 'bg-yellow-500',
-    link: 'https://www.sportstech.de/laufband/swalk-lite'
+    badge: "testWinner",
+    badgeColor: "bg-yellow-500",
+    link: "https://www.sportstech.de/laufband/swalk-lite",
   },
   {
-    id: 'Citysports',
-    brand: 'Citysports',
-    model: 'CS-WP6',
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city04.png',
+    id: "Citysports",
+    brand: "Citysports",
+    model: "CS-WP6",
+    image:
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city04.png",
     rating: 4.8,
-    badge: '',
-    badgeColor: 'bg-blue-500',
+    badge: "",
+    badgeColor: "bg-blue-500",
     // link: '/warningpage'
-    
   },
   {
-    id: 'kiddoza',
-    brand: 'kiddoza',
-    model: 'Under desk walking pad',
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza04.png',
+    id: "kiddoza",
+    brand: "kiddoza",
+    model: "Under desk walking pad",
+    image:
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza04.png",
     rating: 4.6,
-    badge: '',
-    badgeColor: 'bg-gray-500',
+    badge: "",
+    badgeColor: "bg-gray-500",
     //  link: '/warningpage'
   },
   {
-    id: 'Superun',
-    brand: 'Superun',
-    model: 'B,A06-С',
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun04.png',
+    id: "Superun",
+    brand: "Superun",
+    model: "B,A06-С",
+    image:
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun04.png",
     rating: 4.5,
-    badge: 'bestValue',
-    badgeColor: 'bg-green-500',
+    badge: "",
+    badgeColor: "bg-green-500",
     // link: '/warningpage'
   },
   {
-    id: 'sportstech',
-    brand: 'Sportstech',
-    model: 'sWalk Lite',
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/products/treadmill-sportstech.webp',
-    rating: 4.9,
-    badge: 'testWinner',
-    badgeColor: 'bg-yellow-500',
-   link: 'https://www.sportstech.de/laufband/swalk-lite'
+    id: "Merach",
+    brand: "Merach",
+    model: "F-R2024",
+    image: "/Merach/IMG_0045.png",
+    rating: 4.6,
+    badge: "",
+    badgeColor: "bg-red-500",
   },
   {
-    id: 'Citysports',
-    brand: 'Citysports',
-    model: 'CS-WP6',
-    image: '/CITYSPORTS/city04.png',
-    rating: 4.8,
-    badge: '',
-    badgeColor: 'bg-blue-500',
-    // link: '/warningpage'
+    id: "Cursor ",
+    brand: "Cursor ",
+    model: "T26B1",
+    image: "/Cursor/Cursor-fitness-walking-pad-removebg-preview.png",
+    rating: 3.9,
+    badge: "",
+    badgeColor: "bg-red-500",
   },
-  
 ];
 
 const getBadgeText = (badgeType, t) => {
-  if (badgeType === 'testWinner') {
-    return t('sportstech.badge');
+  if (badgeType === "testWinner") {
+    return t("sportstech.badge");
   }
-  return '';
+  return "";
 };
 
 const StarRating = ({ rating }) => {
@@ -87,11 +87,15 @@ const StarRating = ({ rating }) => {
   return (
     <div className="flex items-center space-x-1 mt-2">
       {[...Array(fullStars)].map((_, i) => (
-        <span key={i} className="text-yellow-400 text-lg">★</span>
+        <span key={i} className="text-yellow-400 text-lg">
+          ★
+        </span>
       ))}
       {hasHalfStar && <span className="text-yellow-400 text-lg">☆</span>}
       {[...Array(emptyStars)].map((_, i) => (
-        <span key={i} className="text-gray-300 text-lg">★</span>
+        <span key={i} className="text-gray-300 text-lg">
+          ★
+        </span>
       ))}
       <span className="text-sm text-gray-600 ml-2">{rating}</span>
     </div>
@@ -99,7 +103,7 @@ const StarRating = ({ rating }) => {
 };
 
 export default function BestTreadmills() {
-  const t = useTranslations('homepage.bestTreadmills');
+  const t = useTranslations("homepage.bestTreadmills");
   const locale = useLocale();
 
   return (
@@ -107,7 +111,7 @@ export default function BestTreadmills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {t('title')}
+            {t("title")}
           </h2>
           {/* <div>            <a  className="text-gray-300 hover:text-primary-400 transition-colors" href='/warning'>hello</a></div> */}
           {/* <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -130,12 +134,12 @@ export default function BestTreadmills() {
           breakpoints={{
             768: {
               slidesPerView: 2,
-              slidesPerGroup: 2
+              slidesPerGroup: 2,
             },
             1024: {
               slidesPerView: 3,
-              slidesPerGroup: 3
-            }
+              slidesPerGroup: 3,
+            },
           }}
           className="pb-20"
         >
@@ -143,8 +147,10 @@ export default function BestTreadmills() {
             <SwiperSlide key={`${treadmill.id}-${treadmill.model}-${index}`}>
               <div className="h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col overflow-hidden card-height">
                 <div className="relative">
-                  {treadmill.badge === 'testWinner' && (
-                    <span className={`absolute top-4 left-4 ${treadmill.badgeColor} text-white px-3 py-1 rounded-full text-sm font-bold shadow z-10`}>
+                  {treadmill.badge === "testWinner" && (
+                    <span
+                      className={`absolute top-4 left-4 ${treadmill.badgeColor} text-white px-3 py-1 rounded-full text-sm font-bold shadow z-10`}
+                    >
                       {getBadgeText(treadmill.badge, t)}
                     </span>
                   )}
@@ -164,23 +170,21 @@ export default function BestTreadmills() {
                   </p>
                   <StarRating rating={treadmill.rating} />
                   <div className="mt-auto pt-5">
-                  <a
+                    <a
                       href={treadmill.link}
-                      target={treadmill.link !== '#' ? '_blank' : '_self'}
-                      rel={treadmill.link !== '#' ? 'noopener noreferrer' : ''}
+                      target={treadmill.link !== "#" ? "_blank" : "_self"}
+                      rel={treadmill.link !== "#" ? "noopener noreferrer" : ""}
                       className="block w-full bg-primary-500 hover:bg-primary-600 text-white text-center py-2.5 rounded-lg font-semibold transition"
                     >
-                      {t('buyNow')}
+                      {t("buyNow")}
                     </a>
-                </div>
-
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-
     </section>
   );
 }

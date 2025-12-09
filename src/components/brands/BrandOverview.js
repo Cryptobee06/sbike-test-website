@@ -24,12 +24,11 @@ export default function BrandOverview({ brand }) {
     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
                    font-extrabold mb-4 sm:mb-6 drop-shadow-lg leading-tight">
       {brand.name}{' '}
-      <span className="text-blue-200">{brand.model}</span>{' '}
-      {/* {t('title')} */}
+      <span className="text-blue-200">{brand.model}</span>
     </h1>
 
     <p className="text-sm sm:text-base md:text-lg lg:text-xl 
-                  font-medium leading-relaxed tracking-wide drop-shadow-md">
+                  font-medium leading-relaxed tracking-wide drop-shadow-md ">
       {brand.description[locale]}
     </p>
   </div>

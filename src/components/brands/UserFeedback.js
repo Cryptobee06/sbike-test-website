@@ -330,7 +330,7 @@ const feedbackData = {
     ],
     de: [
       {
-        id: 16,
+        id: 19,
         name: 'Tim',
         avatar: 'T',
         rating: 4,
@@ -339,7 +339,7 @@ const feedbackData = {
 
       },
       {
-        id: 17,
+        id:20,
         name: 'Felix',
         avatar: 'F',
         rating: 3,
@@ -348,7 +348,7 @@ const feedbackData = {
 
       },
       {
-        id: 18,
+        id: 21,
         name: 'Emilia',
         avatar: 'E',
         rating: 3,
@@ -358,6 +358,297 @@ const feedbackData = {
       }
     ]
   },
+  copant : {
+    en: [
+      {
+        id: 19,
+        name: 'Oliver H.',
+        avatar: 'O',
+        rating: 4,
+        comment: '“Great for basic walking and fits perfectly under my desk, but the belt length is a bit short for a natural stride.” ',
+        date: '3 hours ago',
+
+      },
+      {
+        id: 20,
+        name: 'Ava M.',
+        avatar: 'A',
+        rating: 3,
+        comment: '“Quiet and compact, but I wish the speed went beyond 6 km/h so I could do light jogging.” ',
+        date: ' 2 days ago',
+
+      },
+      {
+        id: 21,
+        name: 'Liam D.',
+        avatar: 'L',
+        rating: 3,
+        comment: '“Good for simple use but not for long workouts - cushioning could be better for knees.”',
+        date: '5 days ago',
+
+      }
+    ],
+    de: [
+      {
+        id: 22,
+        name: 'Jonas',
+        avatar: 'J',
+        rating: 4,
+        comment: 'Die KI-Trainingsprogramme und Online-Rennen machen richtig Spaß – so vergeht die Zeit wie im Flug.',
+        date: 'Vor 3 Stunden',
+
+      },
+      {
+        id: 23,
+        name: 'Sarah',
+        avatar: 'S',
+        rating: 3,
+        comment: 'Der Motor läuft sehr leise und das Gerät lässt sich dank der Rollen leicht unter den Schreibtisch schieben. Die Geschwindigkeitsgrenze ist jedoch schnell erreicht',
+        date: 'vor einem Tag',
+
+      },
+      {
+        id: 24,
+        name: 'Felix',
+        avatar: 'E',
+        rating: 3,
+        comment: 'Tolle Kombination aus App-Steuerung und Fernbedienung. Für mein Gewicht von 120 kg bietet der robuste Rahmen guten Halt.',
+        date: 'vor 4 Tagen',
+
+      },
+      {
+        id: 25,
+        name: 'Maja',
+        avatar: 'M',
+        rating: 3,
+        comment: 'Die Multiplayer-Funktion sorgt für zusätzliche Motivation. Ohne Smartphone gehen einige Funktionen aber nicht, das sollte man wissen',
+        date: 'vor einem Monat',
+
+      },
+      
+    ]
+  },
+  merach: {
+    en: [
+      {
+        id: 28,
+        name: 'Lucas W.',
+        avatar: 'L',
+        rating: 3,
+        comment: ' “Very convenient for daily indoor walking, but the deck is smaller than expected and feels tight during faster steps.” ',
+        date: '8 days ago',
+
+      },
+      {
+        id: 29,
+        name: 'Hannah J.',
+        avatar: 'H',
+        rating: 4,
+        comment: ' “I like the quiet motor and portability, but 6 km/h is too slow when I try to jog.” ',
+        date: ' 3 days ago',
+
+      },
+      {
+        id: 30,
+        name: 'Ethan B.',
+        avatar: 'E',
+        rating: 3,
+        comment: '“Good compact treadmill for casual use, but after longer sessions my knees feel some strain due to limited cushioning.”',
+        date: '9 days ago',
+
+      }
+    ],
+    de: [
+      {
+        id: 31,
+        name: 'Lea',
+        avatar: 'L',
+        rating: 4,
+        comment: 'Leise und einfach zu bedienen – perfekt fürs Homeoffice',
+        date: 'Vor 2 Stunden',
+
+      },
+      {
+        id: 32,
+        name: 'Markus',
+        avatar: 'M',
+        rating: 3,
+        comment: 'Angenehmer Laufgurt und App-Abwechslung; für intensives Laufen reicht das Tempo jedoch nicht aus.',
+        date: 'vor einem Tag',
+
+      },
+      {
+        id: 33,
+        name: 'Timo',
+        avatar: 'T',
+        rating: 3,
+        comment: 'Leichtes Gewicht und kompakte Größe; für große Nutzer könnte die Lauffläche länger sein.',
+        date: 'Vor 5 Tagen',
+
+      },
+      {
+        id: 34,
+        name: 'Sophie',
+        avatar: 'S',
+        rating: 3,
+        comment: 'Magnetische Fernbedienung ist praktisch, und die App-Games machen Spaß',
+        date: 'vor einem Monat',
+
+      },
+
+    ]
+  },
+  cursor : {
+    en: [
+      {
+        id: 35,
+        name: 'Oliver R',
+        avatar: 'O',
+        rating: 3,
+        comment: ' “Great for casual walking, but the speed options are quite limited for anything more intense.” ',
+        date: '4 days ago',
+
+      },
+      {
+        id: 36,
+        name: ' Amelia D',
+        avatar: 'A',
+        rating: 4,
+        comment: ' “Compact and quiet, fits perfectly under my desk. I just wish the belt was slightly longer.” ',
+        date: ' 3 days ago',
+
+      },
+      {
+        id: 37,
+        name: ' Viktor S',
+        avatar: 'V',
+        rating: 3,
+        comment: '“Good for basic movement, but not ideal for extended workouts or fast-paced walking.”',
+        date: '6 days ago',
+
+      }
+    ],
+    de: [
+      {
+        id: 38,
+        name: 'Sophia',
+        avatar: 'S',
+        rating: 4,
+        comment: 'Ich bin so happy mit dem Laufband … ideal für Serien & Homeoffice',
+        date: 'Vor 2 Stunden',
+
+      },
+      {
+        id: 39,
+        name: 'Fritz',
+        avatar: 'F',
+        rating: 3,
+        comment: 'Kompakt, praktisch und sofort einsatzbereit.',
+        date: 'vor einem Tag',
+
+      },
+      {
+        id: 40,
+        name: 'Matilda',
+        avatar: 'M',
+        rating: 3,
+        comment: 'Das Gerät kann nicht wirklich was es ist recht laut und es lässt sich analog nach oben stellen.Also die Steigung einstellen was erst mal nicht schlecht ist will man jedoch mal ein bisschen Gas geben. Beim Laufen verzieht sich sofort das Laufband',
+        date: 'Vor 5 Tagen',
+
+      },
+      {
+        id: 41,
+        name: 'Paul',
+        avatar: 'P',
+        rating: 3,
+        comment: 'Etwas billig gemacht der und der an/aus Schalter kommt auf dem Boden und beim transportieren geht er an .Ich hsbe mir eine Steckdose mit einem Schalter besorgt so kann er nicht ungewollt einschalten nicht gerade gut eher schlächt',
+        date: 'vor einem Monat',
+
+      },
+
+    ]
+  },
+  cazvian : {
+    en: [
+      {
+        id: 42,
+        name: ' Sofia K',
+        avatar: 'S',
+        rating: 3,
+        comment: ' “Nice for daily walking, but the motor feels light for longer sessions.”',
+        date: '1 day ago',
+
+      },
+      {
+        id: 43,
+        name: 'Daniel F',
+        avatar: 'D',
+        rating: 4,
+        comment: ' “Easy to store and move, though the speed range is very basic.” ',
+        date: ' 5 days ago',
+
+      },
+      {
+        id: 44,
+        name: 'Harper J',
+        avatar: 'H',
+        rating: 3,
+        comment: ' “Good option for starters, but not for serious fitness routines.”',
+        date: '8 days ago',
+
+      }
+    ],
+    de: [
+      {
+        id: 45,
+        name: 'Anneliese',
+        avatar: 'A',
+        rating: 4,
+        comment: 'Perfekt, um meine Steps zu schaffen. Super kompakt.',
+        date: 'Vor 2 Stunden',
+
+      },
+      {
+        id: 46,
+        name: 'Leon',
+        avatar: 'L',
+        rating: 3,
+        comment: 'Topspeed nur 4,5kmh bei 80kg Motor wird sehr heiß',
+        date: 'vor einem Tag',
+
+      },
+      {
+        id: 47,
+        name: 'Albert',
+        avatar: 'A',
+        rating: 3,
+        comment: 'Es ist kleiner als man es denkt',
+        date: 'Vor 5 Tagen',
+
+      },
+      {
+        id: 48,
+        name: 'Sophie',
+        avatar: 'S',
+        rating: 3,
+        comment: 'Es war zu klein als ich vorgestellt habe',
+        date: 'vor einem Monat',
+
+      },
+       {
+        id: 49,
+        name: 'Karl',
+        avatar: 'K',
+        rating: 3,
+        comment: 'Für den Preis gut – aber keine Programme, kein Komfort wie bei teureren Geräten.',
+        date: 'vor einem Monat',
+
+      },
+
+    ]
+  },
+
+
 };
 // ✅ Helper to pick feedback dynamically
 const generateUserFeedback = (brandName, locale) => {

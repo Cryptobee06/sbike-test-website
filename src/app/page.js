@@ -1,5 +1,3 @@
-
-
 export const dynamic = 'force-static';
 import HeroSection from '@/components/homepage/HeroSection';
 import ExpertOverview from '@/components/homepage/ExpertOverview';
@@ -22,7 +20,7 @@ export async function generateMetadata() {
     },
     icons: {
       icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
-        },
+      },
   };
 }
 
@@ -35,8 +33,7 @@ export default function HomePage() {
       <ExpertOpinion />
       <BestTreadmills />
       <CustomerReviews />
-            <PopularBrands />
-
+      <PopularBrands />
     </div>
   );
 }

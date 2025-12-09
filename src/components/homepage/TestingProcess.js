@@ -63,17 +63,15 @@ export default function TestingProcess() {
                 <button
                   key={test.id}
                   onClick={() => setActiveTest(index)}
-                  className={`w-full text-left transition duration-300 ease-in-out p-5 rounded-2xl border group hover:shadow-md ${
-                    isActive
+                  className={`w-full text-left transition duration-300 ease-in-out p-5 rounded-2xl border group hover:shadow-md ${isActive
                       ? 'bg-blue-50 border-blue-500 shadow-lg scale-[1.02]'
                       : 'bg-white border-gray-200 hover:border-blue-400'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-start gap-4">
                     <Icon
-                      className={`w-6 h-6 mt-1 transition ${
-                        isActive ? 'text-blue-600' : 'text-blue-400 group-hover:text-blue-500'
-                      }`}
+                      className={`w-6 h-6 mt-1 transition ${isActive ? 'text-blue-600' : 'text-blue-400 group-hover:text-blue-500'
+                        }`}
                     />
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-1">
@@ -91,51 +89,50 @@ export default function TestingProcess() {
 
           {/* Right: Image & Details */}
           <div className="sticky top-28">
-          <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-white">
-  {/* Responsive Image */}
-  <div className="w-full h-78 sm:h-74 md:h-80 lg:h-[500px] overflow-hidden">
-    <img
-      src={testData[activeTest].image}
-      alt={t(`${getTestKey(testData[activeTest].id)}.title`)}
-      className="w-full h-full object-cover"
-    />
-  </div>
+            <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-white">
+              {/* Responsive Image */}
+              <div className="w-full h-78 sm:h-74 md:h-80 lg:h-[500px] overflow-hidden">
+                <img
+                  src={testData[activeTest].image}
+                  alt={t(`${getTestKey(testData[activeTest].id)}.title`)}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-  {/* Content */}
-  <div className="p-4 sm:p-6">
-    <div className="flex items-center gap-2 sm:gap-3 mb-2">
-      {(() => {
-        const ActiveIcon = testData[activeTest].icon;
-        return <ActiveIcon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />;
-      })()}
-      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
-        {t(`${getTestKey(testData[activeTest].id)}.title`)}
-      </h3>
-    </div>
+              {/* Content */}
+              <div className="p-4 sm:p-6">
+                <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                  {(() => {
+                    const ActiveIcon = testData[activeTest].icon;
+                    return <ActiveIcon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />;
+                  })()}
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
+                    {t(`${getTestKey(testData[activeTest].id)}.title`)}
+                  </h3>
+                </div>
 
-    <p className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed">
-      {t(`${getTestKey(testData[activeTest].id)}.description`)}
-    </p>
+                <p className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed">
+                  {t(`${getTestKey(testData[activeTest].id)}.description`)}
+                </p>
 
-    <div className="inline-flex items-center px-2 sm:px-3 py-1 
+                <div className="inline-flex items-center px-2 sm:px-3 py-1 
                     bg-green-100 text-green-800 text-xs sm:text-sm 
                     font-medium rounded-full">
-      <svg
-        className="w-3 h-3 sm:w-4 sm:h-4 mr-1"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          fillRule="evenodd"
-          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-          clipRule="evenodd"
-        />
-      </svg>
-      {t('passed')}
-    </div>
-  </div>
-</div>
-
+                  <svg
+                    className="w-3 h-3 sm:w-4 sm:h-4 mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  {t('passed')}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

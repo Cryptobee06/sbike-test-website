@@ -13,13 +13,10 @@ export default function ExpertOverview() {
           "url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1600&q=80')",
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-blue-900 bg-opacity-80"></div>
 
-      {/* Content container */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
         <div className="bg-white rounded-3xl shadow-2xl px-8 py-16 md:px-14 md:py-20 text-center">
-          {/* Badge icon */}
           <div className="mx-auto -mt-24 mb-10 w-24 h-24 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-xl ring-4 ring-white">
             <BadgeCheck className="w-10 h-10" />
           </div>

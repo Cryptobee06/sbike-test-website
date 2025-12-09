@@ -57,8 +57,7 @@ export default function ProductDetails({ brand }) {
                   <li key={index} className="flex items-start">
                      <span className="text-blue-600 mt-1">✔</span>  
                     <span className="text-gray-700 ml-5">{feature}</span>
-                  </li>
-                           
+                  </li>   
                 ))}
               </ul>
         </div>

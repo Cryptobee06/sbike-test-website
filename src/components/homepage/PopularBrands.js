@@ -8,6 +8,11 @@ const brands = [
   { name: 'ProForm', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/superun.png' },
   { name: 'Horizon Fitness', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/urevo.webp' },
   { name: 'Life Fitness', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/kiddoza.jpg' },
+  { name: 'Life Fitness', logo: '/Merach-Logo.webp' },
+  { name: 'Life Fitness', logo: '/Untitled_design__1_-removebg-preview.png' },
+  { name: 'Life Fitness', logo: '/Untitled_design__2_-removebg-preview.png' },
+  
+
 ];
 
 export default function PopularBrands() {
@@ -50,8 +55,10 @@ export default function PopularBrands() {
                 fill
                 className="object-contain transition-transform duration-300 ease-in-out group-hover:scale-105"
               />
+            
             </div>
           ))}
+          <h1 className='text-black text-3xl font-serif  ease-in-out group-hover:scale-105 cursor-pointer'>Copant</h1>
         </div>
       </div>
     </section>

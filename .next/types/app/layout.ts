@@ -1,4 +1,4 @@
-// File: /Users/beeyoond/Desktop/walkingpad-final-code/src/app/layout.js
+// File: C:\Users\Raj\Desktop\Walkingpad4brands\walkingpad-vergleich\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

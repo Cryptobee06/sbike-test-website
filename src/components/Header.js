@@ -9,7 +9,11 @@ const brands = [
   { name: 'Citysports', slug: 'Citysports' },
   { name: 'kiddoza', slug: 'kiddoza' },
   { name: 'Superun', slug: 'Superun' },
-  { name: 'Urevo', slug: 'Urevo' }
+  { name: 'Urevo', slug: 'Urevo' },
+  {name:'Copant',slug:'Copant'},
+  {name:'Merach',slug:'Merach'},
+  {name:'Cursor',slug:'Cursor'},
+  {name:'Cazvian',slug:'Cazvian'},
 ];
 
 export default function Header() {
@@ -31,7 +35,6 @@ export default function Header() {
   const currentPath = pathname.replace(`/${locale}`, '') || '/';
 
   const isActivePath = (path) => {
-
     if (path === '/' && currentPath === '/') return true;
     if (path !== '/' && currentPath.startsWith(path)) return true;
     return false;
