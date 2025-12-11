@@ -345,10 +345,10 @@ const brandData = {
     name: "Urevo",
     images: [
       "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/UREVO/ureo04.png",
-      "/UREVO/ureo03.png",
-      "/UREVO/ureo01.png",
-      "/UREVO/ureo02.png",
-      "/UREVO/ureo05.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Urevo/ureo01.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Urevo/ureo02.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Urevo/ureo03.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Urevo/ureo05.png",
     ],
     features: {
       en: [
@@ -392,7 +392,7 @@ const brandData = {
       de: "Urevo ist ein Premium-Fitnessgeräte-Hersteller mit jahrzehntelanger Erfahrung in kommerziellen Fitnessstudios. Das T5 Track Connect bringt kommerzielle Qualität in die Heimumgebung.",
     },
 
-    bannerImage: "/images/treadmills/life-banner.jpg",
+    bannerImage: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Urevo/life-banner.jpg",
     pros: {
       en: [
         "Sleek, fold-flat build for compact spaces",
@@ -429,11 +429,11 @@ const brandData = {
   Copant: {
     name: "Copant",
     images: [
-      "/Product1/IMG_0009.png",
-      "/Product1/IMG_0015.png",
-      "/Product1/IMG_0016.png",
-      "/Product1/IMG_0019.png",
-      "/Product1/Untitled_design-removebg-preview.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/IMG_0009.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/IMG_0015.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/IMG_0016.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/IMG_0019.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/Untitled_design-removebg-preview.png",
     ],
     features: {
       en: [
@@ -478,7 +478,7 @@ const brandData = {
       de: "Die innovativen Fitnessgeräte von Sportstech, insbesondere das sWalk Lite Walkingpad, stehen für durchdachtes Home-Fitness-Design. Mit smarten Funktionen wie App-Konnektivität, leiser Performance und platzsparender Bauweise gehört Sportstech zu den beliebtesten Marken im Walking Pad-Vergleich.",
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
-    bannerImage: "/Product1/product1brandbanner.jpg", // features: {
+    bannerImage: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/product1brandbanner.jpg", // features: {
     //   en: 'The Sportstech sWalk features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface. The advanced cushioning system reduces joint impact by up to 40%. Smart features include Bluetooth connectivity, heart rate monitoring, and compatibility with fitness apps.The Sportstech F15 features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface.The advanced cushioning system reduces joint impact by up to 40%.',
     //   de: 'Das Sportstech sWalk verfügt über einen leistungsstarken 2,5 PS Motor, 15% maximale Steigung und eine geräumige 125x40cm Lauffläche. Das fortschrittliche Dämpfungssystem reduziert die Gelenkbelastung um bis zu 40%. Smart-Features umfassen Bluetooth-Konnektivität, Herzfrequenzüberwachung und Kompatibilität mit Fitness-Apps.'
     // },
@@ -521,11 +521,11 @@ const brandData = {
   Merach: {
     name: "Merach",
     images: [
-      "/Merach/IMG_0044.png",
-      "/Merach/IMG_0045.png",
-      "/Merach/IMG_0037.png",
-      "/Merach/IMG_0048-removebg-preview.png",
-      "/Merach/IMG_0039-removebg-preview.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/IMG_0044.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/IMG_0045.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/IMG_0037.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/IMG_0048-removebg-preview.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/IMG_0039-removebg-preview.png",
     ],
     features: {
       en: [
@@ -571,7 +571,7 @@ const brandData = {
       de: "Die innovativen Fitnessgeräte von Sportstech, insbesondere das sWalk Lite Walkingpad, stehen für durchdachtes Home-Fitness-Design. Mit smarten Funktionen wie App-Konnektivität, leiser Performance und platzsparender Bauweise gehört Sportstech zu den beliebtesten Marken im Walking Pad-Vergleich.",
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
-    bannerImage: "/Merach/Merachbrandimg2.jpg",
+    bannerImage: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/Merachbrandimg2.jpg",
     // features: {
     //   en: 'The Sportstech sWalk features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface. The advanced cushioning system reduces joint impact by up to 40%. Smart features include Bluetooth connectivity, heart rate monitoring, and compatibility with fitness apps.The Sportstech F15 features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface.The advanced cushioning system reduces joint impact by up to 40%.',
     //   de: 'Das Sportstech sWalk verfügt über einen leistungsstarken 2,5 PS Motor, 15% maximale Steigung und eine geräumige 125x40cm Lauffläche. Das fortschrittliche Dämpfungssystem reduziert die Gelenkbelastung um bis zu 40%. Smart-Features umfassen Bluetooth-Konnektivität, Herzfrequenzüberwachung und Kompatibilität mit Fitness-Apps.'
@@ -616,11 +616,11 @@ const brandData = {
   Cursor: {
     name: "Cursor",
     images: [
-      "/Cursor/81juYFfAB9L._AC_SL1500_-removebg-preview.png",
-      "/Cursor/curser-removebg-preview (1).png",
-      "/Cursor/curser-removebg-preview.png",
-      "/Cursor/curserrr-removebg-preview.png",
-      "/Cursor/Cursor-fitness-walking-pad-removebg-preview.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/81juYFfAB9L._AC_SL1500_-removebg-preview.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/curser-removebg-preview (1).png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/curser-removebg-preview.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/curserrr-removebg-preview.png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/Cursor-fitness-walking-pad-removebg-preview.png",
     ],
     features: {
       en: [
@@ -654,7 +654,7 @@ const brandData = {
       de: "Das CURSOR Walking Pad verbindet durchdachtes Design mit starker Leistung.Die 9 - % - Steigung macht das Training intensiver und realistischer,während die dreifache Dämpfung Laufkomfort auf Studio - Niveau bietet Der 2,75 - PS - Motor läuft leise und kraftvoll, wodurch sich das Gerät hervorragend für Wohnungen und Büros eignet Ein weiteres Highlight: Die hohen Maximalbelastung von 136 kg (Seite 3), wodurch das Gerät auch für schwerere Nutzer geeignet ist Die 114×55×11 cm Bauweise ermöglicht eine extrem platzsparende Nutzung.",
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
-    bannerImage: "/Cursor/wmremove-transformed.png",
+    bannerImage: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/wmremove-transformed.png",
     // features: {
     //   en: 'The Sportstech sWalk features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface. The advanced cushioning system reduces joint impact by up to 40%. Smart features include Bluetooth connectivity, heart rate monitoring, and compatibility with fitness apps.The Sportstech F15 features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface.The advanced cushioning system reduces joint impact by up to 40%.',
     //   de: 'Das Sportstech sWalk verfügt über einen leistungsstarken 2,5 PS Motor, 15% maximale Steigung und eine geräumige 125x40cm Lauffläche. Das fortschrittliche Dämpfungssystem reduziert die Gelenkbelastung um bis zu 40%. Smart-Features umfassen Bluetooth-Konnektivität, Herzfrequenzüberwachung und Kompatibilität mit Fitness-Apps.'
@@ -705,11 +705,11 @@ const brandData = {
   Cazvian: {
     name: "Cazvian",
     images: [
-      "/Cazvian/cazianfinal.jpg",
-      "/Cazvian/cazianfull (1).jpg",
-      "/Cazvian/Cazviansideview.jpg",
-      "/Cazvian/wmremove-transformed (1).png",
-      "/Cazvian/Untitled design (1).png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/cazianfinal.jpg",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/cazianfull (1).jpg",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/Cazviansideview.jpg",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/wmremove-transformed (1).png",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/Untitled design (1).png",
     ],
     features: {
       en: [
@@ -743,7 +743,7 @@ const brandData = {
       de: "Das Cazvian Walking Pad kombiniert ein kompaktes Design mit hoher Funktionalität und flexiblem Einsatzbereich. Mit 5 % Steigung, einem strömungsleisen Motor und einem stoßdämpfenden Laufgurt bietet es ein natürliches, gelenkschonendes Laufgefühl – ideal für Homeoffice, tägliche Schrittziele und leichte Fitness-Einheiten. Dank der sehr flachen Bauweise lässt sich das Gerät mühelos verstauen und passt perfekt in kleine Räume oder Büros.",
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
-    bannerImage: "/Cazvian/flyerimagecazian (1).jpg", // features: {
+    bannerImage: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/flyerimagecazian (1).jpg", // features: {
     //   en: 'The Sportstech sWalk features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface. The advanced cushioning system reduces joint impact by up to 40%. Smart features include Bluetooth connectivity, heart rate monitoring, and compatibility with fitness apps.The Sportstech F15 features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface.The advanced cushioning system reduces joint impact by up to 40%.',
     //   de: 'Das Sportstech sWalk verfügt über einen leistungsstarken 2,5 PS Motor, 15% maximale Steigung und eine geräumige 125x40cm Lauffläche. Das fortschrittliche Dämpfungssystem reduziert die Gelenkbelastung um bis zu 40%. Smart-Features umfassen Bluetooth-Konnektivität, Herzfrequenzüberwachung und Kompatibilität mit Fitness-Apps.'
     // },

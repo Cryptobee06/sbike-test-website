@@ -523,7 +523,7 @@ const testData = {
   },
   Copant: {
     image:
-      "/Product1/Lucid_Origin_A_fit_muscular_man_with_a_manbun_hairstyle_light__3.jpg",
+       "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/Lucid_Origin_A_fit_muscular_man_with_a_manbun_hairstyle_light__3.jpg",
     overallScore: 3.8,
     status: "Passed",
     features: [
@@ -623,7 +623,7 @@ const testData = {
   },
   Merach: {
     image:
-      "/Merach/Lucid_Origin_A_fit_muscular_man_with_a_manbun_hairstyle_light__0.jpg",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/Lucid_Origin_A_fit_muscular_man_with_a_manbun_hairstyle_light__0.jpg",
     overallScore: 3.7,
     status: "Passed",
     features: [
@@ -721,7 +721,7 @@ const testData = {
   },
   Cursor: {
     image:
-      "/Product1/Lucid_Origin_A_fit_muscular_man_with_a_manbun_hairstyle_light__3.jpg",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/cursertrainerimage.jpg",
     overallScore: 3.8,
     status: "Passed",
     features: [
@@ -817,7 +817,7 @@ const testData = {
   },
   Cazvian: {
     image:
-      "/Merach/Lucid_Origin_A_fit_muscular_man_with_a_manbun_hairstyle_light__0.jpg",
+      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/caziantrainer.jpg",
     overallScore: 3.7,
     status: "Passed",
     features: [

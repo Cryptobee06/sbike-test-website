@@ -1,6 +1,3 @@
-
-
-
 import GuideHero from '@/components/guide/GuideHero';
 import KeyFeatures from '@/components/guide/KeyFeatures';
 import UseCase from '@/components/guide/UseCase';

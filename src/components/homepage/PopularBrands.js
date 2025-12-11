@@ -8,11 +8,9 @@ const brands = [
   { name: 'ProForm', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/superun.png' },
   { name: 'Horizon Fitness', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/urevo.webp' },
   { name: 'Life Fitness', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/kiddoza.jpg' },
-  { name: 'Life Fitness', logo: '/Merach-Logo.webp' },
-  { name: 'Life Fitness', logo: '/Untitled_design__1_-removebg-preview.png' },
-  { name: 'Life Fitness', logo: '/Untitled_design__2_-removebg-preview.png' },
-  
-
+  { name: 'Merach', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Merach-Logo.webp' },
+  { name: 'cursor', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor.png' },
+  { name: 'cazvian', logo: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Ace.png' },
 ];
 
 export default function PopularBrands() {

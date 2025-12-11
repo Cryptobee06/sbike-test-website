@@ -292,42 +292,42 @@ const walkingPadsData = [
       de: "Testsieger 2025",
     },
     badgeColor: "bg-green-500",
-    image: "/Product1/IMG_0009.png",
+    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/IMG_0009.png",
     price: "599.00",
     originalPrice: null,
 
     features: {
       display: {
         en: "LED display showing speed, time, distance & calories",
-        de: "",
+        de: "LCD-Display",
       },
       dimensions: {
         en: "Slim, space-saving design for desks & small rooms",
-        de: "",
+        de: "107,8T x 51,4B x 10,5H cm",
       },
       weight: {
         en: "Up to 100 kg",
-        de: "",
+        de: "136 KG",
       },
       resistance: {
         en: "No incline",
-        de: "",
+        de: "ohne",
       },
       programs: {
         en: "Basic walking modes with manual controls",
-        de: "",
+        de: "ohne",
       },
       heartRate: {
         en: "Not available",
-        de: "",
+        de: "No data",
       },
       motor: {
         en: "2.5 HP Motor",
-        de: "",
+        de: "No data",
       },
       speed: {
         en: "1–6 km/h",
-        de: "",
+        de: "1-6 km/h",
       },
       // ledColor: {
       //   "en": "7 color LEDs depending on speed or pulse",
@@ -366,42 +366,42 @@ const walkingPadsData = [
       de: "Testsieger 2025",
     },
     badgeColor: "bg-green-500",
-    image: "/Merach/IMG_0045.png",
+    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/IMG_0045.png",
     price: "599.00",
     originalPrice: null,
 
     features: {
       display: {
         en: "Multi-function LCD console with real-time metrics",
-        de: "",
+        de: "LED",
       },
       dimensions: {
         en: "Full treadmill size with foldable frame",
-        de: "",
+        de: "1160*476*131MM",
       },
       weight: {
         en: "Higher capacity suitable for heavier users",
-        de: "",
+        de: "110 Kilogramm",
       },
       resistance: {
         en: "Multiple manual incline levels",
-        de: "",
+        de: "0%-5% Steigung",
       },
       programs: {
         en: "Built-in programs for walking, jogging & climbing",
-        de: "",
+        de: "ohne",
       },
       heartRate: {
         en: "Integrated hand pulse sensors",
-        de: "",
+        de: "No data",
       },
       motor: {
         en: "2.75 HP Motor",
-        de: "",
+        de: "2.5 HP Motor",
       },
       speed: {
         en: "0.6–3.8 mph (~ 1.0–6.1 km/h)",
-        de: "",
+        de: "1-6 km/h",
       },
       // ledColor: {
       //   "en": "7 color LEDs depending on speed or pulse",
@@ -440,42 +440,42 @@ const walkingPadsData = [
       de: "Testsieger 2025",
     },
     badgeColor: "bg-green-500",
-    image: "/Cursor/Cursor-fitness-walking-pad-removebg-preview.png",
+    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/Cursor-fitness-walking-pad-removebg-preview.png",
     price: "599.00",
     originalPrice: null,
 
     features: {
       display: {
         en: "Compact LED screen with essential data",
-        de: "",
+        de: "LED",
       },
       dimensions: {
         en: "Ultra-compact under-desk footprint",
-        de: "",
+        de: "114 x 55 x 11 cm",
       },
       weight: {
         en: "Up to 110 kg",
-        de: "",
+        de: "136 kg",
       },
       resistance: {
         en: "No incline",
-        de: "",
+        de: "16% Steigung",
       },
       programs: {
         en: "Simple presets for daily walking",
-        de: "",
+        de: "ohne",
       },
       heartRate: {
         en: "Not included",
-        de: "",
+        de: "No data",
       },
       motor: {
         en: "2.5 HP Motor",
-        de: "",
+        de: "2.5HP",
       },
       speed: {
         en: "0.5–6 km/h",
-        de: "",
+        de: "12 Kilometer pro Stunde",
       },
       // ledColor: {
       //   "en": "7 color LEDs depending on speed or pulse",
@@ -514,42 +514,42 @@ const walkingPadsData = [
       de: "Testsieger 2025",
     },
     badgeColor: "bg-green-500",
-    image: "/Cazvian/cazianfinal.jpg",
+    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/cazianfinal.jpg",
     price: "599.00",
     originalPrice: null,
 
     features: {
       display: {
         en: "Front-facing LED display for clear visibility",
-        de: "",
+        de: "LED",
       },
       dimensions: {
         en: "Lightweight, low-profile frame for easy storage",
-        de: "",
+        de: "111 x 56 x 12 cm",
       },
       weight: {
         en: "Up to 120 kg",
-        de: "",
+        de: "110kg",
       },
       resistance: {
         en: "Flat deck (no incline)",
-        de: "",
+        de: "5% Steigung",
       },
       programs: {
         en: "Core routines for calorie burn & step training",
-        de: "",
+        de: "1 program",
       },
       heartRate: {
         en: "Not available",
-        de: "",
+        de: "No data",
       },
       motor: {
         en: "2 HP Motor",
-        de: "",
+        de: "2.0HP",
       },
       speed: {
         en: "1-6 km/h",
-        de: "",
+        de: "1-6 km/h",
       },
       // ledColor: {
       //   "en": "7 color LEDs depending on speed or pulse",
