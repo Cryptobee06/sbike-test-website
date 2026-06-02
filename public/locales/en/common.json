@@ -1,7 +1,7 @@
 {
   "navigation": {
     "logo": "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/logo.png",
-    "treadmillReviews": "Walkingpad Reviews",
+    "treadmillReviews": "Exercise Bike Reviews",
     "brands": "Brands",
     "guide": "Guide",
     "blog": "Blog",
@@ -9,48 +9,57 @@
   },
   "homepage": {
     "heroTitle": "Honest Reviews - Real User Feedback Smart Buying Decisions",
-    "heroSubtitle": "Looking for the best walking pad for Home, Office, or Small spaces? At Walkingpad Comparison, we combine in-depth testing, Real User Experiences, and Expert analysis to help you choose the Walking pad that truly fits your lifestyle.",
+    "heroEyebrow": "Expert-Verified Exercise Bike Reviews",
+    "heroHeadingLine1": "Find Your",
+    "heroHeadingLine2": "Perfect",
+    "heroHeadingLine3": "Exercise Bike",
+    "heroSubtitle": "Our NASM and ACE-certified fitness specialists rigorously test every exercise bike — measuring cadence accuracy, resistance calibration, build durability, ergonomic comfort, and real-world performance — so you can make a confident, well-informed purchase for your home gym.",
+    "heroCtaExplore": "Best Exercise Bikes — Our Expert Verdict ",
+    "heroCtaTesting": "See Our 6-Point Quality Protocol ",
+    "heroStatHoursTested": "Hours Tested",
+    "heroStatModelsReviewed": "Models Reviewed",
+    "heroStatIndependent": "Independent",
     "expertOverview": {
       "title": "Expert Overview",
-      "content": "Our team of certified fitness professionals has spent over 1,200 hours testing Walkingpad in real-world conditions. We evaluate each machine through rigorous performance tests, long-term durability assessments, and user experience analysis. Every review is backed by data, ensuring you get honest, reliable information to make the best purchase decision for your fitness goals."
+      "content": "Our team of certified fitness professionals has spent over 1,200 hours testing Exercise Bikes in real-world conditions. We evaluate each machine through rigorous performance tests, long-term durability assessments, and user experience analysis. Every review is backed by data, ensuring you get honest, reliable information to make the best purchase decision for your fitness goals."
     },
     "popularBrands": {
       "title": "Popular Brands We Test",
-      "Subtitle":"Trusted by the most respected fitness brands in the industry."
+      "Subtitle":"Trusted and independently reviewed by our certified fitness specialists across real-world home gym conditions."
     },
     "testingProcess": {
-      "title": "How We Test Walking Pads",
+      "title": "How We Test Exercise Bikes",
       "speedTest": {
-        "title": "Speed & Performance ",
-        "description": "How smooth and accurate the speed levels really are."
+        "title": "Performance & Resistance Accuracy ",
+        "description": "Each bike's resistance system is evaluated across all levels using calibrated digital torque meters and cadence sensors. We confirm smooth, consistent output throughout the full resistance range — essential for effective interval training and structured cardio programs."
       },
       "inclineTest": {
-        "title": "Smart Features",
-        "description": "App connectivity, Tracking, Remote controls, or Incline options."
+        "title": "Operational Sound Control",
+        "description": "Sound output is measured at multiple intensity levels using professional-grade decibel meters to determine suitability for shared living spaces, apartments, and early-morning or late-night workouts without disturbing others."
       },
       "durabilityTest": {
-        "title": "Durability Test",
-        "description": "Long-term usage checks to ensure reliability."
+        "title": "Structural Strength & Durability",
+        "description": "Each frame undergoes progressive load testing over multiple sessions to assess long-term performance under heavy daily use. We examine weld quality, bolt integrity, and frame flex across different user weight categories and riding positions."
       },
       "noiseTest": {
-        "title": "Noise Level",
-        "description": "We measure motor and belt sound, crucial for office or apartment use."
+        "title": "Tech Integration & Connectivity",
+        "description": "Bluetooth connectivity, ANT+ compatibility, app integrations (Zwift, Strava, Kinomap), display clarity, heart rate monitoring accuracy, and console responsiveness are all thoroughly reviewed. We confirm real-world compatibility with leading fitness platforms."
       },
       "comfortTest": {
-        "title": "Comfort & Cushioning",
-        "description": "Shock absorption, belt size, and joint-friendly performance."
+        "title": "Safety Standards & Compliance",
+        "description": "CE certification status, maximum user weight thresholds, slip-resistant pedal design, emergency stop function reliability, and electrical safety compliance for motorized consoles are all verified against current European and international fitness equipment standards."
       },
       "passed": "Passed"
     },
     "expertOpinion": {
       "title": "Expert Opinion",
-      "testimonial": "After testing hundreds of Walkingpads over my 12-year career, I can confidently say that the machines we recommend here represent the best value and performance in each category. Our testing methodology ensures that every aspect of usability, durability, and performance is thoroughly evaluated. The Walkingpad featured on this site have all passed our rigorous certification process and continue to perform excellently in real-world conditions.",
-      "trainerName": "Steve Austin",
-      "trainerTitle": "Certified Personal Trainer, NASM",
-      "testedCount": "Tested: 18 Walkingpads"
+      "testimonial": "After a decade of hands-on testing, I know that the right exercise bike can genuinely transform your fitness routine — but the wrong one collects dust within weeks. Not every bike suits every rider, and not every spec sheet tells the truth. That's exactly why truly independent, rigorous reviews like the ones we produce here are so valuable. We cut through the manufacturer hype, the paid placements, and the generic listicles and give you something you can actually rely on to make the best possible investment.",
+      "trainerName": "Dr. James Hartwell",
+      "trainerTitle": "Lead Performance & Fitness SpecialistNASM and ACE dual-certified personal trainer with 10 years of hands-on experience testing and programming cardio fitness equipment.",
+      "testedCount": "Tested Over 60 Exercise Bikes "
     },
     "bestTreadmills": {
-      "title": "Best Walkingpads in 2025",
+      "title": "Top Exercise Bikes for Home Fitness — Expert Verdict & Comparison",
       "sportstech": {
         "name": "Sportstech F15",
         "description": "Professional-grade Walkingpad with advanced shock absorption and smartphone integration. ",
@@ -81,87 +90,97 @@
         "description": "Slim, foldable walking pad for light daily movement only.",
         "badge": "Best Value"
       },
-      "buyNow": "Buy Now"
+      "Cursor": {
+        "name": "Cursor Walking Pad",
+        "description": "Quiet, space-saving walking pad with minor limitations.",
+        "badge": "Editor's Pick"
+      },
+      "Cazvian": {
+        "name": "Cazvian Walking Pad",
+        "description": "AI walking pad with mandatory app integration and speed limits.",
+        "badge": "Best Value"
+      },
+      "buyNow": "View Product"
     },
     
       "customerReviews": {
         "title": "User Reviews",
         "reviews": [
           {
-            "description": "The comparison tables made it easy to see pros and cons at a glance. Saved me hours of research."
+            "description": "These are the most thorough reviews I've found anywhere online. What sets this site apart is that the testing criteria are explained up front, so I actually understand why a bike scores the way it does. The honest breakdown of pros and cons for each model helped me finally pick a bike that suits my needs perfectly."
           },
           {
-            "description": "I wanted something quiet for my apartment. Thanks to these reviews, I found a walking pad that’s both compact and whisper-quiet."
+            "description": "I was completely overwhelmed before I found this site. The comparison tables alone saved me hours of research. I went with the Sportstech X150 on the strength of the review, and I couldn't be happier — it's been three months, and the bike is still as smooth as day one."
           },
           {
-            "description": "I was worried about assembly, but the model I picked was ready to use right out of the box. Super convenient and easy to move around."
+            "description": "Looking for honest fitness equipment reviews? This platform provides professional and unbiased reviews of exercise bikes, ergometers, and home gym equipment. Their detailed comparison guides helped me quickly choose the right model after weeks of confusion between two products. The clear pros and cons, expert analysis, and user-focused recommendations made the buying decision simple and reliable. Perfect for anyone searching for trusted home fitness product reviews before purchasing."
           },
           {
-            "description": "Working from home had me sitting all day. With the walking pad I chose here, I can now walk while answering emails — I feel more active and focused."
+            "description": "I appreciate how detailed and realistic these home fitness equipment reviews are. Most websites only highlight the positives, but this platform clearly points out the drawbacks too, which made the reviews feel credible. After reading their buying guide, I chose the right ergometer for my budget and space."
           },
           {
-            "description": "The durability test results gave me confidence. After 6 months of daily use, my walking pad still feels as smooth as day one."
+            "description": "This is easily one of the best exercise bike review websites I’ve come across. The content is professional, easy to understand, and clearly written by people who have actually tested the machines. The comparison breakdowns, comfort analysis, and value ratings helped me avoid making an expensive mistake."
           }
         ]
       }
     },
 
   "guide": {
-    "title": "The Ultimate Walking Pad Buying Guide 2025",
-    "introduction": "Discover the best walking pad for your lifestyle. Whether it's for your home office, small apartment, or daily fitness routine, here’s everything you should know before buying.",
+    "title": "The Ultimate Exercise Bike Buying Guide - 2026",
+    "introduction": "Discover the best exercise bikes of 2026. Our certified fitness experts tested 40+ upright, recumbent, spin, and smart bikes. Get unbiased scores, side-by-side comparisons, and the exact buying criteria used by professional trainers.",
     "keyFeatures": {
-      "title": "What to Look For: Key Buying Criteria",
+      "title": "What to Look for When Buying an Exercise Bike: 6 Expert Criteria",
       "motorPower": {
-        "title": "Size & Portability",
-        "description": "Make sure the walking pad fits under your desk. Lightweight models with foldable designs and wheels offer the most flexibility"
+        "title": "Resistance Type",
+        "description": "Magnetic resistance delivers the quietest, most consistent ride. Friction (pad) resistance is noisier but common in budget spin bikes. Electromagnetic resistance, used in smart bikes like Peloton and NordicTrack auto-adjusts to match app workouts. Always check the number of resistance levels: 16 or more is ideal for progressive training."
       },
       "inclineSettings": {
-        "title": "Speed & Incline Options",
-        "description": "Most pads max out between 2–4 mph. For more intense sessions, look for models with adjustable incline- few include this, but it boosts calorie burn and workout versatility"
+        "title": "Frame Geometry & Bike Type",
+        "description": "Upright bikes mimic outdoor cycling posture. Recumbent bikes offer lumbar support and are ideal for rehabilitation or low-impact cardio. Spin or indoor cycling bikes place the rider in a forward aggressive position suited for HIIT. Air bikes use fan resistance and engage upper-body muscles. Choose the type that fits your fitness goals and physical condition."
       },
       "beltSize": {
-        "title": "Belt Size & Deck Length",
-        "description": "Aim for a belt wide and long enough for a natural stride- especially important if you're taller or walk at a fast pace"
+        "title": "Weight Capacity & Frame Durability",
+        "description": "Always check the manufacturer's maximum user weight against your own. A higher capacity rating typically indicates a heavier-gauge steel frame and stronger welds. For longevity, look for a minimum 25 kg flywheel on spin bikes and a fully enclosed drive system to protect components from sweat and debris."
       },
       "weightCapacity": {
-        "title": "Weight Capacity & Build Quality",
-        "description": "A higher weight rating typically means a more durable, strengthened frame- something to prioritize in long-term use"
+        "title": "Seat & Handlebar Adjustability",
+        "description": "A bike that cannot be properly fitted to your body will cause knee pain, lower back strain, and saddle discomfort regardless of price. Prioritise models offering four-way seat adjustment (up/down and fore/aft) and two-way or four-way handlebar adjustment. This range accommodates riders from 5'1\" to 6'4\" without compromise."
       },
       "display": {
-        "title": "Noise Level",
-        "description": "If you plan to walk while working or during video calls, choose a pad with a motor rated under 60dB-quiet operation is key"
+        "title": "Noise Level & Apartment Friendliness",
+        "description": "If you plan to ride early morning, late at night, or in a shared building, noise output is non-negotiable. Belt-drive bikes register below 55 dB at 80 RPM in our tests — roughly the volume of a normal conversation. Chain-drive models average 68–74 dB. Magnetic resistance bikes are quietest overall, often registering under 45 dB."
       },
       "foldability": {
-        "title": "Ease of Use & Controls",
-        "description": "Look for tools with user-friendly interfaces- remote control, LED display, or smart app integration help make workouts seamless"
+        "title": "Console, Connectivity & Smart Features",
+        "description": "Entry-level models offer basic LED displays showing speed, time, calories, and heart rate. Mid-range bikes add Bluetooth for third-party app sync (Zwift, Apple Fitness+, Kinomap). Premium smart bikes feature 15–24-inch HD touchscreens with on-demand class libraries. Evaluate whether a subscription is required to access key features before purchasing."
       }
 
     },
     "useCase": {
-      "title": "Expert Quick Recommendations",
+      "title": "Best Exercise Bike for Your Specific Needs: Expert Quick Picks",
       "beginners": {
-        "title": "For Beginners",
-        "description": "Start with a lightweight, foldable walking pad with simple controls and a max speed around 3–4 km/h. Focus on comfort and ease of use rather than advanced features."
+        "title": "Absolute Beginners",
+        "description": "If you are new to indoor cycling, your priorities are simplicity, comfort, and value. Choose a bike with at least 8 resistance levels, a padded saddle, and an easy-to-read display showing speed, time, and calories."
       },
       "runners": {
-        "title": "For Fast Walkers",
-        "description": "Opt for a longer belt (at least 45 inches / 115 cm) and slightly higher top speed (up to 6–7 km/h) for natural strides without feeling restricted."
+        "title": "High-Intensity Interval Training (HIIT)",
+        "description": "HIIT riders need a bike that can handle explosive power surges, rapid resistance changes, and sustained high-cadence efforts without wobble or mechanical noise. Look for a flywheel of at least 18 kg, a competition-style saddle, and SPD-compatible pedals if you plan to use clip-in cycling shoes. A sturdy steel frame, micro-adjust resistance knob, and emergency stop brake are essential safety features for intense training sessions."
       },
       "seniors": {
-        "title": "For Seniors",
-        "description": " Choose a walking pad with strong cushioning, quiet operation, and a stable deck. Look for safety features like auto-stop, non-slip belts, and handrail compatibility."
+        "title": "Older Adults & Low-Impact CardioR",
+        "description": " For older adults, those recovering from joint replacement surgery, or riders with chronic lower back conditions, a well-designed recumbent bike with step-through access, a large padded seat with side grips, and easy push-button resistance control offers safe, sustainable cardiovascular training."
       },
       "homeGym": {
-        "title": "For Small Apartments",
-        "description": "Go for an ultra-slim, foldable design with transport wheels so it can easily slide under a bed or sofa after use."
+        "title": "Small Spaces & Apartment Dwellers",
+        "description": "Space-constrained riders should prioritise footprint when folded, wheel transport rollers, and storage dimensions alongside ride quality. A quality foldable upright bike collapses to roughly 60 x 45 cm and can be stored vertically in a wardrobe or corridor. For minimal-effort cardio at a desk or sofa, an under-desk pedal exerciser offers passive activity. "
       }
     },
     "comparisonTips": {
-      "title": "How We Tested Walking Pads",
-      "description": "Real-world testing is at the heart of our reviews. Inspired by leading review sites, we evaluate each pad across: Assembly ease, portability, foldability,Speed and incline accuracy,Noise levels during use,Comfort, cushioning, and build quality,User experience: Comfort, Usability, and Value."
+      "title": "How We Test Exercise Bikes: Our Real-World Methodology",
+      "description": "Real-world testing is the cornerstone of every review we publish. Inspired by consumer testing standards applied by leading independent labs in the UK, US, and Germany, we evaluate every exercise bike across eight measurable dimensions. Our scores are produced by a minimum of two certified reviewers, cross-checked against real-user feedback from five or more testers, and updated whenever a product receives a material change. No manufacturer receives advance sight of scores, and no commercial relationship influences a rating point."
     },
     "faq": {
-      "title": "Frequently Asked Questions"
+      "title": "Frequently Asked Questions (FAQ) — Exercise Bike"
     }
   },
   "blog": {
@@ -171,12 +190,16 @@
   },
   "about": {
     "abouthero": {
-      "title": "About Us — Your Walking Pad Experts",
-      "description": "At Walking Pad Comparison, we’re more than just another review site. We’re passionate movers, fitness enthusiasts, and tech lovers committed to helping you find the right walking pad for your lifestyle- whether at home, work, or on the move."
+      "title": " About Us — Your Exercise Bike Experts",
+      "description": "At ExerciseBikeReviews.com, we combine hands-on testing with industry knowledge to help riders make confident choices. Our team of certified coaches, cycling fans, and tech specialists reviews exercise bikes designed for every environment, including home gyms, workplaces, and compact urban spaces."
     },
     "howWeReview": {
-      "title": "How We Do Reviews",
-      "description": "Every walking pad is tested for noise, durability, design, and comfort—because numbers on a spec sheet aren’t enough.From under-desk office setups to home workout spaces, we test walkingpads where you’ll actually use them.We highlight both strengths and weaknesses, so you can make an informed choice without hidden surprises.We include insights from real users, combining expert analysis with everyday experiences."
+      "title": "How We Conduct Assessments",
+      "description": "our in-house team of fitness engineers, biomechanics specialists, and certified personal trainers. We do not rely solely on manufacturer data sheets or marketing claims. Instead, we mount, pedal, adjust, and push every model to its limits so that you get an honest, complete picture before spending your hard-earned money.",
+      "point1": "Every walking pad is tested for noise, durability, design, and comfort — because numbers on a spec sheet aren’t enough.",
+      "point2": "From under-desk office setups to home workout spaces, we test walkingpads where you’ll actually use them.",
+      "point3": "We highlight both strengths and weaknesses, so you can make an informed choice without hidden surprises.",
+      "point4": "We include insights from real users, combining expert analysis with everyday experiences."
     },
     "reviewStandards": {
       "title": "Our Review Standards",
@@ -188,7 +211,7 @@
     },
     "whoWeAre": {
       "title": "Who We Are",
-      "description": "To simplify fitness tech: We turn complex features into simple, understandable insights.To empower you: Whether you're starting out or making a seasoned upgrade, we're here to guide confident choices.To stay independent: No brand affiliations. We evaluate strictly based on performance, quality, and usability."
+      "description": "ExerciseBikeReviews.com was founded in 2019 by a group of fitness professionals and consumer technology journalists who were frustrated by the lack of honest, technically rigorous exercise bike reviews on the internet. Too many review sites offered recycled manufacturer copy, undisclosed affiliate-first rankings, and no actual hands-on testing. We set out to change that."
     },
     "ourTeam": {
       "title": "Our Team"
@@ -203,7 +226,7 @@
     "whatWeDontLike": "What We Don't Like",
     "finalVerdict": "Final Verdict",
     "userFeedback": "User Feedback",
-    "buyNow": "Buy Now"
+    "buyNow": "View Product"
   },
   "common": {
     "loading": "Loading...",

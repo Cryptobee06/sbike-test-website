@@ -38,38 +38,38 @@ export default function HowWeReview() {
   const t = useTranslations('about.howWeReview');
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
       {/* Background SVG Decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <svg
-          className="absolute left-[-100px] top-[-50px] w-[400px] h-[400px]"
+          className="absolute left-[-100px] top-[-50px] w-[300px] sm:w-[400px] h-[300px] sm:h-[400px]"
           viewBox="0 0 400 400"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="200" cy="200" r="200" fill="rgba(59, 130, 246, 0.04)" />
+          <circle cx="200" cy="200" r="200" fill="rgba(255, 81, 0, 0.9)" />
         </svg>
         <svg
-          className="absolute right-[-80px] bottom-[-80px] w-[300px] h-[300px]"
+          className="absolute right-[-80px] bottom-[-80px] w-[200px] sm:w-[300px] h-[200px] sm:h-[300px]"
           viewBox="0 0 400 400"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="200" cy="200" r="200" fill="rgba(59, 130, 246, 0.03)" />
+          <circle cx="200" cy="200" r="200" fill="rgba(12, 243, 24, 0.03)" />
         </svg>
       </div>
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-10">
+        <h2 className="text-lg sm:text-xl lg:text-3xl font-extrabold text-gray-900 mb-6 sm:mb-10">
           {t('title')}
         </h2>
 
-        <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-3xl p-8 md:p-12 shadow-lg">
+        <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg">
           {/* Icon */}
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 rounded-full bg-primary-600 shadow-md flex items-center justify-center">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <div className="w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-primary-600 shadow-md flex items-center justify-center">
+              <svg className="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -81,7 +81,7 @@ export default function HowWeReview() {
           </div>
 
           {/* Description */}
-          <p className="text-lg md:text-xl  review-description max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-base lg:text-lg review-description max-w-3xl mx-auto leading-relaxed">
             {t('description')}
           </p>
         </div>

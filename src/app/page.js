@@ -10,16 +10,16 @@ import CustomerReviews from '@/components/homepage/CustomerReviews';
 export async function generateMetadata() {
   return {
 
-    title: 'WalkingpadReviews - Expert Walkingpad Testing & Reviews 2025',
-    description: 'Independent Walkingpad reviews from certified fitness professionals. Comprehensive testing for performance, durability, and value. Find the best Walkingpad for your needs.',
-    keywords: 'Walkingpad reviews, Walkingpad testing, best Walkingpads 2025, fitness equipment reviews, Walkingpad buying guide',
+    title: 'Exercise Bike Reviews - Expert Testing & Ratings',
+    description: 'Independent Exercise Bike reviews from certified fitness professionals. Comprehensive testing for performance, durability, and value. Find the best Exercise Bike for your needs.',
+    keywords: 'Exercise Bike reviews, Exercise Bike testing, best Exercise Bikes 2025, fitness equipment reviews, Exercise Bike buying guide',
     openGraph: {
-      title: 'WalkingpadReviews - Expert Walkingpad Testing & Reviews 2025',
-      description: 'Independent Walkingpad reviews from certified fitness professionals',
+      title: 'Exercise Bike Reviews - Expert Exercise Bike Testing & Ratings 2025',
+      description: 'Independent Exercise Bike reviews from certified fitness professionals',
       type: 'website',
     },
     icons: {
-      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+      icon: '/logo/Exercise Bikes Test Fav 1.png'
       },
   };
 }

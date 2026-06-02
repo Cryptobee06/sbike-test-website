@@ -1,5 +1,5 @@
 "use client";
-import { useTranslations, useLocale } from "@/contexts/LanguageContext";
+import { useTranslations } from "@/contexts/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -11,170 +11,153 @@ const treadmillsData = [
   {
     id: "sportstech",
     brand: "Sportstech",
-    model: "sWalk Lite",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/products/treadmill-sportstech.webp",
+    model: "Sportstech SX175 SpeedBike",
+    image: "/Model/Sportstech sx175 model.webp",
     rating: 4.9,
     badge: "testWinner",
-    badgeColor: "bg-yellow-500",
-    link: "https://www.sportstech.de/laufband/swalk-lite",
+    link: "https://www.sportstech.de/speedbike/sx175",
   },
   {
     id: "Citysports",
-    brand: "Citysports",
-    model: "CS-WP6",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city04.png",
-    rating: 4.8,
+    brand: "Peloton",
+    model: "Peloton Bike+",
+    image: "/Model/Peloton bike model.webp",
+    rating: 4.0,
     badge: "",
-    badgeColor: "bg-blue-500",
-    // link: '/warningpage'
-  },
-  {
-    id: "kiddoza",
-    brand: "kiddoza",
-    model: "Under desk walking pad",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza04.png",
-    rating: 4.6,
-    badge: "",
-    badgeColor: "bg-gray-500",
-    //  link: '/warningpage'
+    link: "#",
   },
   {
     id: "Superun",
-    brand: "Superun",
-    model: "B,A06-С",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun04.png",
-    rating: 4.5,
+    brand: "NordicTrack",
+    model: "NordicTrack S24 Studio Bike",
+    image: "/Model/Nordictrack bike model.webp",
+    rating: 3.9,
     badge: "",
-    badgeColor: "bg-green-500",
-    // link: '/warningpage'
+    link: "#",
   },
   {
-    id: "Merach",
-    brand: "Merach",
-    model: "F-R2024",
-    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/IMG_0044.png",
-    rating: 4.6,
-    badge: "",
-    badgeColor: "bg-red-500",
+    id: "sportstech",
+    brand: "Sportstech",
+    model: "Sportstech X150 Ergometer",
+    image: "/Model/Sportstech X150 model.webp",
+    rating: 4.9,
+    badge: "testWinner",
+    link: "https://www.sportstech.de/ergometer/x150",
   },
   {
-    id: "Copant",
-    brand: "Copant",
-    model: "Raceable Walking Pad",
-    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/IMG_0009.png",
-    rating: 4.5,
+    id: "Cursor",
+    brand: "Ultrasport",
+    model: "Ultrasport F-Bike",
+    image: "/Model/ultrasport bike model.jpg",
+    rating: 3.8,
     badge: "",
-    badgeColor: "bg-red-500",
+    link: "#",
+  },
+  {
+    id: "Cazvian",
+    brand: "SportPlus",
+    model: "SportPlus SP-HT-9600-iE",
+    image: "/Model/Sportplus bike model.webp",
+    rating: 3.7,
+    badge: "",
+    link: "#",
   },
 ];
 
-const getBadgeText = (badgeType, t) => {
-  if (badgeType === "testWinner") {
-    return t("sportstech.badge");
-  }
-  return "";
-};
-
 const StarRating = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-
+  const full = Math.floor(rating);
+  const half = rating % 1 !== 0;
+  const empty = 5 - full - (half ? 1 : 0);
   return (
-    <div className="flex items-center space-x-1 mt-2">
-      {[...Array(fullStars)].map((_, i) => (
-        <span key={i} className="text-yellow-400 text-lg">
-          ★
-        </span>
+    <div className="flex items-center gap-0.5">
+      {[...Array(full)].map((_, i) => (
+        <svg key={i} className="w-3.5 h-3.5 text-[#C8A96E]" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
       ))}
-      {hasHalfStar && <span className="text-yellow-400 text-lg">☆</span>}
-      {[...Array(emptyStars)].map((_, i) => (
-        <span key={i} className="text-gray-300 text-lg">
-          ★
-        </span>
+      {half && (
+        <svg className="w-3.5 h-3.5 text-[#C8A96E] opacity-50" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      )}
+      {[...Array(empty)].map((_, i) => (
+        <svg key={i} className="w-3.5 h-3.5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
       ))}
-      <span className="text-sm text-gray-600 ml-2">{rating}</span>
+      <span className="text-[0.65rem] text-neutral-400 ml-1.5 font-semibold">{rating}</span>
     </div>
   );
 };
 
 export default function BestTreadmills() {
   const t = useTranslations("homepage.bestTreadmills");
-  const locale = useLocale();
 
   return (
-    <section id="best-treadmills" className="py-24 bg-gray-100 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {t("title")}
-          </h2>
-          {/* <div>            <a  className="text-gray-300 hover:text-primary-400 transition-colors" href='/warning'>hello</a></div> */}
-          {/* <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            {t('description')}
-          </p> */}
+    <section id="best-treadmills" className="bg-[#F5F5F0] py-24 border-t border-neutral-200">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
+          <div>
+            {/* <span className="eyebrow block mb-4">Top Picks</span> */}
+            <h2 className="heading-section text-neutral-900">
+              {t("title")}
+            </h2>
+          </div>
+          <Link href="/reviews">
+            <span className="btn-primary text-xs py-3.5 px-8 flex-shrink-0">
+              View All Reviews
+            </span>
+          </Link>
         </div>
+
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={2}
           slidesPerView={1}
           loop
           navigation
           pagination={{ clickable: true }}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false
-          // }}
           observer={true}
           observeParents={true}
           breakpoints={{
-            768: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-              slidesPerGroup: 3,
-            },
+            768:  { slidesPerView: 2, slidesPerGroup: 2 },
+            1024: { slidesPerView: 3, slidesPerGroup: 3 },
           }}
-          className="pb-20"
+          className="pb-14"
         >
-          {treadmillsData.map((treadmill, index) => (
-            <SwiperSlide key={`${treadmill.id}-${treadmill.model}-${index}`}>
-              <div className="h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col overflow-hidden card-height">
-                <div className="relative">
-                  {treadmill.badge === "testWinner" && (
-                    <span
-                      className={`absolute top-4 left-4 ${treadmill.badgeColor} text-white px-3 py-1 rounded-full text-sm font-bold shadow z-10`}
-                    >
-                      {getBadgeText(treadmill.badge, t)}
+          {treadmillsData.map((item, index) => (
+            <SwiperSlide key={`${item.id}-${item.model}-${index}`}>
+              <div className="bg-white border border-neutral-200 hover:border-neutral-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.10)] flex flex-col overflow-hidden card-height group">
+
+                {/* Image area */}
+                <div className="relative bg-neutral-50 flex-shrink-0" style={{ height: '260px' }}>
+                  {item.badge === "testWinner" && (
+                    <span className="absolute top-4 left-4 z-10 bg-neutral-900 text-white text-[0.55rem] font-bold tracking-[0.15em] uppercase px-2.5 py-1">
+                      {t("sportstech.badge")}
                     </span>
                   )}
                   <img
-                    src={treadmill.image}
-                    alt={`${treadmill.brand} ${treadmill.model}`}
-                    className="w-full h-60 object-contain bg-white p-5"
+                    src={item.image}
+                    alt={`${item.brand} ${item.model}`}
+                    className="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                    {treadmill.brand} {treadmill.model}
-                  </h3>
-                  <p className="text-sm text-gray-600 line-clamp-2 mb-3">
-                    {t(`${treadmill.id}.description`)}
-                  </p>
-                  <StarRating rating={treadmill.rating} />
-                  <div className="mt-auto pt-5">
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-grow border-t border-neutral-100">
+                  <div className="flex-grow">
+                    <p className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-neutral-400 mb-2">{item.brand}</p>
+                    <h3 className="text-lg font-bold text-neutral-900 tracking-tight mb-3">{item.model}</h3>
+                    <StarRating rating={item.rating} />
+                  </div>
+                  <div className="mt-6 pt-5 border-t border-neutral-100">
                     <a
-                      href={treadmill.link}
-                      target={treadmill.link !== "#" ? "_blank" : "_self"}
-                      rel={treadmill.link !== "#" ? "noopener noreferrer" : ""}
-                      className="block w-full bg-primary-500 hover:bg-primary-600 text-white text-center py-2.5 rounded-lg font-semibold transition"
+                      href={item.link}
+                      target={item.link !== "#" ? "_blank" : "_self"}
+                      rel={item.link !== "#" ? "noopener noreferrer" : ""}
+                      className="block w-full bg-neutral-900 hover:bg-neutral-700 text-white text-center py-3.5 text-[0.65rem] font-bold tracking-[0.18em] uppercase transition-colors duration-200"
                     >
                       {t("buyNow")}
                     </a>

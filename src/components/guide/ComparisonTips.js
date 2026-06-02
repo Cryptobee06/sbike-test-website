@@ -1,41 +1,32 @@
 'use client';
 import { useTranslations } from '@/contexts/LanguageContext';
+import { CheckCircle } from 'lucide-react';
 
 export default function ComparisonTips() {
   const t = useTranslations('guide.comparisonTips');
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-sky-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-10">
+    <section className="py-12 sm:py-16 lg:py-24 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10 sm:mb-12">
+          {/* <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-5">
+            Our Process
+          </div> */}
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
             {t('title')}
           </h2>
+          <div className="divider-emerald mt-4"></div>
+        </div>
 
-          <div className="relative bg-white rounded-3xl border border-blue-100 shadow-lg px-8 py-12 md:px-12 md:py-16">
-            {/* Icon badge */}
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-              <div className="w-16 h-16 bg-blue-600 shadow-lg rounded-full flex items-center justify-center ring-4 ring-blue-200">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
+        <div className="relative bg-primary-50 border border-primary-100 rounded-3xl px-4 sm:px-8 lg:px-12 py-8 sm:py-12 lg:py-16 shadow-card">
+          <div className="absolute -top-6 sm:-top-7 left-1/2 -translate-x-1/2">
+            <div className="w-12 sm:w-14 h-12 sm:h-14 bg-primary-600 rounded-2xl flex items-center justify-center shadow-emerald">
+              <CheckCircle className="w-6 sm:w-7 h-6 sm:h-7 text-white" />
             </div>
-
-            <p className="text-lg text-gray-700 leading-relaxed mt-10">
-              {t('description')}
-            </p>
           </div>
+          <p className="text-base sm:text-lg lg:text-lg text-gray-600 leading-relaxed mt-4 sm:mt-4 text-center">
+            {t('description')}
+          </p>
         </div>
       </div>
     </section>

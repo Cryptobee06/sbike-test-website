@@ -6,11 +6,11 @@ import OurTeam from '@/components/about/OurTeam';
 
 export async function generateMetadata() {
   return {
-    title: 'Über uns - Experten Walkingpad-Test Team & Bewertungsstandards',
+    title: 'Über uns - Experten Exercise Bike Team & Bewertungsstandards',
     description: 'Erfahren Sie mehr über unser Expertenteam, rigorose Testmethodik und transparente Bewertungsstandards. Professionelle Laufband-Bewertungen, denen Sie vertrauen können.',
-    keywords: 'über Walkingpad-Bewertungen, Experten-Test Team, Bewertungsmethodik, Fitnessgeräte Standards',
+    keywords: 'über Exercise Bike-Bewertungen, Experten-Test Team, Bewertungsmethodik, Fitnessgeräte Standards',
     icons: {
-      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+      icon: '/logo/Exercise Bikes Test Fav 1.png'
         },
   };
 }

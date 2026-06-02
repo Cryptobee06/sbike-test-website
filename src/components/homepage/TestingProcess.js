@@ -1,182 +1,94 @@
 'use client';
-import { useState } from 'react';
 import { useTranslations } from '@/contexts/LanguageContext';
-import {
-  Gauge,
-  Mountain,
-  Wrench,
-  Volume2,
-  Sparkles,
-} from 'lucide-react';
+import { Gauge, Mountain, Wrench, Volume2, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 const testData = [
-  {
-    id: 'speedTest',
-    icon: Gauge,
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/speed.jpg',
-  },
-  {
-    id: 'durabilityTest',
-    icon: Wrench,
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/durability-test.jpeg',
-  },
-  {
-    id: 'inclineTest',
-    icon: Mountain,
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/incline.webp',
-  },
-  {
-    id: 'noiseTest',
-    icon: Volume2,
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/noise-test.jpg',
-  },
-  {
-    id: 'comfortTest',
-    icon: Sparkles,
-    image: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/testing/comforthome.jpg',
-  },
+  { id: 'speedTest',      icon: Gauge,    image: '/Test protocol/Test protocol 1.jpg' },
+  { id: 'durabilityTest', icon: Wrench,   image: '/Test protocol/Test protocol 7.jpg' },
+  { id: 'inclineTest',    icon: Mountain, image: '/Test protocol/Test protocol 3.jpg' },
+  { id: 'noiseTest',      icon: Volume2,  image: '/Test protocol/Test protocol 5.jpg' },
+  { id: 'comfortTest',    icon: Sparkles, image: '/Test protocol/Test protocol 6.jpg' },
 ];
 
 export default function TestingProcess() {
   const t = useTranslations('homepage.testingProcess');
-  const [activeTest, setActiveTest] = useState(0);
-
-  const getTestKey = (id) => id || 'speedTest';
 
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-16">
+    <section className="bg-white">
+
+      {/* Section header */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 text-center">
+        <h2 className="heading-section text-neutral-900 max-w-2xl mx-auto">
           {t('title')}
         </h2>
+      </div>
 
-        {/* Desktop Layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 gap-14 items-start">
-          {/* Left: Test Cards */}
-          <div className="space-y-6">
-            {testData.map((test, index) => {
-              const Icon = test.icon;
-              const key = getTestKey(test.id);
-              const isActive = index === activeTest;
+      {/* Alternating editorial rows */}
+      {testData.map((test, index) => {
+        const Icon = test.icon;
+        const isReversed = index % 2 === 1;
 
-              return (
-                <button
-                  key={test.id}
-                  onClick={() => setActiveTest(index)}
-                  className={`w-full text-left transition duration-300 ease-in-out p-5 rounded-2xl border group hover:shadow-md ${isActive
-                      ? 'bg-blue-50 border-blue-500 shadow-lg scale-[1.02]'
-                      : 'bg-white border-gray-200 hover:border-blue-400'
-                    }`}
-                >
-                  <div className="flex items-start gap-4">
-                    <Icon
-                      className={`w-6 h-6 mt-1 transition ${isActive ? 'text-blue-600' : 'text-blue-400 group-hover:text-blue-500'
-                        }`}
-                    />
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-1">
-                        {t(`${key}.title`)}
-                      </h3>
-                      <p className="text-gray-600 text-sm">
-                        {t(`${key}.description`)}
-                      </p>
-                    </div>
+        return (
+          <div
+            key={test.id}
+            className={`flex flex-col lg:flex-row border-t border-neutral-200 ${isReversed ? 'lg:flex-row-reverse' : ''}`}
+          >
+            {/* Image side */}
+            <div className="w-full lg:w-1/2 h-[200px] xs:h-[280px] sm:h-[380px] lg:h-auto lg:min-h-[500px] xl:min-h-[580px] overflow-hidden bg-neutral-100 relative flex-shrink-0">
+              <img
+                src={test.image}
+                alt={t(`${test.id}.title`)}
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
+              />
+            </div>
+
+            {/* Text side */}
+            <div
+              className={`w-full lg:w-1/2 flex items-center bg-white px-4 py-8 xs:px-6 xs:py-10 sm:px-10 sm:py-14 lg:px-20 lg:py-24 ${
+                isReversed ? 'lg:border-r' : 'lg:border-l'
+              } border-neutral-200`}
+            >
+              <div className="w-full max-w-md mx-auto lg:mx-0">
+
+                {/* Step number + icon */}
+                <div className="flex items-end gap-3 sm:gap-4 mb-5 sm:mb-6 lg:mb-8">
+                  <span
+                    className="font-black leading-none text-neutral-200 select-none"
+                    style={{ fontSize: 'clamp(2.5rem, 12vw, 6rem)', letterSpacing: '-0.05em', lineHeight: 1 }}
+                  >
+                    0{index + 1}
+                  </span>
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-neutral-900 flex items-center justify-center flex-shrink-0 mb-2">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Right: Image & Details */}
-          <div className="sticky top-28">
-            <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-white">
-              {/* Responsive Image */}
-              <div className="w-full h-78 sm:h-74 md:h-80 lg:h-[500px] overflow-hidden">
-                <img
-                  src={testData[activeTest].image}
-                  alt={t(`${getTestKey(testData[activeTest].id)}.title`)}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-4 sm:p-6">
-                <div className="flex items-center gap-2 sm:gap-3 mb-2">
-                  {(() => {
-                    const ActiveIcon = testData[activeTest].icon;
-                    return <ActiveIcon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />;
-                  })()}
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
-                    {t(`${getTestKey(testData[activeTest].id)}.title`)}
-                  </h3>
                 </div>
 
-                <p className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed">
-                  {t(`${getTestKey(testData[activeTest].id)}.description`)}
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 tracking-tight mb-3 sm:mb-4">
+                  {t(`${test.id}.title`)}
+                </h3>
+                <p className="text-neutral-500 text-sm sm:text-base leading-relaxed font-light">
+                  {t(`${test.id}.description`)}
                 </p>
 
-                <div className="inline-flex items-center px-2 sm:px-3 py-1 
-                    bg-green-100 text-green-800 text-xs sm:text-sm 
-                    font-medium rounded-full">
-                  <svg
-                    className="w-3 h-3 sm:w-4 sm:h-4 mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  {t('passed')}
+                {/* Passed badge */}
+                <div className="flex items-center gap-2 mt-6 sm:mt-8">
+                  <div className="w-4 h-4 bg-neutral-900 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-[0.6rem] sm:text-[0.65rem] font-bold tracking-[0.18em] uppercase text-neutral-400">
+                    {t('passed')}
+                  </span>
                 </div>
+
               </div>
             </div>
           </div>
-        </div>
+        );
+      })}
 
-        {/* Mobile Layout */}
-        <div className="lg:hidden space-y-10">
-          {testData.map((test) => {
-            const Icon = test.icon;
-            const key = getTestKey(test.id);
-            return (
-              <div
-                key={test.id}
-                className="rounded-2xl border border-gray-200 shadow-md overflow-hidden bg-white"
-              >
-                <img
-                  src={test.image}
-                  alt={t(`${key}.title`)}
-                  className="w-full h-78 sm:h-74 md:h-100 lg:h-[500px] object-cover"
-                />
-                <div className="p-5">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Icon className="w-6 h-6 text-blue-600" />
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {t(`${key}.title`)}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 text-sm mb-3">
-                    {t(`${key}.description`)}
-                  </p>
-                  <div className="inline-flex items-center px-3 py-1 text-sm bg-green-100 text-green-800 rounded-full font-medium">
-                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {t('passed')}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
     </section>
   );
 }

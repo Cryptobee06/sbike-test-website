@@ -6,11 +6,11 @@ import FAQ from '@/components/guide/FAQ';
 
 export async function generateMetadata() {
   return {
-    title: 'Walkingpad Kaufratgeber 2025 - Experten Tipps & Beratung',
-    description: 'Umfassender Walkingpad-Kaufratgeber mit Experten-Tipps zu Motorleistung, Bandgröße, Steigungseinstellungen und mehr. Treffen Sie die richtige Wahl für Ihre Fitnessziele.',
-    keywords: 'Walkingpad Kaufratgeber, Walkingpad Eigenschaften, Motorleistung, Bandgröße, Steigungseinstellungen, HeimlWalkingpad Beratung',
+    title: 'Exercise Bike Buying Ratgeber 2025 - Expert Tips & Advice',
+    description: 'Complete exercise bike buying Ratgeber with expert tips on motor power, belt size, incline settings, and more. Make the right choice for your fitness goals.',
+    keywords: 'exercise bike buying Ratgeber, exercise bike features, motor power, belt size, incline settings, home exercise bike advice',
     icons: {
-      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+      icon: '/logo/Exercise Bikes Test Fav 1.png'
         },
   };
 }

@@ -1,912 +1,584 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, Suspense } from "react";
 import { useLocale } from "@/contexts/LanguageContext";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Star, Award, ArrowLeftToLine,ArrowRightToLine  } from "lucide-react";
+import { Star, Award } from "lucide-react";
 
-// Unified walking pad data
-const walkingPadsData = [
+const allWalkingPadsData = [
   {
-    id: "sportstech",
+    id: "sportstech SX175",
     brand: "Sportstech",
-    model: "sWalk Lite",
-    slug: "sportstech",
+    model: "SX175",
+    slug: "SportstechSX175",
     rating: 4.9,
-    badge: {
-      en: "Test Winner 2025",
-      de: "Testsieger 2025",
-    },
+    category: "both",
+    badge: { en: "Test Winner 2025", de: "Testsieger 2025" },
     badgeColor: "bg-green-500",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/treadmills/sportstech-treadmill.jpg",
+    image: "/Model/Sportstech sx175 model.webp",
     price: "599.00",
     originalPrice: null,
-
     features: {
-      display: {
-        en: "Modern LCD display",
-        de: "Modernes LCD-Display",
-      },
-      dimensions: {
-        en: "127 x 56.5 x 11.5 cm",
-        de: "127 x 56,5 x 11,5 cm",
-      },
-      weight: {
-        en: "up to 120 kg",
-        de: "bis 120 kg",
-      },
-      resistance: {
-        en: "Manual incline of 11.5%",
-        de: "Manuelle Steigung von 11,5%",
-      },
-      programs: {
-        en: "4 pre-installed programs (P01–P04)",
-        de: "4 vorinstallierte Programme (P01–P04)",
-      },
-      heartRate: {
-        en: "Hand Pulse Sensors + App",
-        de: "Handpulssensoren + App",
-      },
-      motor: {
-        en: "2.5 HP Motor",
-        de: "2.5 HP Motor",
-      },
-      speed: {
-        en: "1-8 km/h",
-        de: "1-8 km/h",
-      },
-      // ledColor: {
-      //   "en": "7 color LEDs depending on speed or pulse",
-      //   "de": "7 Farb-LEDs je nach Geschwindigkeit oder Puls"
-      // },
-      // appCompatibility: {
-      //   "en": "Works with the Sportstech Live app",
-      //   "de": "Kompatibel mit der Sportstech Live App"
-      // },
-      // control: {
-      //   "en": "Speed adjustment, program switching, and LED control via app",
-      //   "de": "Geschwindigkeitsanpassung, Programmwechsel und LED-Steuerung über die App"
-      // },
-      // realTimeData: {
-      //   "en": "Shows real-time training data like speed, steps, and heart rate",
-      //   "de": "Zeigt Echtzeit-Trainingsdaten wie Geschwindigkeit, Schritte und Herzfrequenz an"
-      // },
-      // workouts: {
-      //   "en": "Personalized workouts with trainers in the app",
-      //   "de": "Personalisierte Workouts mit Trainern in der App"
-      // },
-      // videos: {
-      //   "en": "Outdoor and landscape workout videos in the app",
-      //   "de": "Outdoor- und Landschafts-Workout-Videos in der App"
-      // },
+      display: { en: "23.8\" Full HD Rotating Touchscreen", de: "23,8\" Full-HD-Touchscreen drehbar" },
+      dimensions: { en: "150 × 56 × 135 cm", de: "150 × 56 × 135 cm" },
+      foldedSize: { en: "136 kg (300 lbs)", de: "n/a" },
+      weight: { en: "Auto-Resistance 100 micro-levels", de: "136 kg" },
+      flywheelMass: { en: "Optical HR + ANT+ Chest strap support", de: "n/a" },
+      resistance: { en: "Auto-Resistance 100 micro-levels", de: "Automatischer Widerstand mit 100 Mikro-Stufen" },
+      programs: { en: "4 pre-installed programs (P01–P04)", de: "4 vorinstallierte Programme (P01–P04)" },
+      heartRate: { en: "Optical HR + ANT+ Chest strap support", de: "Optischer HR-Sensor + ANT+ Brustgurt-Unterstützung" },
+      appCompatible: { en: "Wi-Fi, BT, ANT+", de: "WLAN, Bluetooth, ANT+" },
+      backrest: { en: "No", de: "Nein" },
+      driveSystem: { en: "2.5 HP Motor", de: "2.5 PS Motor" },
+      deviceWeight: { en: "n/a", de: "n/a" },
     },
   },
   {
-    id: "citysports",
-    brand: "Citysports",
-    model: "CS-WP6",
-    slug: "Citysports",
-    rating: 4.6,
-    badge: {
-      en: "",
-      de: "",
-    },
+    id: "peloton bike",
+    brand: "Peloton",
+    model: "Bike",
+    slug: "Peloton",
+    rating: 4.0,
+    category: "advanced",
+    badge: { en: "", de: "" },
     badgeColor: "bg-blue-500",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/CITYSPORTS/city04.png",
+    image: "/Model/Peloton bike model.webp",
     price: "299.00",
     originalPrice: "349.00",
     features: {
-      display: {
-        en: "LED Console",
-        de: "LED Konsole",
-      },
-      dimensions: {
-        en: "Compact Foldable",
-        de: "Kompakt faltbar",
-      },
-      weight: {
-        en: "up to 100kg",
-        de: "bis 100kg",
-      },
-      resistance: {
-        en: "No Incline",
-        de: "Keine Neigung",
-      },
-      programs: {
-        en: "2 Programs",
-        de: "2 Programme",
-      },
-      heartRate: {
-        en: "Remote Control",
-        de: "Fernbedienung",
-      },
-      motor: {
-        en: "440W Motor",
-        de: "440W Motor",
-      },
-      speed: {
-        en: "1-8 km/h",
-        de: "1-8 km/h",
-      },
+      display: { en: "24\" HD Pivoting Touchscreen", de: "24\" HD-Touchscreen schwenkbar" },
+      dimensions: { en: "~152 × 56 × 140 cm", de: "ca. 152 × 56 × 140 cm" },
+      foldedSize: { en: "n/a", de: "n/a" },
+      weight: { en: "136 kg (300 lbs)", de: "136 kg" },
+      flywheelMass: { en: "n/a", de: "n/a" },
+      resistance: { en: "Electromagnetic 24 digital levels", de: "Elektromagnetisch mit 24 digitalen Stufen" },
+      programs: { en: "n/a", de: "n/a" },
+      heartRate: { en: "Handlebar pulse Chest strap compatible", de: "Pulssensoren am Lenker + Brustgurt-kompatibel" },
+      appCompatible: { en: "Wi-Fi, BT, iFIT", de: "WLAN, Bluetooth, iFIT-App" },
+      backrest: { en: "No", de: "Nein" },
+      driveSystem: { en: "440 W", de: "440 Watt" },
+      deviceWeight: { en: "n/a", de: "n/a" },
     },
   },
   {
-    id: "kiddoza",
-    brand: "Kiddoza",
-    model: "Under Desk Walking Pad",
-    slug: "kiddoza",
-    rating: 4.2,
-    badge: {
-      en: "",
-      de: "",
-    },
+    id: "nordictrack",
+    brand: "Nordictrack",
+    model: "Bike",
+    slug: "Nordictrack",
+    rating: 3.5,
+    category: "advanced",
+    badge: { en: "", de: "" },
     badgeColor: "bg-purple-500",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Kiddoza/kiddoza04.png",
+    image: "/Model/Nordictrack bike model.webp",
     price: "449.00",
     originalPrice: "499.00",
     features: {
-      display: {
-        en: "LCD Display",
-        de: "LCD Display",
-      },
-      dimensions: {
-        en: "20kg Weight",
-        de: "20kg Gewicht",
-      },
-      weight: {
-        en: "up to 120kg",
-        de: "bis 120kg",
-      },
-      resistance: {
-        en: "4% Incline",
-        de: "4% Neigung",
-      },
-      programs: {
-        en: "3 Programs",
-        de: "3 Programme",
-      },
-      heartRate: {
-        en: "Mobile App",
-        de: "Mobile App",
-      },
-      motor: {
-        en: "2.5 HP Motor",
-        de: "2.5 HP Motor",
-      },
-      speed: {
-        en: "1-6 km/h",
-        de: "1-6 km/h",
-      },
+      display: { en: "Built-in Controls App-based (no screen)", de: "App-basiert (kein integrierter Bildschirm)" },
+      dimensions: { en: "~105 × 52 × 141 cm", de: "ca. 105 × 52 × 141 cm" },
+      foldedSize: { en: "n/a", de: "n/a" },
+      weight: { en: "150 kg (330 lbs)", de: "150 kg" },
+      flywheelMass: { en: "n/a", de: "n/a" },
+      resistance: { en: "Electronic Shifting SHIMANO/SRAM/Campagnolo", de: "Elektronische Schaltung SHIMANO/SRAM/Campagnolo" },
+      programs: { en: "3 Programs", de: "3 Programme" },
+      heartRate: { en: "ANT+ HRM + Bluetooth + L/R power balance", de: "ANT+ HRM + Bluetooth + Links/Rechts-Leistungsbalance" },
+      appCompatible: { en: "BT 5.0 + ANT+ multi-device", de: "Bluetooth 5.0 + ANT+ Multi-Geräte-Kopplung" },
+      backrest: { en: "No", de: "Nein" },
+      driveSystem: { en: "2.5 HP", de: "2.5 PS" },
+      deviceWeight: { en: "n/a", de: "n/a" },
     },
   },
   {
-    id: "superun",
-    brand: "Superun",
-    model: "B.A06-C",
-    slug: "Superun",
-    rating: 4.5,
-    badge: {
-      en: "",
-      de: "",
-    },
+    id: "Wahoo bike",
+    brand: "Wahoo",
+    model: "Bike",
+    slug: "Wahoo",
+    rating: 3.9,
+    category: "advanced",
+    badge: { en: "", de: "" },
     badgeColor: "bg-orange-500",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/Superun+Raceable+Walking+Pad/superun04.png",
+    image: "/Model/Wahoo bike model.jpg",
     price: "399.00",
     originalPrice: null,
     features: {
-      display: {
-        en: "Basic LCD",
-        de: "Basic LCD",
-      },
-      dimensions: {
-        en: "86 lbs Weight",
-        de: "86 lbs Gewicht",
-      },
-      weight: {
-        en: "up to 159kg",
-        de: "bis 159kg",
-      },
-      resistance: {
-        en: "0-6% Manual",
-        de: "0-6% manuell",
-      },
-      programs: {
-        en: "4 Programs",
-        de: "4 Programme",
-      },
-      heartRate: {
-        en: "PitPat App",
-        de: "PitPat App",
-      },
-      motor: {
-        en: "3 HP Brushless",
-        de: "3 HP Brushless",
-      },
-      speed: {
-        en: "0.6-16 km/h",
-        de: "0.6-16 km/h",
-      },
+      display: { en: "LED Display + Tablet Holder", de: "LED-Display + Tablet-Halterung" },
+      dimensions: { en: "~100 × 47 × 120 cm", de: "ca. 100 × 47 × 120 cm" },
+      foldedSize: { en: "120 kg (265 lbs)", de: "n/a" },
+      weight: { en: "120 kg (265 lbs)", de: "120 kg" },
+      flywheelMass: { en: "n/a", de: "n/a" },
+      resistance: { en: "Stepless Magnetic Resistance", de: "Stufenloser Magnetwiderstand" },
+      programs: { en: "n/a", de: "n/a" },
+      heartRate: { en: "Handlebar pulse sensors", de: "Pulssensoren am Lenker" },
+      appCompatible: { en: "Bluetooth + basic app", de: "Bluetooth + Basis-App-Unterstützung" },
+      backrest: { en: "No", de: "Nein" },
+      driveSystem: { en: "2.5 HP", de: "2.5 PS" },
+      deviceWeight: { en: "n/a", de: "n/a" },
     },
   },
   {
-    id: "urevo",
-    brand: "Urevo",
-    model: "SpaceWalk E1L",
-    slug: "Urevo",
-    rating: 4,
-    badge: {
-      en: "",
-      de: "",
-    },
+    id: "Garmin Bike",
+    brand: "Garmin",
+    model: "Bike",
+    slug: "Garmin",
+    rating: 3.9,
+    category: "advanced",
+    badge: { en: "", de: "" },
     badgeColor: "bg-teal-500",
-    image:
-      "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/UREVO/ureo04.png",
+    image: "/Model/Garmin bike model.webp",
     price: "379.00",
     originalPrice: "429.00",
     features: {
-      display: {
-        en: "Smart Display",
-        de: "Smart Display",
-      },
-      dimensions: {
-        en: "Fold-flat Design",
-        de: "Fold-flat Design",
-      },
-      weight: {
-        en: "up to 120kg",
-        de: "bis 120kg",
-      },
-      resistance: {
-        en: "14% Auto-Incline",
-        de: "14% Auto-Neigung",
-      },
-      programs: {
-        en: "1 Programs",
-        de: "1 Programme",
-      },
-      heartRate: {
-        en: "UREVO App + Sensors",
-        de: "UREVO App + Sensoren",
-      },
-      motor: {
-        en: "Ultra-quiet Brushless",
-        de: "Ultra-leise Brushless",
-      },
-      speed: {
-        en: "1-8 km/h",
-        de: "1-8 km/h",
-      },
+      display: { en: "4.5\" Display + USB Chargers", de: "4,5\"-Display + USB-Ladeanschlüsse" },
+      dimensions: { en: "~110 × 53 × 140 cm", de: "ca. 110 × 53 × 140 cm" },
+      foldedSize: { en: "n/a", de: "n/a" },
+      weight: { en: "136 kg (300 lbs)", de: "136 kg" },
+      flywheelMass: { en: "n/a", de: "n/a" },
+      resistance: { en: "Virtual Shifting Programmable gears", de: "Virtuelle Schaltung mit programmierbaren Gängen" },
+      programs: { en: "n/a", de: "n/a" },
+      heartRate: { en: "ANT+ HRM support L/R power balance", de: "ANT+ HRM-Unterstützung + Links/Rechts-Leistungsbalance" },
+      appCompatible: { en: "BT Smart + ANT+ FE-C + Zwift", de: "Bluetooth Smart, ANT+ FE-C, Zwift" },
+      backrest: { en: "No", de: "Nein" },
+      driveSystem: { en: "2.5 HP", de: "2.5 HP" },
+      deviceWeight: { en: "n/a", de: "n/a" },
     },
   },
   {
-    id: "Copant",
-    brand: "Copant ",
-    model: "Raceable Walking Pad",
-    slug: "Copant",
-    rating: 4.5,
-    badge: {
-      en: "Test Winner 2025",
-      de: "Testsieger 2025",
-    },
+    id: "sportstech X150",
+    brand: "Sportstech",
+    model: "X150",
+    slug: "Sportstech",
+    rating: 4.9,
+    category: "both",
+    badge: { en: "Test Winner 2025", de: "Testsieger 2025" },
     badgeColor: "bg-green-500",
-    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/copant/IMG_0009.png",
+    image: "/Model/Sportstech X150 model.webp",
     price: "599.00",
     originalPrice: null,
-
     features: {
-      display: {
-        en: "LED display showing speed, time, distance & calories",
-        de: "LCD-Display",
-      },
-      dimensions: {
-        en: "Slim, space-saving design for desks & small rooms",
-        de: "107,8T x 51,4B x 10,5H cm",
-      },
-      weight: {
-        en: "Up to 100 kg",
-        de: "136 KG",
-      },
-      resistance: {
-        en: "No incline",
-        de: "ohne",
-      },
-      programs: {
-        en: "Basic walking modes with manual controls",
-        de: "ohne",
-      },
-      heartRate: {
-        en: "Not available",
-        de: "No data",
-      },
-      motor: {
-        en: "2.5 HP Motor",
-        de: "No data",
-      },
-      speed: {
-        en: "1–6 km/h",
-        de: "1-6 km/h",
-      },
-      // ledColor: {
-      //   "en": "7 color LEDs depending on speed or pulse",
-      //   "de": "7 Farb-LEDs je nach Geschwindigkeit oder Puls"
-      // },
-      // appCompatibility: {
-      //   "en": "Works with the Sportstech Live app",
-      //   "de": "Kompatibel mit der Sportstech Live App"
-      // },
-      // control: {
-      //   "en": "Speed adjustment, program switching, and LED control via app",
-      //   "de": "Geschwindigkeitsanpassung, Programmwechsel und LED-Steuerung über die App"
-      // },
-      // realTimeData: {
-      //   "en": "Shows real-time training data like speed, steps, and heart rate",
-      //   "de": "Zeigt Echtzeit-Trainingsdaten wie Geschwindigkeit, Schritte und Herzfrequenz an"
-      // },
-      // workouts: {
-      //   "en": "Personalized workouts with trainers in the app",
-      //   "de": "Personalisierte Workouts mit Trainern in der App"
-      // },
-      // videos: {
-      //   "en": "Outdoor and landscape workout videos in the app",
-      //   "de": "Outdoor- und Landschafts-Workout-Videos in der App"
-      // },
+      display: { en: "3.5\" LCD Tablet", de: "3,5\" LCD + Tablet-Halterung" },
+      dimensions: { en: "104.5×53.5×112 mm", de: "104,5 × 53,5 × 112" },
+      foldedSize: { en: "55 x 55 cm", de: "55 x 55 cm" },
+      weight: { en: "120 kg", de: "120 kg" },
+      flywheelMass: { en: "4 Kg", de: "4 kg" },
+      resistance: { en: "8 magnetic", de: "8 Magnetstufen" },
+      programs: { en: "3-in-1 + App", de: "3-in-1 + App" },
+      heartRate: { en: "Hand sensors", de: "Handsensoren" },
+      appCompatible: { en: "Zwift/Kinomap", de: "Zwift / Kinomap" },
+      backrest: { en: "Recumbent mode", de: "Liegeergometer-Modus" },
+      driveSystem: { en: "Belt drive", de: "Riemenantrieb" },
+      deviceWeight: { en: "~19 kg", de: "ca. 19 kg" },
     },
   },
   {
-    id: "Merach",
-    brand: "Merach",
-    model: "T26B1 3-in-1 Treadmill",
-    slug: "Merach",
-    rating: 4.6,
-    badge: {
-      en: "Test Winner 2025",
-      de: "Testsieger 2025",
-    },
+    id: "Ultrasport",
+    brand: "Ultrasport",
+    model: "Bike",
+    slug: "Ultrasport",
+    rating: 3.5,
+    category: "amateur",
+    // badge: { en: "Test Winner 2025", de: "Testsieger 2025" },
     badgeColor: "bg-green-500",
-    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/merach/IMG_0045.png",
+    image: "/Model/ultrasport bike model.jpg",
     price: "599.00",
     originalPrice: null,
-
     features: {
-      display: {
-        en: "Multi-function LCD console with real-time metrics",
-        de: "LED",
-      },
-      dimensions: {
-        en: "Full treadmill size with foldable frame",
-        de: "1160*476*131MM",
-      },
-      weight: {
-        en: "Higher capacity suitable for heavier users",
-        de: "110 Kilogramm",
-      },
-      resistance: {
-        en: "Multiple manual incline levels",
-        de: "0%-5% Steigung",
-      },
-      programs: {
-        en: "Built-in programs for walking, jogging & climbing",
-        de: "ohne",
-      },
-      heartRate: {
-        en: "Integrated hand pulse sensors",
-        de: "No data",
-      },
-      motor: {
-        en: "2.75 HP Motor",
-        de: "2.5 HP Motor",
-      },
-      speed: {
-        en: "0.6–3.8 mph (~ 1.0–6.1 km/h)",
-        de: "1-6 km/h",
-      },
-      // ledColor: {
-      //   "en": "7 color LEDs depending on speed or pulse",
-      //   "de": "7 Farb-LEDs je nach Geschwindigkeit oder Puls"
-      // },
-      // appCompatibility: {
-      //   "en": "Works with the Sportstech Live app",
-      //   "de": "Kompatibel mit der Sportstech Live App"
-      // },
-      // control: {
-      //   "en": "Speed adjustment, program switching, and LED control via app",
-      //   "de": "Geschwindigkeitsanpassung, Programmwechsel und LED-Steuerung über die App"
-      // },
-      // realTimeData: {
-      //   "en": "Shows real-time training data like speed, steps, and heart rate",
-      //   "de": "Zeigt Echtzeit-Trainingsdaten wie Geschwindigkeit, Schritte und Herzfrequenz an"
-      // },
-      // workouts: {
-      //   "en": "Personalized workouts with trainers in the app",
-      //   "de": "Personalisierte Workouts mit Trainern in der App"
-      // },
-      // videos: {
-      //   "en": "Outdoor and landscape workout videos in the app",
-      //   "de": "Outdoor- und Landschafts-Workout-Videos in der App"
-      // },
+      display: { en: "LCD Console", de: "LCD-Konsole" },
+      dimensions: { en: "80×45×121", de: "80 × 45 × 121" },
+      foldedSize: { en: "30×40×142 cm", de: "30 × 40 × 142 cm" },
+      weight: { en: "100 kg", de: "100 kg" },
+      flywheelMass: { en: "1.5 kg", de: "1,5 kg" },
+      resistance: { en: "8 magnetic", de: "8 Magnetstufen" },
+      programs: { en: "Manual only", de: "Manuell" },
+      heartRate: { en: "Hand sensors", de: "Handsensoren" },
+      appCompatible: { en: "No", de: "Nein" },
+      backrest: { en: "Included", de: "Inklusive" },
+      driveSystem: { en: "Belt drive", de: "Riemenantrieb" },
+      deviceWeight: { en: "~12 kg", de: "ca. 12 kg" },
     },
   },
   {
-    id: "Cursor ",
-    brand: "Cursor  ",
-    model: "Walking Pad",
-    slug: "Cursor ",
-    rating: 3.9,
-    badge: {
-      en: "Test Winner 2025",
-      de: "Testsieger 2025",
-    },
+    id: "Sportplus",
+    brand: "Sportplus",
+    model: "Bike",
+    slug: "SportPlus",
+    rating: 3.4,
+    category: "amateur",
+    // badge: { en: "Test Winner 2025", de: "Testsieger 2025" },
     badgeColor: "bg-green-500",
-    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/cursor/Cursor-fitness-walking-pad-removebg-preview.png",
+    image: "/Model/Sportplus bike model.webp",
     price: "599.00",
     originalPrice: null,
-
     features: {
-      display: {
-        en: "Compact LED screen with essential data",
-        de: "LED",
-      },
-      dimensions: {
-        en: "Ultra-compact under-desk footprint",
-        de: "114 x 55 x 11 cm",
-      },
-      weight: {
-        en: "Up to 110 kg",
-        de: "136 kg",
-      },
-      resistance: {
-        en: "No incline",
-        de: "16% Steigung",
-      },
-      programs: {
-        en: "Simple presets for daily walking",
-        de: "ohne",
-      },
-      heartRate: {
-        en: "Not included",
-        de: "No data",
-      },
-      motor: {
-        en: "2.5 HP Motor",
-        de: "2.5HP",
-      },
-      speed: {
-        en: "0.5–6 km/h",
-        de: "12 Kilometer pro Stunde",
-      },
-      // ledColor: {
-      //   "en": "7 color LEDs depending on speed or pulse",
-      //   "de": "7 Farb-LEDs je nach Geschwindigkeit oder Puls"
-      // },
-      // appCompatibility: {
-      //   "en": "Works with the Sportstech Live app",
-      //   "de": "Kompatibel mit der Sportstech Live App"
-      // },
-      // control: {
-      //   "en": "Speed adjustment, program switching, and LED control via app",
-      //   "de": "Geschwindigkeitsanpassung, Programmwechsel und LED-Steuerung über die App"
-      // },
-      // realTimeData: {
-      //   "en": "Shows real-time training data like speed, steps, and heart rate",
-      //   "de": "Zeigt Echtzeit-Trainingsdaten wie Geschwindigkeit, Schritte und Herzfrequenz an"
-      // },
-      // workouts: {
-      //   "en": "Personalized workouts with trainers in the app",
-      //   "de": "Personalisierte Workouts mit Trainern in der App"
-      // },
-      // videos: {
-      //   "en": "Outdoor and landscape workout videos in the app",
-      //   "de": "Outdoor- und Landschafts-Workout-Videos in der App"
-      // },
+      display: { en: "5.5\" Backlit LCD", de: "5,5\" LCD mit Hintergrundbeleuchtung" },
+      dimensions: { en: "102×51×140", de: "102 × 51 × 140" },
+      foldedSize: { en: "Not foldable", de: "Nicht klappbar" },
+      weight: { en: "150 kg", de: "150 kg" },
+      flywheelMass: { en: "10 kg", de: "10 kg" },
+      resistance: { en: "24 computer", de: "24 computergesteuerte Stufen" },
+      programs: { en: "24 + 18 via App", de: "24 + 18 per App" },
+      heartRate: { en: "Hand sensors", de: "Handsensoren" },
+      appCompatible: { en: "Kinomap/BT", de: "Kinomap / BT" },
+      backrest: { en: "No", de: "Nein" },
+      driveSystem: { en: "Belt drive", de: "2.5 HP" },
+      deviceWeight: { en: "~37 kg", de: "ca. 37 kg" },
     },
   },
   {
-    id: "Cazvian ",
-    brand: "Cazvian ",
-    model: "Walking Pad",
-    slug: "Cazvian",
-    rating: 4.1,
-    badge: {
-      en: "Test Winner 2025",
-      de: "Testsieger 2025",
-    },
+    id: "DOMYOS",
+    brand: "DOMYOS",
+    model: "Bike",
+    slug: "DOMYOS",
+    rating: 3.8,
+    category: "amateur",
+    // badge: { en: "Test Winner 2025", de: "Testsieger 2025" },
     badgeColor: "bg-green-500",
-    image: "https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/walkingpad+assets/Cazvian/cazianfinal.jpg",
+    image: "/Model/essential bike model.jpg",
     price: "599.00",
     originalPrice: null,
-
     features: {
-      display: {
-        en: "Front-facing LED display for clear visibility",
-        de: "LED",
-      },
-      dimensions: {
-        en: "Lightweight, low-profile frame for easy storage",
-        de: "111 x 56 x 12 cm",
-      },
-      weight: {
-        en: "Up to 120 kg",
-        de: "110kg",
-      },
-      resistance: {
-        en: "Flat deck (no incline)",
-        de: "5% Steigung",
-      },
-      programs: {
-        en: "Core routines for calorie burn & step training",
-        de: "1 program",
-      },
-      heartRate: {
-        en: "Not available",
-        de: "No data",
-      },
-      motor: {
-        en: "2 HP Motor",
-        de: "2.0HP",
-      },
-      speed: {
-        en: "1-6 km/h",
-        de: "1-6 km/h",
-      },
-      // ledColor: {
-      //   "en": "7 color LEDs depending on speed or pulse",
-      //   "de": "7 Farb-LEDs je nach Geschwindigkeit oder Puls"
-      // },
-      // appCompatibility: {
-      //   "en": "Works with the Sportstech Live app",
-      //   "de": "Kompatibel mit der Sportstech Live App"
-      // },
-      // control: {
-      //   "en": "Speed adjustment, program switching, and LED control via app",
-      //   "de": "Geschwindigkeitsanpassung, Programmwechsel und LED-Steuerung über die App"
-      // },
-      // realTimeData: {
-      //   "en": "Shows real-time training data like speed, steps, and heart rate",
-      //   "de": "Zeigt Echtzeit-Trainingsdaten wie Geschwindigkeit, Schritte und Herzfrequenz an"
-      // },
-      // workouts: {
-      //   "en": "Personalized workouts with trainers in the app",
-      //   "de": "Personalisierte Workouts mit Trainern in der App"
-      // },
-      // videos: {
-      //   "en": "Outdoor and landscape workout videos in the app",
-      //   "de": "Outdoor- und Landschafts-Workout-Videos in der App"
-      // },
+      display: { en: "4-function LCD", de: "4-Funktionen-LCD" },
+      dimensions: { en: "87×48×121", de: "87 × 48 × 121" },
+      foldedSize: { en: "Not foldable", de: "Nicht klappbar" },
+      weight: { en: "110 kg", de: "110 kg" },
+      flywheelMass: { en: "3 kg", de: "3 kg" },
+      resistance: { en: "7 manual", de: "7 manuelle Stufen" },
+      programs: { en: "None", de: "Keine" },
+      heartRate: { en: "No", de: "Nein" },
+      appCompatible: { en: "No", de: "Nein" },
+      backrest: { en: "No", de: "Nein" },
+      driveSystem: { en: "Belt drive", de: "Riemenantrieb" },
+      deviceWeight: { en: "20 kg", de: "ca. 20 kg" },
+    },
+  },
+  {
+    id: "AsVIVA",
+    brand: "AsVIVA",
+    model: "Bike",
+    slug: "AsVIVA",
+    rating: 3.7,
+    category: "amateur",
+    // badge: { en: "Test Winner 2025", de: "Testsieger 2025" },
+    badgeColor: "bg-green-500",
+    image: "/Model/AsVIVA bike model.webp",
+    price: "599.00",
+    originalPrice: null,
+    features: {
+      display: { en: "Backlit LCD + App", de: "Hintergrundbeleuchtetes LCD + App" },
+      dimensions: { en: "118×54×139", de: "118 × 54 × 139" },
+      foldedSize: { en: "Not foldable", de: "Nicht klappbar" },
+      weight: { en: "150 kg", de: "150 kg" },
+      flywheelMass: { en: "15 kg", de: "15 kg" },
+      resistance: { en: "16 computer", de: "16 computergesteuerte Stufen" },
+      programs: { en: "12 preset", de: "12 vorprogrammierte Stufen" },
+      heartRate: { en: "+ Chest strap", de: "+ Brustgurt" },
+      appCompatible: { en: "Kinomap/BT", de: "Kinomap / Bluetooth" },
+      backrest: { en: "No", de: "Nein" },
+      driveSystem: { en: "Belt drive", de: "Riemenantrieb" },
+      deviceWeight: { en: "38 kg", de: "ca. 38 kg" },
     },
   },
 ];
 
-export default function ReviewsPage() {
-  const locale = useLocale();
+const categoryDefinitions = {
+  amateur: {
+    name: { en: "Amateur Exercise Bikes", de: "Amateur-Exercise Bikes" },
+    ids: ["sportstech X150", "Ultrasport", "Sportplus", "DOMYOS", "AsVIVA"],
+  },
+  advanced: {
+    name: { en: "Advanced Exercise Bikes", de: "Advanced Exercise Bikes" },
+    ids: ["sportstech SX175", "peloton bike", "nordictrack", "Wahoo bike", "Garmin Bike"],
+  },
+};
 
-  const tableRef = useRef(null);
+const featureRows = [
+  { label: { en: "Display", de: "Display" }, key: "display" },
+  { label: { en: "Dimensions (cm)", de: "Abmessungen (cm)" }, key: "dimensions" },
+  { label: { en: "Max User Weight", de: "Max. Benutzergewicht" }, key: "weight" },
+  { label: { en: "Resistance Levels", de: "Widerstandsstufen" }, key: "resistance" },
+  { label: { en: "Pulse Measurement", de: "Pulsmessung" }, key: "heartRate" },
+  { label: { en: "App Compatible", de: "App-kompatibel" }, key: "appCompatible" },
+];
 
-  const renderStars = (rating) => {
-    return (
-      <div className="flex items-center justify-center gap-1">
-        {[...Array(5)].map((_, i) => (
-          <Star
-            key={i}
-            className={`w-4 h-4 ${
-              i < Math.floor(rating)
-                ? "fill-yellow-400 text-yellow-400"
-                : "text-gray-300"
-            }`}
-          />
-        ))}
-        <span className="ml-1 text-sm font-semibold text-gray-700">
-          {rating}
-        </span>
-      </div>
-    );
-  };
-
-   const scrollToFirstColumn = () => {
-    if (tableRef.current) {
-      tableRef.current.scrollLeft = 0;
-    }
-  };
-
-  // Scroll to last column
-  const scrollToLastColumn = () => {
-    if (tableRef.current) {
-      const lastColumn = tableRef.current.querySelector("th:last-child");
-      if (lastColumn) {
-        tableRef.current.scrollTo({
-          left: lastColumn.offsetLeft,
-          behavior: "smooth",
-        });
-      }
-    }
-  };
-
-  const featureRows = [
-    {
-      label: {
-        en: "Display",
-        de: "Display",
-      },
-      key: "display",
-    },
-    {
-      label: {
-        en: "Dimensions",
-        de: "Abmessungen",
-      },
-      key: "dimensions",
-    },
-    {
-      label: {
-        en: "Max Weight Capacity",
-        de: "bis Körpergewicht",
-      },
-      key: "weight",
-    },
-    {
-      label: {
-        en: "Incline/Resistance",
-        de: "Widerstand",
-      },
-      key: "resistance",
-    },
-    {
-      label: {
-        en: "Training Programs",
-        de: "Trainingsprogramme",
-      },
-      key: "programs",
-    },
-    {
-      label: {
-        en: "Heart Rate Monitoring",
-        de: "Pulsmessung",
-      },
-      key: "heartRate",
-    },
-    {
-      label: {
-        en: "Motor",
-        de: "Motor",
-      },
-      key: "motor",
-    },
-    {
-      label: {
-        en: "Speed Range",
-        de: "Geschwindigkeit",
-      },
-      key: "speed",
-    },
-  ];
-
-  const pageText = {
-    title: {
-      en: "Walking Pad Comparison 2025",
-      de: "Walking Pad Vergleich 2025",
-    },
-    subtitle: {
-      en: "Compare the best walking pads to find your perfect home fitness solution",
-      de: "Die besten Walking Pads im direkten Vergleich",
-    },
-    model: {
-      en: "Model",
-      de: "Model",
-    },
-    readReview: {
-      en: "Read Review",
-      de: "Test lesen",
-    },
-    recommendation: {
-      title: {
-        en: "Our Recommendation: Sportstech sWalk Lite - Winner 2025",
-        de: "Empfehlung: Sportstech sWalk Lite - Testsieger 2025",
-      },
-      text: {
-        en: "The Sportstech sWalk Lite stands out with the best features, highest quality, and most comprehensive functionality. With 15 incline levels, 21.5\" touch display, and speeds up to 20 km/h, it's the premium choice for demanding users seeking professional-grade home fitness equipment.",
-        de: 'Das Sportstech sWalk Lite überzeugt mit der besten Ausstattung, höchster Qualität und umfangreichsten Features. Mit 15 Neigungsstufen, 21.5" Touch-Display und bis zu 20 km/h ist es die Premium-Wahl für anspruchsvolle Nutzer.',
-      },
-    },
-  };
-
-  // Get base path for links
-  const getBasePath = () => {
-    return locale === "de" ? "/de" : "";
-  };
+// ── MOBILE CARD ──────────────────────────────────────────────────────────────
+function MobileCard({ brand, locale, isWinner, readReviewLabel, basePath, featureRowsData }) {
+  const hasBadge = brand.badge?.[locale];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-primary-100 py-20 treadmill-bacgroundimage">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-xl-5">
-          <div className="text-center margin-banner mt-xl-5">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 ">
+    <div
+      className={`bg-white rounded-2xl border overflow-visible relative ${
+        isWinner
+          ? "border-primary-400 ring-2 ring-primary-100"
+          : "border-gray-200"
+      }`}
+    >
+      {/* Badge — absolute top-left, exactly like desktop */}
+      {hasBadge && (
+        <div className="absolute top-2 left-2 bg-green-600 text-white text-[11px] px-3 py-1 rounded-full font-semibold tracking-wide z-10 whitespace-nowrap">
+          {brand.badge[locale]}
+        </div>
+      )}
+
+      {/* Award icon — absolute top-right, exactly like desktop */}
+      {isWinner && (
+        <div className="absolute -top-2 -right-2 bg-green-600 text-white p-1 rounded-full z-10">
+          <Award className="w-4 h-4" />
+        </div>
+      )}
+
+      {/* Product image — pt-10 gives space so badge doesn't overlap image */}
+      <div className="w-full flex items-center justify-center bg-gray-50 pt-10 pb-4 px-6 rounded-t-2xl">
+        <img
+          src={brand.image}
+          alt={`${brand.brand} ${brand.model}`}
+          className="h-28 w-auto object-contain"
+        />
+      </div>
+
+      {/* Name + Stars */}
+      <div className="text-center px-4 pt-3 pb-4">
+        <h3 className="font-bold text-[17px] text-gray-900 mb-2 leading-tight">
+          {brand.brand} {brand.model}
+        </h3>
+        <div className="flex items-center justify-center gap-1">
+          {[...Array(5)].map((_, i) => {
+            const filled = i < Math.floor(brand.rating);
+            const half = !filled && i < brand.rating;
+            return (
+              <span key={i} className="relative inline-block w-4 h-4">
+                <Star className="w-4 h-4 text-gray-200 absolute inset-0" />
+                {half && (
+                  <span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>
+                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  </span>
+                )}
+                {filled && (
+                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 absolute inset-0" />
+                )}
+              </span>
+            );
+          })}
+          <span className="ml-1.5 text-sm font-semibold text-gray-400">{brand.rating}</span>
+        </div>
+      </div>
+
+      {/* Spec rows */}
+      <div className="border-t border-gray-100 mx-4">
+        {featureRowsData.map((feature, i) => (
+          <div
+            key={feature.key}
+            className={`flex justify-between items-start py-3 gap-4 ${
+              i < featureRowsData.length - 1 ? "border-b border-gray-100" : ""
+            }`}
+          >
+            <span className="text-[13px] text-gray-500 font-medium flex-shrink-0">
+              {feature.label[locale]}
+            </span>
+            <span className="text-[13px] text-gray-800 text-right leading-snug font-normal">
+              {brand.features[feature.key][locale]}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="px-4 py-4">
+        <Link
+          href={`${basePath}/brands/${brand.slug}`}
+          className="w-full block text-center py-3 rounded-xl font-bold text-sm bg-primary-600 text-white hover:bg-primary-700 transition-colors"
+        >
+          {readReviewLabel}
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+// ── MAIN PAGE ────────────────────────────────────────────────────────────────
+function ReviewsContent() {
+  const locale = useLocale();
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const category = categoryParam && categoryDefinitions[categoryParam] ? categoryParam : "amateur";
+  const tableRef = useRef(null);
+
+  const walkingPadsData = (() => {
+    if (!category || !categoryDefinitions[category]) return allWalkingPadsData;
+    const categoryIds = categoryDefinitions[category].ids;
+    return allWalkingPadsData.filter(
+      (pad) => categoryIds.includes(pad.id) || categoryIds.includes(pad.slug)
+    );
+  })();
+
+  const renderStars = (rating) => (
+    <div className="flex items-center justify-center gap-1">
+      {[...Array(5)].map((_, i) => {
+        const filled = i < Math.floor(rating);
+        const half = !filled && i < rating;
+        return (
+          <span key={i} className="relative inline-block w-4 h-4">
+            <Star className="w-4 h-4 text-gray-300 absolute inset-0" />
+            {half && (
+              <span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>
+                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              </span>
+            )}
+            {filled && <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 absolute inset-0" />}
+          </span>
+        );
+      })}
+      <span className="ml-1 text-sm font-semibold text-gray-400">{rating}</span>
+    </div>
+  );
+
+  const getBasePath = () => (locale === "de" ? "/de" : "");
+
+  const pageText = {
+    title: { en: "Exercise Bike Comparison", de: "Erweiterter Heimtrainer-Vergleich" },
+    subtitle: {
+      en: "Compare the world's finest smart exercise bikes, tested by certified fitness professionals across power accuracy, ride realism, connectivity, and value.",
+      de: "Vergleichen Sie die weltweit besten smarten Heimtrainer, getestet von zertifizierten Fitness-Experten.",
+    },
+    model: { en: "Model", de: "Model" },
+    readReview: { en: "Read Review", de: "Test lesen" },
+    recommendation:
+      category === "amateur"
+        ? {
+            title: { en: "Our Recommendation: Sportstech X150 Ergometer - Winner", de: "Unsere Empfehlung: Sportstech X150 Ergometer — Sieger 2026" },
+            text: {
+              en: "The Sportstech X150 stands out as the best all-round amateur exercise bike of 2025. Its unique 3-in-1 design combined with Zwift & Kinomap app compatibility, a foldable frame and integrated tablet holder make it the most versatile package in its class.",
+              de: "Das Sportstech X150 überzeugt als bester Allround-Heimtrainer für Hobby- und Einsteiger-Nutzer im Jahr 2025.",
+            },
+          }
+        : {
+            title: { en: "Our Recommendation: Sportstech SX175 — Winner", de: "Unsere Empfehlung: Sportstech SX175 — Testsieger" },
+            text: {
+              en: "The Sportstech SX175 stands out as the best value proposition in the advanced exercise bike category. With stepless magnetic resistance, built-in pulse measurement, and an LED display, all at just €299, it delivers everything most home users need without a mandatory subscription.",
+              de: "Das Sportstech SX175 bietet das beste Preis-Leistungs-Verhältnis im Premium-Heimtrainer-Segment.",
+            },
+          },
+  };
+
+  const isWinner = (id) => id === "sportstech X150" || id === "sportstech SX175";
+
+  return (
+    <div className="min-h-screen bg-white">
+
+      {/* Hero */}
+      <section className="relative treadmill-bacgroundimage">
+        <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-black/50 to-black/30" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="text-center py-14 sm:py-20 text-white">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6 drop-shadow-lg leading-tight">
               {pageText.title[locale]}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl md:text-2xl max-w-3xl mx-auto text-white/90 drop-shadow px-2">
               {pageText.subtitle[locale]}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Comparison Table Section */}
-      <section className="py-12">
-        <div className="min-h-screen bg-gray-50 px-2 sm:px-4 lg:px-6 ">
+      {/* Category Tabs */}
+      <section className="bg-white border-b border-gray-100 shadow-sm sticky top-16 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-3 py-3 sm:py-4">
+            <Link
+              href={`${getBasePath()}/reviews/?category=amateur`}
+              className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
+                category === "amateur"
+                  ? "bg-primary-600 text-white"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              {categoryDefinitions.amateur.name[locale]}
+            </Link>
+            <Link
+              href={`${getBasePath()}/reviews/?category=advanced`}
+              className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
+                category === "advanced"
+                  ? "bg-primary-600 text-white"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              {categoryDefinitions.advanced.name[locale]}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Section */}
+      <section className="py-8 sm:py-12">
+        <div className="min-h-screen bg-primary-50 px-3 sm:px-4 lg:px-6 py-6">
           <div className="max-w-8xl mx-auto">
-            {/* Mobile Cards View (< 768px) */}
-            <div className="text-right mb-6 flex justify-between items-center"></div>
-            <div className="md:hidden space-y-4 mb-6">
-              {walkingPadsData.map((brand, index) => (
-                <div
+
+            {/* ── MOBILE CARDS (< 768px) ── */}
+            <div className="md:hidden space-y-4 px-1 pt-2">
+              {walkingPadsData.map((brand) => (
+                <MobileCard
                   key={brand.id}
-                  className={`bg-white rounded-lg shadow-lg p-4 border transform transition-all duration-500 ease-out hover:scale-105 hover:shadow-xl hover:-translate-y-1 ${
-                    brand.id === "sportstech"
-                      ? "border-green-500 ring-1 ring-green-200 hover:ring-2 hover:ring-green-300"
-                      : "border-gray-200 hover:border-gray-300"
-                  }`}
-                  style={{
-                    animationDelay: `${index * 100}ms`,
-                  }}
-                >
-                  {/* Badge for mobile */}
-                  {brand.id === "sportstech" && brand.badge[locale] && (
-                    <div className="flex justify-between items-start mb-3">
-                      <div className="bg-green-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                        {brand.badge[locale]}
-                      </div>
-                      <div className="bg-green-500 text-white p-1 rounded-full">
-                        <Award className="w-4 h-4" />
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Product Info */}
-                  <div className="text-center mb-4">
-                    <div className="w-full h-32 mb-3 bg-gray-50 rounded-md flex items-center justify-center overflow-hidden p-2">
-                      <img
-                        src={brand.image}
-                        alt={`${brand.brand} ${brand.model}`}
-                        className="max-w-full max-h-full object-contain"
-                      />
-                    </div>
-                    <h3 className="font-bold text-lg mb-2 text-gray-800">
-                      {brand.brand} {brand.model}
-                    </h3>
-                    <div className="mb-3">{renderStars(brand.rating)}</div>
-                  </div>
-
-                  {/* Features List for Mobile */}
-                  <div className="space-y-3 mb-4">
-                    {featureRows.map((feature) => (
-                      <div
-                        key={feature.key}
-                        className="flex justify-between items-start py-2 border-b border-gray-100 last:border-b-0"
-                      >
-                        <span className="font-medium text-gray-700 text-sm flex-1 pr-3">
-                          {feature.label[locale]}
-                        </span>
-                        <span
-                          className={`text-sm text-right flex-1 ${
-                            brand.id === "sportstech"
-                              ? "text-green-800 font-medium"
-                              : "text-gray-700"
-                          }`}
-                        >
-                          {brand.features[feature.key][locale]}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Review Button for Mobile */}
-                  <div className="mt-4">
-                    <Link
-                      href={`${getBasePath()}/brands/${brand.slug}`}
-                      className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
-                        brand.id === "sportstech"
-                          ? "bg-green-600 text-white hover:bg-green-700"
-                          : "bg-primary-600 text-white hover:bg-primary-700"
-                      }`}
-                    >
-                      {pageText.readReview[locale]}
-                    </Link>
-                  </div>
-                </div>
+                  brand={brand}
+                  locale={locale}
+                  isWinner={isWinner(brand.id)}
+                  readReviewLabel={pageText.readReview[locale]}
+                  basePath={getBasePath()}
+                  featureRowsData={featureRows}
+                />
               ))}
+
+              {/* Mobile recommendation strip */}
+              <div className="bg-white rounded-2xl border border-primary-200 p-5 mt-4">
+                <h3 className="text-base font-bold text-primary-700 mb-2">
+                  {pageText.recommendation.title[locale]}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {pageText.recommendation.text[locale]}
+                </p>
+              </div>
             </div>
 
-            {/* Tablet View (768px - 1024px) */}
-           
-            <div className="w-full flex justify-between items-end mb-4">
-              <button
-             onClick={scrollToFirstColumn}
-                className="px-4 py-2 rounded-lg bg-blue-700 text-gray-600"
-              >
-                 <ArrowLeftToLine  size={20} className="text-white"/>
-              </button>
-              <button
-                onClick={scrollToLastColumn}
-                className="px-4 py-2 rounded-lg bg-blue-700 text-gray-600"
-              >
-                 < ArrowRightToLine  size={20} className="text-white"/>
-              </button>
-            </div>
-
-            {/* Desktop Table View (>= 1024px) */}
-            <div className="hidden md:block bg-white rounded-lg shadow-lg overflow-hidden">
+            {/* ── DESKTOP TABLE (>= 768px) ── */}
+            <div className="hidden md:block bg-white rounded-2xl shadow-card overflow-hidden border border-gray-100">
               <div className="w-full relative">
-                {/* TABLE WRAPPER */}
-
-                <div className="w-full overflow-x-auto " ref={tableRef}>
+                <div className="w-full overflow-x-auto" ref={tableRef}>
                   <table className="border-collapse">
-                    {/* HEADER */}
                     <thead>
-                      <tr className="bg-gray-100">
-                        {/* FIXED FIRST COLUMN */}
-                        <th className="sticky left-0 z-30 bg-gray-100 border-r w-[260px] p-3 text-center font-semibold text-gray-700">
-                          <span className="text-lg">
-                            {pageText.model[locale]}
-                          </span>
+                      <tr className="bg-gray-50">
+                        <th className="sticky left-0 z-30 bg-gray-50 border-r border-gray-200 w-[260px] p-3 text-center font-semibold text-gray-700">
+                          <span className="text-lg">{pageText.model[locale]}</span>
                         </th>
-
-                        {/* SCROLLABLE BRAND COLUMNS */}
-                        {walkingPadsData.map((brand, index) => (
-                          <th
-                            key={brand.id}
-                            className="p-2 text-center align-top w-[300px]"
-                          >
+                        {walkingPadsData.map((brand) => (
+                          <th key={brand.id} className="p-2 text-center align-top w-[300px] bg-white">
                             <div
-                              className={`relative bg-white rounded-lg p-4 shadow-md border transition-all duration-500
-                    ${
-                      brand.id === "sportstech"
-                        ? "border-green-500 ring-1 ring-green-200 hover:ring-2 hover:ring-green-300 "
-                        : "border-gray-200 hover:border-gray-300"
-                    }`}
+                              className={`relative bg-white rounded-2xl p-4 shadow-sm border transition-all duration-300 ${
+                                isWinner(brand.id)
+                                  ? "border-primary-400 ring-1 ring-primary-100"
+                                  : "border-gray-100 hover:border-primary-200"
+                              }`}
                             >
-                              {/* Badge only for Sportstech */}
-                              {brand.id === "sportstech" &&
-                                brand.badge[locale] && (
-                                  <>
-                                    <div className="absolute bg-green-500 text-white  text-xs px-2 rounded-full font-semibold z-10">
-                                      {brand.badge[locale]}
-                                    </div>
-                                    <div className="absolute -top-2 -right-2 bg-green-500 text-white p-1 rounded-full">
-                                      <Award className="w-4 h-4" />
-                                    </div>
-                                  </>
-                                )}
-
-                              {/* Product Image */}
+                              {isWinner(brand.id) && brand.badge[locale] && (
+                                <>
+                                  <div className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-0.5 rounded-full font-semibold z-10">
+                                    {brand.badge[locale]}
+                                  </div>
+                                  <div className="absolute -top-2 -right-2 bg-green-600 text-white p-1 rounded-full">
+                                    <Award className="w-4 h-4" />
+                                  </div>
+                                </>
+                              )}
                               <div className="pt-2">
-                                <div className="w-full h-32 mb-4 bg-gray-50 rounded-md flex items-center justify-center overflow-hidden">
+                                <div className="w-full h-32 mb-4 bg-gray-50 rounded-xl flex items-center justify-center overflow-hidden">
                                   <img
                                     src={brand.image}
                                     alt={`${brand.brand} ${brand.model}`}
                                     className="max-w-full max-h-full object-contain"
                                   />
                                 </div>
-
-                                {/* Title */}
-                                <h3 className="font-bold text-base mb-3 text-gray-800 leading-tight h-[70px]">
+                                <h3 className="font-bold text-base mb-3 text-gray-900 leading-tight h-[70px]">
                                   {brand.brand} {brand.model}
                                 </h3>
-
-                                {/* Rating */}
-                                <div className="mb-3">
-                                  {renderStars(brand.rating)}
-                                </div>
-
-                                {/* Review Button */}
+                                <div className="mb-3">{renderStars(brand.rating)}</div>
                                 <Link
                                   href={`${getBasePath()}/brands/${brand.slug}`}
-                                  className={`inline-block w-full text-center py-2 px-3 rounded-lg font-semibold text-sm transition-colors ${
-                                    brand.id === "sportstech"
-                                      ? "bg-green-600 text-white hover:bg-green-700"
-                                      : "bg-primary-600 text-white hover:bg-primary-700"
-                                  }`}
+                                  className="inline-block w-full text-center py-2 px-3 rounded-xl font-semibold text-sm transition-colors bg-primary-600 text-white hover:bg-primary-700"
                                 >
                                   {pageText.readReview[locale]}
                                 </Link>
@@ -916,31 +588,22 @@ export default function ReviewsPage() {
                         ))}
                       </tr>
                     </thead>
-
-                    {/* BODY ROWS */}
                     <tbody>
                       {featureRows.map((feature, index) => (
                         <tr
                           key={feature.key}
-                          className={`${
-                            index % 2 === 0 ? "bg-gray-50" : "bg-white"
-                          } border-t`}
+                          className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50"} border-t border-gray-100`}
                         >
-                          {/* FIXED FEATURE NAME COLUMN */}
-                          <td className="sticky left-0 z-20 bg-gray-100 border-r w-[260px] p-4 font-semibold text-gray-700">
-                            <span className="text-base">
-                              {feature.label[locale]}
-                            </span>
+                          <td className="sticky left-0 z-20 bg-gray-50 border-r border-gray-200 w-[260px] p-4 font-semibold text-gray-700">
+                            <span className="text-base">{feature.label[locale]}</span>
                           </td>
-
-                          {/* SCROLLABLE BRAND FEATURE COLUMNS */}
                           {walkingPadsData.map((brand) => (
                             <td
                               key={brand.id}
                               className={`p-4 text-center text-base w-[300px] ${
-                                brand.id === "sportstech"
-                                  ? "bg-green-50 text-green-800 font-medium"
-                                  : "text-gray-700"
+                                isWinner(brand.id)
+                                  ? "bg-primary-50 text-primary-700 font-medium"
+                                  : "text-gray-600"
                               }`}
                             >
                               {brand.features[feature.key][locale]}
@@ -952,22 +615,37 @@ export default function ReviewsPage() {
                   </table>
                 </div>
 
-                {/* BOTTOM SUMMARY */}
-                <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 border-t">
+                {/* Desktop recommendation strip */}
+                <div className="bg-primary-50 p-6 border-t border-primary-100">
                   <div className="text-center">
-                    <h3 className="text-xl font-bold text-green-800 mb-2">
+                    <h3 className="text-xl font-bold text-primary-700 mb-2">
                       {pageText.recommendation.title[locale]}
                     </h3>
-                    <p className="text-green-700 text-lg max-w-3xl mx-auto">
+                    <p className="text-gray-700 text-lg max-w-3xl mx-auto">
                       {pageText.recommendation.text[locale]}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
     </div>
+  );
+}
+
+export default function ReviewsPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-white text-gray-600 flex items-center justify-center p-8">
+          Loading...
+        </div>
+      }
+    >
+      <ReviewsContent />
+    </Suspense>
   );
 }

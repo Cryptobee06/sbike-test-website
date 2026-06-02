@@ -5,29 +5,23 @@ export default function AboutHero() {
   const t = useTranslations('about.abouthero');
 
   return (
-    // <section className="relative py-24 sm:py-32 bg-gradient-to-br from-primary-50 to-primary-100 overflow-hidden">
-        <section className="relative w-full py-28 sm:py-36 bg-primary-herobg text-white overflow-hidden">
-
-      {/* Decorative Background Circles */}
+    <section className="relative hero-bg text-white overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <svg
-          className="w-full h-full"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <circle cx="20%" cy="30%" r="200" fill="rgba(59, 130, 246, 0.05)" />
-          <circle cx="80%" cy="70%" r="300" fill="rgba(59, 130, 246, 0.06)" />
-        </svg>
+        <div className="absolute -top-20 right-0 w-96 h-96 rounded-full bg-primary-700/20 blur-3xl" />
+        <div className="absolute bottom-0 left-20 w-72 h-72 rounded-full bg-primary-600/15 blur-3xl" />
       </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6 drop-shadow-sm">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28 text-center">
+        <h1 className="text-lg sm:text-2xl lg:text-4xl font-black leading-tight mb-4 sm:mb-6 tracking-tight">
           {t('title')}
         </h1>
-        <p className="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xs sm:text-base lg:text-xl text-primary-100/80 max-w-2xl mx-auto leading-relaxed">
           {t('description')}
         </p>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" className="relative block w-full h-10">
+          <path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#ffffff" />
+        </svg>
       </div>
     </section>
   );

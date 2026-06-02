@@ -2,11 +2,11 @@ import ReviewsPage from '@/components/reviews/ReviewsPage';
 
 export async function generateMetadata() {
   return {
-    title: 'Walkingpad Tests 2025 - Experten Tests & Bewertungen',
-    description: 'Umfassende Walkingpad-Tests und Bewertungen von Fitness-Experten. Vergleichen Sie Top-Marken und Modelle, um das perfekte Walkingpad für Ihr Heimstudio zu finden.',
-    keywords: 'Walkingpad Tests 2025, beste Laufbänder, Walkingpad Vergleich, Fitnessgeräte Tests',
+    title: 'Exercise Bike 2025 - Experten Tests & Bewertungen',
+    description: 'Umfassende Exercise Bike-Tests und Bewertungen von Fitness-Experten. Vergleichen Sie Top-Marken und Modelle, um das perfekte Exercise Bike für Ihr Heimstudio zu finden.',
+    keywords: 'Exercise Bike Tests 2025, beste Laufbänder, Exercise Bike Vergleich, Fitnessgeräte Tests',
     icons: {
-      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+      icon: '/logo/Exercise Bikes Test Fav 1.png'
         },
   };
 }

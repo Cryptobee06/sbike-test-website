@@ -3,183 +3,139 @@ import { useState, useEffect } from 'react';
 import { useTranslations } from '@/contexts/LanguageContext';
 
 const reviewsData = [
-  {
-    id: 1,
-    name: 'Michael Chen',
-    rating: 5,
-    review:
-      'Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk Lite war ein Volltreffer!',
-    avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus1.jpg',
-  },
-  {
-    id: 2,
-    name: ' Sarah Johnson',
-    rating: 5,
-    review:
-      'Very thorough reviews with real performance data. I appreciate the detailed testing process and honest pros/cons for each model.',
-      avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus2.webp',
-  },
-  {
-    id: 3,
-    name: 'Emma Williams',
-    rating: 4.8,
-    review:
-      'Great resource for treadmill comparisons. The buying guide was especially helpful for understanding what features matter most.',
-      avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus3.webp',
-  },
-  {
-    id: 4,
-    name: 'David',
-    rating: 5,
-    review:
-      "Professional and unbiased reviews. The team clearly knows what they're talking about. Saved me from buying the wrong treadmill!",
-      avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus4.webp',
-  },
-  {
-    id: 5,
-    name: 'Thompson',
-    rating: 4.9,
-    review:
-      'Comprehensive testing and easy-to-understand explanations. The noise level tests were particularly useful for my apartment living situation.',
-      avatar: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/customer/cus5.jpg',
-  },
+  { id: 1, name: 'Daniel R.',   rating: 5,   review: 'Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk Lite war ein Volltreffer!', avatar: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/customer/cus1.jpg' },
+  { id: 2, name: 'Emma L.',  rating: 5,   review: 'Very thorough reviews with real performance data. I appreciate the detailed testing process and honest pros/cons for each model.', avatar: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/customer/cus2.webp' },
+  { id: 3, name: 'Thomas W.',  rating: 4.8, review: 'Great resource for treadmill comparisons. The buying guide was especially helpful for understanding what features matter most.', avatar: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/customer/cus3.webp' },
+  { id: 4, name: 'Roman William  N.',          rating: 5,   review: "Professional and unbiased reviews. The team clearly knows what they're talking about. Saved me from buying the wrong treadmill!", avatar: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/customer/cus4.webp' },
+  { id: 5, name: 'Kevin Petersion S.',       rating: 4.9, review: 'Comprehensive testing and easy-to-understand explanations. The noise level tests were particularly useful for my apartment.', avatar: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/customer/cus5.jpg' },
 ];
-
-const StarRating = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-
-
-  return (
-    <div className="flex items-center space-x-1">
-      {[...Array(fullStars)].map((_, i) => (
-        <svg key={`full-${i}`} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-        </svg>
-      ))}
-      {hasHalfStar && (
-        <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-          <defs>
-            <linearGradient id="half-star-review">
-              <stop offset="50%" stopColor="currentColor"/>
-              <stop offset="50%" stopColor="#e5e7eb"/>
-            </linearGradient>
-          </defs>
-          <path fill="url(#half-star-review)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-        </svg>
-      )}
-      {[...Array(emptyStars)].map((_, i) => (
-        <svg key={`empty-${i}`} className="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-        </svg>
-      ))}
-    </div>
-  );
-};
 
 export default function CustomerReviews() {
   const t = useTranslations('homepage.customerReviews');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-console.log(t('firstrev.description'),"4444444444444")
-const translatedReviews = t('reviews', { returnObjects: true });
+  const translatedReviews = t('reviews', { returnObjects: true });
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === reviewsData.length - 1 ? 0 : prev + 1));
-    }, 5000);
-
+    }, 5500);
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
-  const goToSlide = (index) => {
+  const goTo = (index) => {
     setCurrentIndex(index);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    setTimeout(() => setIsAutoPlaying(true), 12000);
   };
 
-  return (
-    <section className="w-full py-24 relative bg-gradient-to-r from-[#0a2540] via-[#121e30] to-[#1a1a2e] overflow-hidden text-white">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          {t('title')}
-        </h2>
+  const review = reviewsData[currentIndex];
+  const text = translatedReviews?.[currentIndex]?.description || review.review;
 
-        <div className="relative max-w-5xl mx-auto">
-          <div className="overflow-hidden rounded-3xl shadow-2xl backdrop-blur-2xl bg-white/10 border border-white/20">
+  return (
+    <section className="bg-[#0D0D0D] relative overflow-hidden border-t border-neutral-800">
+
+      {/* Very subtle grid lines */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
+        style={{
+          backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
+          backgroundSize: '80px 80px',
+        }}
+      />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 py-28 md:py-36">
+
+        {/* Header */}
+        <div className="text-center mb-16">
+          {/* <span className="eyebrow-dark block mb-4">Real Experiences</span> */}
+          <h2 className="heading-section text-white">
+            {t('title')}
+          </h2>
+        </div>
+
+        {/* Review card */}
+        <div className="relative">
+          <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-             {reviewsData.map((review, index) => {
-  const translatedReview = translatedReviews[index]?.description || review.review;
+              {reviewsData.map((r, index) => {
+                const reviewText = translatedReviews?.[index]?.description || r.review;
+                return (
+                  <div key={r.id} className="w-full flex-shrink-0 text-center px-3 sm:px-4 md:px-16">
 
-  return (
-    <div
-      key={review.id}
-      className="w-full flex-shrink-0 px-6 py-12 text-center"
-    >
-      <div className="w-20 h-20 mx-auto rounded-full overflow-hidden ring-4 ring-indigo-400 mb-6 shadow-lg">
-        <img
-          src={review.avatar}
-          alt={review.name}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="flex justify-center mb-4">
-        <StarRating rating={review.rating} />
-      </div>
-      <blockquote className="relative italic text-xl text-gray-100 leading-relaxed mb-6 max-w-2xl mx-auto">
-        <span className="text-3xl text-white mr-1">“</span>
-        {translatedReview}
-        <span className="text-3xl text-white ml-1">”</span>
-      </blockquote>
-      <p className="text-lg font-semibold text-white">{review.name}</p>
-    </div>
-  );
-})}
+                    {/* Giant quote mark */}
+                    <div
+                      className="text-neutral-800 font-serif leading-none select-none mb-4 mx-auto"
+                      style={{ fontSize: 'clamp(2rem, 8vw, 7rem)', lineHeight: 1 }}
+                    >
+                      "
+                    </div>
 
+                    {/* Stars */}
+                    <div className="flex justify-center gap-1 mb-8">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className={`w-5 h-5 ${i < Math.floor(r.rating) ? 'text-[#C8A96E]' : 'text-neutral-700'}`}
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+
+                    {/* Quote text */}
+                    <blockquote className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl font-light leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12">
+                      {reviewText}
+                    </blockquote>
+
+                    {/* Avatar + name */}
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-14 h-14 overflow-hidden border border-neutral-700">
+                        <img src={r.avatar} alt={r.name} className="w-full h-full object-cover" />
+                      </div>
+                      <p className="text-neutral-300 font-semibold text-sm tracking-wide">{r.name}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Prev/Next arrows */}
           <button
-            onClick={() => goToSlide(currentIndex === 0 ? reviewsData.length - 1 : currentIndex - 1)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-indigo-500/70 hover:bg-indigo-600 text-white p-3 rounded-full shadow-md transition"
-            aria-label="Previous"
+            onClick={() => goTo(currentIndex === 0 ? reviewsData.length - 1 : currentIndex - 1)}
+            className="absolute left-1 sm:left-4 md:left-0 top-1/3 -translate-y-1/2 md:-translate-x-6 w-8 h-8 sm:w-10 sm:h-10 border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-500 text-neutral-400 hover:text-white transition-all duration-200 flex items-center justify-center"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-
           <button
-            onClick={() => goToSlide(currentIndex === reviewsData.length - 1 ? 0 : currentIndex + 1)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-indigo-500/70 hover:bg-indigo-600 text-white p-3 rounded-full shadow-md transition"
-            aria-label="Next"
+            onClick={() => goTo(currentIndex === reviewsData.length - 1 ? 0 : currentIndex + 1)}
+            className="absolute right-1 sm:right-4 md:right-0 top-1/3 -translate-y-1/2 md:translate-x-6 w-8 h-8 sm:w-10 sm:h-10 border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-500 text-neutral-400 hover:text-white transition-all duration-200 flex items-center justify-center"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>
 
-        {/* Dots */}
-        <div className="mt-8 flex justify-center gap-2">
-          {reviewsData.map((_, index) => (
+        {/* Progress indicators */}
+        <div className="mt-16 flex justify-center items-center gap-3">
+          {reviewsData.map((_, i) => (
             <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? 'bg-indigo-400 scale-110'
-                  : 'bg-white/40 hover:bg-white/60'
-              }`}
-              aria-label={`Go to review ${index + 1}`}
-            />
+              key={i}
+              onClick={() => goTo(i)}
+              className="transition-all duration-300"
+              aria-label={`Review ${i + 1}`}
+            >
+              <div className={`transition-all duration-300 ${i === currentIndex ? 'w-8 h-0.5 bg-white' : 'w-4 h-0.5 bg-neutral-700 hover:bg-neutral-500'}`} />
+            </button>
           ))}
         </div>
       </div>

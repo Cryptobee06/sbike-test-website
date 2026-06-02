@@ -28,7 +28,7 @@ export default function LayoutWrapper({ children }) {
         title: 'WalkingpadTests - Experten Walkingpad Tests & Bewertungen',
         description: 'Unabhängige Bewertungen von zertifizierten Fitnessexperten, die jedes Gerät auf Leistung, Haltbarkeit und Wertigkeit prüfen.',
         icons: {
-          icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+          icon: '/logo/Exercise Bikes Test Fav 1.png'
             },
       };
     }
@@ -36,7 +36,7 @@ export default function LayoutWrapper({ children }) {
       title: 'WalkingpadReviews - Expert Walkingpad Testing & Reviews',
       description: 'Independent Walkingpad reviews from certified fitness professionals. Comprehensive testing for performance, durability, and value.',
       icons: {
-        icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+        icon: '/logo/Exercise Bikes Test Fav 1.png'
           },
     };
   }, [currentLocale]);
@@ -47,7 +47,7 @@ export default function LayoutWrapper({ children }) {
     title: 'WalkingpadReviews - Expert Walkingpad Testing & Reviews',
     description: 'Independent Walkingpad reviews from certified fitness professionals. Comprehensive testing for performance, durability, and value.',
     icons: {
-      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+      icon: '/logo/Exercise Bikes Test Fav 1.png'
         },
   };
   // On mounting, add Google Tag Manager script to body

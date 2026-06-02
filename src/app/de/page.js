@@ -11,16 +11,16 @@ import CustomerReviews from '@/components/homepage/CustomerReviews';
 
 export async function generateMetadata() {
   return {
-    title: 'LaufbandTests - Experten Laufband Tests & Bewertungen 2025',
-    description: 'Unabhängige Laufband-Bewertungen von zertifizierten Fitness-Profis. Umfassende Tests für Leistung, Haltbarkeit und Wert. Finden Sie das beste Laufband für Ihre Bedürfnisse.',
-    keywords: 'Laufband Tests, Laufband Bewertungen, beste Laufbänder 2025, Fitnessgeräte Tests, Laufband Kaufratgeber',
+    title: 'Heimtrainer Bewertungen - Experten Tests & Bewertungen',
+    description: 'Unabhängige Heimtrainer-Bewertungen von zertifizierten Fitness-Profis. Umfassende Tests für Leistung, Haltbarkeit und Wert. Finden Sie das beste Heimtrainer für Ihre Bedürfnisse.',
+    keywords: 'Heimtrainer Tests, Heimtrainer Bewertungen, beste Heimtrainer 2025, Fitnessgeräte Tests, Heimtrainer Kaufratgeber',
     openGraph: {
-      title: 'LaufbandTests - Experten Laufband Tests & Bewertungen 2025',
-      description: 'Unabhängige Laufband-Bewertungen von zertifizierten Fitness-Profis',
+      title: 'Heimtrainer Tests - Experten Heimtrainer Tests & Bewertungen 2025',
+      description: 'Unabhängige Heimtrainer-Bewertungen von zertifizierten Fitness-Profis',
       type: 'website',
     },
     icons: {
-      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+      icon: '/logo/Exercise Bikes Test Fav 1.png'
         },
   };
 }

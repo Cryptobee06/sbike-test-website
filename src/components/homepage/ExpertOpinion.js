@@ -1,69 +1,71 @@
-
-
 'use client';
 import { useTranslations } from '@/contexts/LanguageContext';
-import Image from 'next/image';
-import { Quote, BadgeCheck } from 'lucide-react';
 
 export default function ExpertOpinion() {
   const t = useTranslations('homepage.expertOpinion');
 
   return (
-    <section
-      className="relative w-full py-28 md:py-36 bg-cover bg-center bg-no-repeat text-white"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1600&q=80')",
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-[#0a2540]/90 backdrop-blur-sm" />
+    <section className="flex flex-col lg:flex-row min-h-[400px] lg:min-h-[600px] border-t border-b border-neutral-200">
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
-        <div className="rounded-3xl shadow-2xl border border-white/10 bg-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:shadow-blue-500/40">
-          <div className="grid grid-cols-1 lg:grid-cols-3">
+      {/* Left: full-bleed image */}
+      <div className="relative lg:w-1/2 h-[280px] sm:h-[380px] lg:h-auto overflow-hidden bg-neutral-200">
+        <img
+          src="https://walkingpadassets.s3.us-east-1.amazonaws.com/images/trainer-1.jpg"
+          alt="Expert Trainer"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        {/* Subtle bottom gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent lg:hidden" />
+      </div>
 
-            {/* Image Left */}
-            <div className="relative h-72 lg:h-full">
-              <Image
-                src="https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/images/trainer-1.jpg"
-                alt="Trainer"
-                fill
-                className="object-cover object-top"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a2540] via-transparent to-transparent opacity-80" />
+      {/* Right: dark panel */}
+      <div className="lg:w-1/2 bg-[#0D0D0D] flex items-center px-4 py-10 sm:px-8 sm:py-16 lg:px-16 xl:px-24 lg:py-20">
+        <div className="max-w-lg w-full">
+
+          {/* Eyebrow */}
+          <span className="eyebrow-dark block mb-4 sm:mb-8">Expert Voice</span>
+
+          {/* Giant quote mark */}
+          <div
+            className="text-neutral-700 font-serif leading-none select-none mb-2"
+            style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', lineHeight: 1 }}
+          >
+            "
+          </div>
+
+          {/* Quote */}
+          <blockquote className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl font-light leading-relaxed mb-6 sm:mb-10">
+            {t('testimonial')}
+          </blockquote>
+
+          {/* Attribution - stack vertically on mobile, row on sm+ */}
+          <div className="border-t border-neutral-800 pt-8 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
+            <div className="text-center sm:text-left">
+              <p className="text-white font-semibold text-base tracking-tight">{t('trainerName')}</p>
+              <p className="text-neutral-500 text-sm mt-1 tracking-wide">{t('trainerTitle')}</p>
             </div>
 
-            {/* Content Right */}
-            <div className="lg:col-span-2 p-8 md:p-12 flex flex-col justify-center">
-              <div className="text-blue-300 mb-5">
-                <Quote className="w-10 h-10 drop-shadow" />
+            {/* Stars + badge - center on mobile, right on sm+ */}
+            <div className="flex flex-col items-center sm:items-end gap-2 flex-shrink-0 w-full sm:w-auto">
+              <div className="flex gap-1 sm:gap-1.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-6 h-6 sm:w-5 sm:h-5 text-[#C8A96E]"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
               </div>
-
-              <blockquote className="text-lg md:text-xl italic text-white leading-relaxed mb-8">
-                {t('testimonial')}
-              </blockquote>
-
-              <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div>
-                  <h4 className="text-xl md:text-2xl font-bold text-white tracking-tight">
-                    {t('trainerName')}
-                  </h4>
-                  <p className="text-blue-200 text-sm md:text-base font-medium">
-                    {t('trainerTitle')}
-                  </p>
-                </div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-full bg-blue-100/10 text-blue-100 border border-blue-300/50 shadow-sm">
-                  <BadgeCheck className="w-4 h-4" />
-                  {t('testedCount')}
-                </div>
-              </div>
+              <span className="text-xs sm:text-[0.7rem] font-bold tracking-[0.18em] uppercase text-neutral-600 border border-neutral-700 px-3 py-1">
+                {t('testedCount')}
+              </span>
             </div>
-
           </div>
         </div>
       </div>
     </section>
   );
 }
-

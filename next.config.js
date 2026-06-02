@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export',
   images: {
     domains: ['localhost'],
     unoptimized: true,
@@ -13,6 +12,8 @@ const nextConfig = {
   env: {
     EXPORT_MODE: 'true'
   },
+  output: 'export',
+  trailingSlash: true,
    
 };
 

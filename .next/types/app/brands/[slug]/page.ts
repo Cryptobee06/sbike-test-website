@@ -1,4 +1,4 @@
-// File: C:\Users\Raj\Desktop\Walkingpad4brands\walkingpad-vergleich\src\app\brands\[slug]\page.js
+// File: C:\Users\Sportstech035\Downloads\walkingpad-another-2\S-Bike-test-website\src\app\brands\[slug]\page.js
 import * as entry from '../../../../../src/app/brands/[slug]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

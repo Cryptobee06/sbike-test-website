@@ -4,11 +4,11 @@ import ReviewsPage from '@/components/reviews/ReviewsPage';
 
 export async function generateMetadata() {
   return {
-    title: 'Walkingpad Reviews 2025 - Expert Testing & Ratings',
-    description: 'Comprehensive Walkingpad reviews and ratings from fitness experts. Compare top brands and models to find the perfect Walkingpad for your home gym.',
-    keywords: 'Walkingpad reviews 2025, best Walkingpads, Walkingpad comparison, fitness equipment reviews',
+    title: 'Exercise Bike Reviews 2025 - Expert Testing & Ratings',
+    description: 'Comprehensive Exercise Bike reviews and ratings from fitness experts. Compare top brands and models to find the perfect Exercise Bike for your home gym.',
+    keywords: 'Exercise Bike reviews 2025, best Exercise Bikes, Exercise Bike comparison, fitness equipment reviews',
     icons: {
-      icon: 'https://walkingpad-vergleich.s3.us-east-1.amazonaws.com/fav-icon.png'
+      icon: '/logo/Exercise Bikes Test Fav 1.png'
         },
   };
 }
@@ -16,6 +16,7 @@ export async function generateMetadata() {
 export default function Page() {
   return(
     <>
-     <ReviewsPage /></>
+     <ReviewsPage />
+    </>
   )
 }

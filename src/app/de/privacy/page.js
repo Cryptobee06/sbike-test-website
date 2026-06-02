@@ -89,49 +89,54 @@ export default function PrivacySection() {
       id: 'introduction',
       title: 'Einführung und Geltungsbereich der Richtlinie',
       paragraphs: [
-        "Bei WalkingpadReviews schätzen wir das Vertrauen, das unsere Besucher in uns setzen, und verpflichten uns zum Schutz Ihrer Privatsphäre. Diese Datenschutzerklärung beschreibt, wie wir Ihre personenbezogenen Daten erfassen, verwenden, speichern und schützen, wenn Sie unsere Website besuchen oder mit ihr interagieren. Ob Sie Walkingpad-Vergleiche durchstöbern, Fitness-Ratschläge lesen oder sich für Newsletter anmelden - Ihre Privatsphäre ist uns wichtig. Wir verstehen, dass Sie möglicherweise besorgt darüber sind, wie die von Ihnen bereitgestellten Informationen verwendet werden. Diese Richtlinie gilt für alle Nutzer von WalkingpadReviews und regelt die Datenerfassung und -nutzung in Übereinstimmung mit den geltenden Datenschutzgesetzen, einschließlich der Datenschutz-Grundverordnung (DSGVO) und des California Consumer Privacy Act (CCPA).",
-        "Wir erfassen nur Informationen, die notwendig sind, um Ihnen Dienstleistungen zu erbringen, Ihre Benutzererfahrung zu verbessern und die Funktionalität der Website zu gewährleisten. Durch die Nutzung von WalkingpadReviews erkennen Sie die in dieser Datenschutzerklärung beschriebenen Praktiken an und akzeptieren sie."
+        "Bei Exercise Bike Review legen wir großen Wert auf das Vertrauen unserer Besucher und verpflichten uns zum Schutz Ihrer Privatsphäre. Diese Datenschutzerklärung beschreibt, wie wir Ihre personenbezogenen Daten erfassen, verwenden, speichern und schützen, wenn Sie unsere Website besuchen oder mit ihr interagieren. Egal, ob Sie Heimtrainer vergleichen, Indoor-Cycling-Ratgeber lesen, Fitnessgeräte-Bewertungen durchsuchen oder unseren Newsletter abonnieren – Ihre Privatsphäre hat für uns höchste Priorität.",
+        "Wir verstehen, dass Nutzer Bedenken hinsichtlich der Verwendung ihrer Daten haben können. Diese Richtlinie gilt für alle Nutzer von Exercise Bike Review und regelt die Datenerhebung und -verarbeitung gemäß den geltenden Datenschutzgesetzen, einschließlich der Datenschutz-Grundverordnung (DSGVO) und des California Consumer Privacy Act (CCPA).",
+        "Wir erfassen nur die Daten, die erforderlich sind, um unsere Dienste bereitzustellen, die Benutzererfahrung zu verbessern und die Funktionalität der Website sicherzustellen. Durch die Nutzung von Exercise Bike Review erkennen Sie die in dieser Datenschutzerklärung beschriebenen Praktiken an."
       ]
     },
     {
       id: 'data-we-collect',
-      title: 'Informationen, die wir erfassen',
+      title: 'Welche Informationen wir erfassen',
       paragraphs: [
-        "Wir können Ihren Namen, Ihre E-Mail-Adresse, IP-Adresse, Telefonnummer (falls angegeben) oder Standortdaten erfassen. Diese Informationen werden normalerweise erfasst, wenn Sie freiwillig Formulare auf unserer Website ausfüllen.",
-        "Nicht-personenbezogene Informationen sind Daten, die Sie nicht direkt identifizieren, aber Details wie Browsertyp, Betriebssystem, Verweisquelle und Website-Nutzungsmuster enthalten können.",
-        "Diese Daten helfen uns, Ihre Benutzererfahrung zu verbessern und unsere Inhalte und Dienstleistungen zu optimieren."
+        "Wir können personenbezogene Daten wie Ihren Namen, Ihre E-Mail-Adresse, IP-Adresse, Telefonnummer (falls angegeben) sowie Standortdaten erfassen. Diese Informationen werden in der Regel erhoben, wenn Sie freiwillig Formulare auf unserer Website ausfüllen.",
+        "Nicht-personenbezogene Daten umfassen Informationen, die Sie nicht direkt identifizieren, wie Browsertyp, Betriebssystem, Verweisquelle, Geräteinformationen und allgemeine Nutzungsdaten der Website.",
+        "Diese Daten helfen uns dabei, die Benutzererfahrung zu verbessern, Inhalte zu Heimtrainer-Bewertungen zu optimieren, die Website-Performance zu analysieren und unseren Lesern relevantere Fitnessinformationen bereitzustellen."
       ]
     },
     {
       id: 'use-of-data',
       title: 'Wie wir Ihre Informationen verwenden',
       paragraphs: [
-        "Wir verwenden die erfassten Informationen, um unsere Dienstleistungen bereitzustellen, aufrechtzuerhalten und zu verbessern. Wir können auch aggregierte Daten verwenden, um das Benutzerverhalten zu analysieren und die Plattformsicherheit zu erhöhen.",
-        "Ihre eingereichten Bewertungen oder Kommentare können mit Namensnennung veröffentlicht werden, es sei denn, Sie beantragen Anonymität."
+        "Wir verwenden die gesammelten Informationen, um unsere Dienste bereitzustellen, zu betreiben und zu verbessern. Dazu gehören unter anderem die Verbesserung von Heimtrainer-Vergleichstools, die Optimierung von Bewertungsinhalten, die Beantwortung von Anfragen, der Versand von Newslettern sowie die Verbesserung der allgemeinen Website-Funktionalität.",
+        "Darüber hinaus können aggregierte und anonymisierte Daten verwendet werden, um das Nutzerverhalten zu analysieren, die Sicherheit der Website zu verbessern und besser zu verstehen, wie Besucher mit unseren Fitness- und Indoor-Cycling-Inhalten interagieren.",
+        "Von Ihnen eingereichte Bewertungen, Kommentare oder Produktfeedbacks können öffentlich angezeigt werden, sofern Sie nicht ausdrücklich Anonymität verlangen."
       ]
     },
     {
       id: 'sharing-data',
       title: 'Wie wir Informationen teilen',
       paragraphs: [
-        "Wir verkaufen, vermieten oder handeln niemals mit Ihren persönlichen Daten. Wir können sie jedoch mit vertrauenswürdigen Drittanbietern wie Hosting-Diensten und Analysepartnern teilen.",
-        "Einige Affiliate-Links auf unserer Website können Sie zu Plattformen von Drittanbietern weiterleiten, die separate Datenschutzrichtlinien haben."
+        "Wir verkaufen, vermieten oder handeln niemals mit Ihren personenbezogenen Daten. Allerdings können wir Daten mit vertrauenswürdigen Drittanbietern teilen, beispielsweise Hosting-Diensten, Analyseanbietern, E-Mail-Marketing-Plattformen oder technischen Support-Partnern, um die ordnungsgemäße Funktion der Website sicherzustellen.",
+        "Einige Inhalte auf Exercise Bike Review enthalten Affiliate-Links, die Nutzer auf externe Händler- oder Hersteller-Websites weiterleiten. Diese Drittanbieter-Websites arbeiten unabhängig und verfügen über eigene Datenschutzrichtlinien, auf die wir keinen Einfluss haben.",
+        "Wir empfehlen Nutzern, die Datenschutzrichtlinien aller externen Websites zu überprüfen, die sie über Affiliate- oder Werbelinks besuchen."
       ]
     },
     {
       id: 'your-rights',
       title: 'Ihre Wahlmöglichkeiten und Verpflichtungen',
       paragraphs: [
-        "Je nach Ihrem Standort haben Sie möglicherweise Rechte gemäß Datenschutzgesetzen wie der DSGVO oder CCPA. Dies umfasst Zugang, Berichtigung oder Löschung Ihrer Daten.",
-        "Um diese Rechte auszuüben oder Fragen zu stellen, senden Sie uns eine E-Mail an privacy@walkingpadreviews.com."
+        "Abhängig von Ihrem Standort haben Sie möglicherweise Rechte gemäß Datenschutzgesetzen wie der DSGVO oder dem CCPA. Diese Rechte können den Zugang zu Ihren personenbezogenen Daten, die Berichtigung unrichtiger Informationen, die Einschränkung der Verarbeitung oder die Löschung Ihrer Daten umfassen.",
+        "Sie können außerdem Cookies über Ihre Browsereinstellungen deaktivieren, Newsletter abbestellen oder verlangen, dass wir Ihre personenbezogenen Daten nicht weiter verarbeiten.",
+        "Wenn Sie diese Rechte ausüben möchten oder Fragen zu Ihren Daten haben, kontaktieren Sie uns bitte über die Kontaktseite unserer Website."
       ]
     },
     {
       id: 'other-info',
       title: 'Weitere wichtige Informationen',
       paragraphs: [
-        "Wir können diese Datenschutzerklärung gelegentlich aktualisieren. Ihre fortgesetzte Nutzung der Website zeigt die Annahme von Änderungen an.",
-        "Bitte überprüfen Sie diese Seite regelmäßig auf Aktualisierungen."
+        "Wir können diese Datenschutzerklärung gelegentlich aktualisieren, um Änderungen gesetzlicher Anforderungen, der Website-Funktionalität, von Affiliate-Beziehungen oder unserer angebotenen Dienste widerzuspiegeln.",
+        "Die fortgesetzte Nutzung von Exercise Bike Review nach der Veröffentlichung von Aktualisierungen gilt als Zustimmung zur überarbeiteten Datenschutzerklärung",
+        "Wir empfehlen, diese Seite regelmäßig zu überprüfen, um darüber informiert zu bleiben, wie wir Ihre Informationen erfassen, verwenden und schützen."
       ]
     }
   ];
@@ -185,10 +190,10 @@ export default function PrivacySection() {
             <div>
               <h2 className="text-xl font-semibold text-gray-900 mb-2">Ihre Privatsphäre ist wichtig</h2>
               <p className="text-gray-700 text-base mb-2">
-                WalkingpadReviews verpflichtet sich zu Transparenz über die Daten, die wir über Sie erfassen, wie sie verwendet werden und mit wem sie geteilt werden.
+                Exercise Bike Review verpflichtet sich zu vollständiger Transparenz darüber, welche Daten wir über Sie erfassen, wie diese verwendet werden und mit welchen Parteien sie gegebenenfalls geteilt werden.
               </p>
               <p className="text-gray-700 text-base">
-                Diese Datenschutzerklärung gilt, wenn Sie unsere Dienste nutzen. Wir bieten Nutzern Wahlmöglichkeiten über die Daten, die wir erfassen, verwenden und teilen, wie in dieser Richtlinie, unserer Cookie-Richtlinie und unseren Nutzungsbedingungen beschrieben.
+                Diese Datenschutzerklärung gilt, wenn Sie unsere Dienste nutzen. Wir bieten unseren Nutzern verschiedene Optionen hinsichtlich der Daten, die wir erfassen, verwenden und weitergeben, wie in dieser Datenschutzerklärung, unserer Cookie-Richtlinie und unseren Nutzungsbedingungen beschrieben.
               </p>
             </div>
 

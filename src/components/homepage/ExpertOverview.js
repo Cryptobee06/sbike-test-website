@@ -1,38 +1,61 @@
 'use client';
 import { useTranslations } from '@/contexts/LanguageContext';
-import { BadgeCheck } from 'lucide-react';
+import { BadgeCheck, Clock, Star } from 'lucide-react';
+
+const stats = [
+  { icon: Clock,      value: '1,200+', label: 'Hours Tested' },
+  { icon: Star,       value: '4.8/5',  label: 'Avg. Rating'  },
+  { icon: BadgeCheck, value: '18+',    label: 'Models Tested' },
+];
 
 export default function ExpertOverview() {
   const t = useTranslations('homepage.expertOverview');
 
   return (
-    <section
-      className="relative w-full py-28 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1600&q=80')",
-      }}
-    >
-      <div className="absolute inset-0 bg-blue-900 bg-opacity-80"></div>
+    <section className="py-24 bg-primary-50 relative overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-20 right-0 w-96 h-96 rounded-full bg-primary-100/60 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-primary-100/40 blur-3xl" />
+      </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
-        <div className="bg-white rounded-3xl shadow-2xl px-8 py-16 md:px-14 md:py-20 text-center">
-          <div className="mx-auto -mt-24 mb-10 w-24 h-24 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-xl ring-4 ring-white">
-            <BadgeCheck className="w-10 h-10" />
-          </div>
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
-            {t('title')}
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            {t('content')}
-          </p>
-
-          <div className="mt-10 text-sm text-gray-500 border-t pt-6 border-gray-200 max-w-sm mx-auto">
-            — Certified Fitness & Equipment Expert
+        {/* Icon */}
+        <div className="flex justify-center mb-8">
+          <div className="w-16 h-16 bg-primary-600 text-white rounded-2xl flex items-center justify-center shadow-emerald">
+            <BadgeCheck className="w-8 h-8" />
           </div>
         </div>
+
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+            {t('title')}
+          </h2>
+          <div className="divider-emerald mb-8"></div>
+          <p className="text-md md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            {t('content')}
+          </p>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mt-12">
+          {stats.map(({ icon: Icon, value, label }) => (
+            <div key={label} className="text-center bg-white rounded-2xl px-6 py-5 border border-primary-100 shadow-card">
+              <div className="flex justify-center mb-2">
+                <div className="w-9 h-9 bg-primary-50 rounded-lg flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-primary-600" />
+                </div>
+              </div>
+              <div className="text-2xl font-black text-gray-900">{value}</div>
+              <div className="text-xs text-gray-500 font-medium mt-0.5">{label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Attribution */}
+        <p className="text-center text-sm text-gray-400 mt-8">— Certified Fitness & Equipment Expert</p>
       </div>
     </section>
   );
