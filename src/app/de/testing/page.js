@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import {
-  Star,
   CheckCircle,
   Zap,
   Shield,
@@ -18,9 +17,11 @@ import {
   Activity,
 } from "lucide-react";
 import FAQ from "@/components/guide/FAQ";
+import GermanGradeLegend from "@/components/ratings/GermanGradeLegend";
+import { getGermanGrade } from "@/utils/germanGrades";
 
 const brands = [
-  "Sportstech XS175",
+  "Sportstech SX175",
   "Sportstech X150",
   "Peloton",
   "NordicTrack",
@@ -33,7 +34,7 @@ const brands = [
 ];
 
 const testData = {
-  "Sportstech XS175": {
+  "Sportstech SX175": {
     image: "/Test page/sx175 test image.webp",
     overallScore: 4.9,
     status: "Bestanden",
@@ -1298,6 +1299,7 @@ const testData = {
 export default function TestingProcessPage() {
   const [activeBrand, setActiveBrand] = useState("Sportstech XS175");
   const brandData = testData[activeBrand];
+  const overallGrade = getGermanGrade(brandData?.overallScore ?? 0, "de");
 
   useEffect(() => {
     if (brandData?.image) {
@@ -1308,20 +1310,16 @@ export default function TestingProcessPage() {
 
   const renderStars = (ratingStr) => {
     const rating = parseFloat(ratingStr);
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 >= 0.5;
-    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    const grade = getGermanGrade(rating, "de");
+
     return (
       <div className="flex items-center">
-        {[...Array(fullStars)].map((_, i) => (
-          <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-        ))}
-        {hasHalfStar && (
-          <Star className="w-4 h-4 text-yellow-500 fill-current opacity-50" />
-        )}
-        {[...Array(emptyStars)].map((_, i) => (
-          <Star key={i} className="w-4 h-4 text-gray-300" />
-        ))}
+        <span
+          className={`rounded-full px-2.5 py-1 text-xs font-semibold border ${grade.badgeClass}`}
+          style={grade.badgeStyle}
+        >
+          Note {grade.note} ({grade.label})
+        </span>
       </div>
     );
   };
@@ -1399,6 +1397,10 @@ export default function TestingProcessPage() {
             Getestet in allen Kategorien. Zuverlässige Markenempfehlungen für jedes Budget.
           </p>
         </div>
+{/* 
+        <div className="mb-8">
+          <GermanGradeLegend locale="de" />
+        </div> */}
 
         <div className="flex flex-wrap gap-3 justify-center mb-12">
           {brands.map((brand) => (
@@ -1427,10 +1429,12 @@ export default function TestingProcessPage() {
                     <div className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(brandData.status)}`}>
                       {brandData.status}
                     </div>
-                    <div className="flex items-center space-x-2 bg-white/20 rounded-lg px-3 py-1">
-                      <Star className="w-5 h-5 text-amber-300 fill-current" />
-                      <span className="font-bold text-lg text-white">{brandData.overallScore.toFixed(1)}/5</span>
-                    </div>
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-semibold border ${overallGrade.badgeClass}`}
+                      style={overallGrade.badgeStyle}
+                    >
+                      Note {overallGrade.note} ({overallGrade.label})
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1473,7 +1477,6 @@ export default function TestingProcessPage() {
                       <p className="text-gray-500 text-sm mb-4 leading-relaxed">{data.description}</p>
                       <div className="flex items-center space-x-2">
                         {renderStars(data.rating)}
-                        <span className="text-sm text-gray-400">({data.rating})</span>
                       </div>
                     </div>
                   </div>
@@ -1525,21 +1528,26 @@ export default function TestingProcessPage() {
                       <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-6">
                         <h3 className="text-xl font-bold text-gray-900 mb-4">Vollständige Testkriterien — Bewertungsübersicht</h3>
                         <div className="space-y-3">
-                          {Object.entries(brandData.individualReview.testCriteria).map(([criteria, data]) => (
-                            <div key={criteria} className="border-b border-gray-100 pb-3 last:border-0">
-                              <div className="flex items-center justify-between">
-                                <div>
-                                  <h4 className="font-semibold text-gray-900">{criteria}</h4>
-                                  <p className="text-sm text-gray-500">{data.description}</p>
-                                </div>
-                                <div className="flex items-center">
-                                  {[...Array(5)].map((_, i) => (
-                                    <Star key={i} className={`w-5 h-5 ${i < data.rating ? "text-amber-400 fill-current" : "text-gray-200"}`} />
-                                  ))}
+                          {Object.entries(brandData.individualReview.testCriteria).map(([criteria, data]) => {
+                            const criteriaGrade = getGermanGrade(data.rating, "de");
+
+                            return (
+                              <div key={criteria} className="border-b border-gray-100 pb-3 last:border-0">
+                                <div className="flex items-center justify-between">
+                                  <div>
+                                    <h4 className="font-semibold text-gray-900">{criteria}</h4>
+                                    <p className="text-sm text-gray-500">{data.description}</p>
+                                  </div>
+                                  <span
+                                    className={`rounded-full px-2.5 py-1 text-xs font-semibold border ${criteriaGrade.badgeClass}`}
+                                    style={criteriaGrade.badgeStyle}
+                                  >
+                                    Note {criteriaGrade.note} ({criteriaGrade.label})
+                                  </span>
                                 </div>
                               </div>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </div>
                       </div>
                     )}
@@ -1593,11 +1601,11 @@ export default function TestingProcessPage() {
                 <p className="text-gray-700 leading-relaxed">
                   {activeBrand === "Sportstech X150" ? (
                     <>
-                      Der Sportstech X150 ist die intelligente Wahl für Nutzer, die bei Vielseitigkeit und Platzersparnis keine Kompromisse eingehen möchten. Entwickelt als echtes 3-in-1 Trainingssystem kombiniert er Upright-Cycling, Liegeergometer-Funktion und Power-Rope-Training in einem Gerät, das sich auf nur 55 × 55 cm zusammenklappen lässt. <strong>4.86/5</strong>.
+                      Der Sportstech X150 ist die intelligente Wahl für Nutzer, die bei Vielseitigkeit und Platzersparnis keine Kompromisse eingehen möchten. Entwickelt als echtes 3-in-1 Trainingssystem kombiniert er Upright-Cycling, Liegeergometer-Funktion und Power-Rope-Training in einem Gerät, das sich auf nur 55 × 55 cm zusammenklappen lässt. <strong>Note {overallGrade.note} ({overallGrade.label})</strong>.
                     </>
                   ) : (
                     <>
-                      Das Sportstech SX175 SpeedBike repräsentiert die Premiumklasse moderner Indoor-Cycling-Bikes mit einer Gesamtwertung von <strong>4.9/5</strong>. Dank des ultra-leisen Magnetwiderstandssystems ist es ideal für studioähnliche Workouts ohne Störung der Nachbarn.
+                      Das Sportstech SX175 SpeedBike repräsentiert die Premiumklasse moderner Indoor-Cycling-Bikes mit einer Gesamtwertung von <strong>Note {overallGrade.note} ({overallGrade.label})</strong>. Dank des ultra-leisen Magnetwiderstandssystems ist es ideal für studioähnliche Workouts ohne Störung der Nachbarn.
                     </>
                   )}
                 </p>

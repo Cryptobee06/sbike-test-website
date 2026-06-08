@@ -1,20 +1,21 @@
 'use client';
 import { useTranslations, useLocale } from '@/contexts/LanguageContext';
 import { useState } from 'react';
+import { getGermanGrade } from '@/utils/germanGrades';
 
 const feedbackData = {
   Sportstech: {
     en: [
-      { id: 1, name: 'Nicolas', avatar: 'N', rating: 4, comment: "Honestly surprised at how quiet this thing is. I use it early in the morning before my flatmate wakes up, and there's zero noise from the pedals. The fold-down is quick, and it really does fit in the corner I measured. The Power Ropes are a bonus; they won't replace a gym session, but they're great for a quick warm-up. Took a star off because the seat felt a bit firm after 40 minutes.", date: '1 week ago' },
-      { id: 2, name: 'Masco', avatar: 'M', rating: 4, comment: 'It does what the box says, which I appreciate. I gave it four stars because I expected slightly more resistance at the higher levels. I cycle outdoors, and even level eight felt easy after a couple of weeks. Clearly aimed at people new to cardio, not cyclists. That said, the build quality is fine, and the display is clear. For €169, it is hard to complain too loudly.', date: '2 day ago' },
-      { id: 3, name: 'Sophie', avatar: 'S', rating: 4, comment: "I bought this specifically for the reclining mode, and I'm not disappointed. Having back issues, cycling upright was uncomfortable, and this lets me exercise without strain. The assembly was manageable, around 40 minutes solo. The tablet holder is a nice touch. My one gripe is that the saddle height does not have many adjustment positions. Overall, very happy with the purchase for my needs.", date: ' 1 month ago' },
+      { id: 1, name: 'Nicolas', avatar: 'N', rating: 4.8, comment: "Honestly surprised at how quiet this thing is. I use it early in the morning before my flatmate wakes up, and there's zero noise from the pedals. The fold-down is quick, and it really does fit in the corner I measured. The Power Ropes are a bonus; they won't replace a gym session, but they're great for a quick warm-up. Took a star off because the seat felt a bit firm after 40 minutes.", date: '1 week ago' },
+      { id: 2, name: 'Masco', avatar: 'M', rating: 4.8, comment: 'It does what the box says, which I appreciate. I gave it four stars because I expected slightly more resistance at the higher levels. I cycle outdoors, and even level eight felt easy after a couple of weeks. Clearly aimed at people new to cardio, not cyclists. That said, the build quality is fine, and the display is clear. For €169, it is hard to complain too loudly.', date: '2 day ago' },
+      { id: 3, name: 'Sophie', avatar: 'S', rating: 4.8, comment: "I bought this specifically for the reclining mode, and I'm not disappointed. Having back issues, cycling upright was uncomfortable, and this lets me exercise without strain. The assembly was manageable, around 40 minutes solo. The tablet holder is a nice touch. My one gripe is that the saddle height does not have many adjustment positions. Overall, very happy with the purchase for my needs.", date: ' 1 month ago' },
       // { id: 4, name: 'Jonas P', avatar: 'JP', rating: 5, comment: 'High-quality build and great value for money. I use it almost daily and feel fitter.', date: 'a week ago' },
       // { id: 5, name: 'Claudia W', avatar: 'CW', rating: 5, comment: 'I was surprised by how stable the walking pad is. It feels secure even when I train on it for longer periods.', date: 'a month ago' }
     ],
     de: [
-      { id: 1, name: 'Nicolas', avatar: 'N', rating: 4, comment: 'Ich war ehrlich überrascht, wie leise dieses Gerät ist. Ich nutze es früh morgens, bevor mein Mitbewohner wach wird, und man hört praktisch nichts. Das Zusammenklappen geht schnell, und es passt wirklich perfekt in die Ecke, die ich vorher ausgemessen habe. Die Power Ropes sind ein nettes Extra – kein Ersatz fürs Fitnessstudio, aber gut zum Aufwärmen. Einen Stern Abzug gibt es wegen des etwas harten Sattels nach längeren Sessions.', date: 'vor einer Woche' },
-      { id: 2, name: 'Masco ', avatar: 'M', rating: 4, comment: 'Es macht genau das, was versprochen wird. Vier Sterne, weil ich auf den höheren Widerstandsstufen etwas mehr Intensität erwartet hatte. Ich fahre regelmäßig draußen Rad, und selbst Stufe acht wurde nach einigen Wochen recht leicht. Das Gerät richtet sich eindeutig an Einsteiger und nicht an ambitionierte Fahrer. Verarbeitung und Display sind aber absolut in Ordnung. Für 169 € kann man kaum ernsthaft meckern.', date: 'vor 2 Wochen' },
-      { id: 3, name: 'Sophie ', avatar: 'S', rating: 4, comment: 'Ich habe das Bike speziell wegen des halb-liegenden Modus gekauft und bin sehr zufrieden. Aufgrund meiner Rückenprobleme war normales aufrechtes Radfahren unangenehm. Der Aufbau dauerte allein etwa 40 Minuten und war gut machbar. Die Tablet-Halterung gefällt mir ebenfalls. Mein einziger Kritikpunkt ist die begrenzte Sattelverstellung. Insgesamt aber genau das richtige Gerät für meine Bedürfnisse.', date: 'Vor 1 Monat' },
+      { id: 1, name: 'Nicolas', avatar: 'N', rating: 4.8, comment: 'Ich war ehrlich überrascht, wie leise dieses Gerät ist. Ich nutze es früh morgens, bevor mein Mitbewohner wach wird, und man hört praktisch nichts. Das Zusammenklappen geht schnell, und es passt wirklich perfekt in die Ecke, die ich vorher ausgemessen habe. Die Power Ropes sind ein nettes Extra – kein Ersatz fürs Fitnessstudio, aber gut zum Aufwärmen. Einen Stern Abzug gibt es wegen des etwas harten Sattels nach längeren Sessions.', date: 'vor einer Woche' },
+      { id: 2, name: 'Masco ', avatar: 'M', rating: 4.8, comment: 'Es macht genau das, was versprochen wird. Vier Sterne, weil ich auf den höheren Widerstandsstufen etwas mehr Intensität erwartet hatte. Ich fahre regelmäßig draußen Rad, und selbst Stufe acht wurde nach einigen Wochen recht leicht. Das Gerät richtet sich eindeutig an Einsteiger und nicht an ambitionierte Fahrer. Verarbeitung und Display sind aber absolut in Ordnung. Für 169 € kann man kaum ernsthaft meckern.', date: 'vor 2 Wochen' },
+      { id: 3, name: 'Sophie ', avatar: 'S', rating: 4.8, comment: 'Ich habe das Bike speziell wegen des halb-liegenden Modus gekauft und bin sehr zufrieden. Aufgrund meiner Rückenprobleme war normales aufrechtes Radfahren unangenehm. Der Aufbau dauerte allein etwa 40 Minuten und war gut machbar. Die Tablet-Halterung gefällt mir ebenfalls. Mein einziger Kritikpunkt ist die begrenzte Sattelverstellung. Insgesamt aber genau das richtige Gerät für meine Bedürfnisse.', date: 'Vor 1 Monat' },
       // { id: 4, name: 'Jonas P', avatar: 'JP', rating: 5, comment: 'Hochwertige Verarbeitung und gutes Preis-Leistungs-Verhältnis. Ich nutze es fast täglich und fühle mich fitter.', date: 'vor einer Woche' },
       // { id: 5, name: 'Claudia W', avatar: 'CM', rating: 5, comment: 'Ich war überrascht, wie stabil das Walking Pad ist. Es fühlt sich sicher an, auch wenn ich länger darauf trainiere.', date: 'vor einem Monat' }
     ]
@@ -119,16 +120,16 @@ const feedbackData = {
   },
   SportstechSX175: {
     en: [
-      { id: 1, name: 'Laura M', avatar: 'LM', rating: 4, comment: 'Really happy with this bike. Arrived quickly, assembly was easy — took me about 40 minutes alone. It is absolutely silent, which was my main concern living in a flat. Connects to the Sportstech app without any issue. Loses a star because I wish there was a cadence display, but for the price, it is excellent.', date: '1 week ago' },
-      { id: 2, name: 'Marcus R', avatar: 'MR', rating: 4, comment: 'Solid build, smooth pedalling, and no annoying squeaks or rattles. The magnetic resistance feels well-balanced — not too easy, not brutally difficult. The app keeps me motivated with the virtual routes. Customer support was helpful when I had an assembly question. Would recommend to anyone starting.', date: '2 day ago' },
-      { id: 3, name: 'Salma K', avatar: 'SK', rating: 4, comment: "Good quality overall and very easy to use. I use it daily for 30-minute sessions, and it holds up well. The reason I haven't given 5 stars is the app — you need a subscription to get the good content, which wasn't made totally clear before purchase. The bike itself, though, is really solid, and the call-and-response between app and hardware is smooth.", date: ' 1 month ago' },
+      { id: 1, name: 'Laura M', avatar: 'LM', rating: 4.8, comment: 'Really happy with this bike. Arrived quickly, assembly was easy — took me about 40 minutes alone. It is absolutely silent, which was my main concern living in a flat. Connects to the Sportstech app without any issue. Loses a star because I wish there was a cadence display, but for the price, it is excellent.', date: '1 week ago' },
+      { id: 2, name: 'Marcus R', avatar: 'MR', rating: 4.8, comment: 'Solid build, smooth pedalling, and no annoying squeaks or rattles. The magnetic resistance feels well-balanced — not too easy, not brutally difficult. The app keeps me motivated with the virtual routes. Customer support was helpful when I had an assembly question. Would recommend to anyone starting.', date: '2 day ago' },
+      { id: 3, name: 'Salma K', avatar: 'SK', rating: 4.8, comment: "Good quality overall and very easy to use. I use it daily for 30-minute sessions, and it holds up well. The reason I haven't given 5 stars is the app — you need a subscription to get the good content, which wasn't made totally clear before purchase. The bike itself, though, is really solid, and the call-and-response between app and hardware is smooth.", date: ' 1 month ago' },
       // { id: 4, name: 'Jonas P', avatar: 'JP', rating: 5, comment: 'High-quality build and great value for money. I use it almost daily and feel fitter.', date: 'a week ago' },
       // { id: 5, name: 'Claudia W', avatar: 'CW', rating: 5, comment: 'I was surprised by how stable the walking pad is. It feels secure even when I train on it for longer periods.', date: 'a month ago' }
     ],
     de: [
-      { id: 1, name: 'Laura M', avatar: 'LM', rating: 4, comment: '„Ich bin wirklich zufrieden mit diesem Bike. Die Lieferung war schnell und der Aufbau einfach – allein etwa 40 Minuten. Es ist absolut leise, was für mich in einer Wohnung entscheidend war. Die Verbindung zur Sportstech-App funktioniert problemlos. Einen Stern Abzug gibt es, weil ich mir eine Trittfrequenzanzeige gewünscht hätte. Für den Preis aber hervorragend.“', date: 'vor einer Woche' },
-      { id: 2, name: 'Marcus R', avatar: 'MR', rating: 4, comment: '„Solide Verarbeitung, geschmeidiges Pedalieren und keine störenden Geräusche oder Vibrationen. Der Magnetwiderstand fühlt sich ausgewogen an – weder zu leicht noch extrem schwer. Die App motiviert mich mit virtuellen Strecken. Der Kundensupport war bei einer Frage zum Aufbau sehr hilfreich. Würde ich Einsteigern definitiv empfehlen.“', date: 'vor 2 Wochen' },
-      { id: 3, name: 'Salma K', avatar: 'SK', rating: 4, comment: '„Insgesamt gute Qualität und sehr einfach zu bedienen. Ich nutze das Bike täglich für 30-Minuten-Einheiten und es hält problemlos stand. Der einzige Kritikpunkt ist die App – für die guten Inhalte braucht man ein Abonnement, was vor dem Kauf nicht ganz klar war. Das Bike selbst ist aber wirklich solide.“', date: 'Vor 1 Monat' },
+      { id: 1, name: 'Laura M', avatar: 'LM', rating: 4.8, comment: '„Ich bin wirklich zufrieden mit diesem Bike. Die Lieferung war schnell und der Aufbau einfach – allein etwa 40 Minuten. Es ist absolut leise, was für mich in einer Wohnung entscheidend war. Die Verbindung zur Sportstech-App funktioniert problemlos. Einen Stern Abzug gibt es, weil ich mir eine Trittfrequenzanzeige gewünscht hätte. Für den Preis aber hervorragend.“', date: 'vor einer Woche' },
+      { id: 2, name: 'Marcus R', avatar: 'MR', rating: 4.8, comment: '„Solide Verarbeitung, geschmeidiges Pedalieren und keine störenden Geräusche oder Vibrationen. Der Magnetwiderstand fühlt sich ausgewogen an – weder zu leicht noch extrem schwer. Die App motiviert mich mit virtuellen Strecken. Der Kundensupport war bei einer Frage zum Aufbau sehr hilfreich. Würde ich Einsteigern definitiv empfehlen.“', date: 'vor 2 Wochen' },
+      { id: 3, name: 'Salma K', avatar: 'SK', rating: 4.8, comment: '„Insgesamt gute Qualität und sehr einfach zu bedienen. Ich nutze das Bike täglich für 30-Minuten-Einheiten und es hält problemlos stand. Der einzige Kritikpunkt ist die App – für die guten Inhalte braucht man ein Abonnement, was vor dem Kauf nicht ganz klar war. Das Bike selbst ist aber wirklich solide.“', date: 'Vor 1 Monat' },
       // { id: 4, name: 'Jonas P', avatar: 'JP', rating: 5, comment: 'Hochwertige Verarbeitung und gutes Preis-Leistungs-Verhältnis. Ich nutze es fast täglich und fühle mich fitter.', date: 'vor einer Woche' },
       // { id: 5, name: 'Claudia W', avatar: 'CM', rating: 5, comment: 'Ich war überrascht, wie stabil das Walking Pad ist. Es fühlt sich sicher an, auch wenn ich länger darauf trainiere.', date: 'vor einem Monat' }
     ]
@@ -143,14 +144,17 @@ const generateUserFeedback = (brandName, locale) => {
   return feedbackData[key]?.en || [];
 };
 
-const StarRating = ({ rating }) => {
+const StarRating = ({ rating, locale }) => {
+  const grade = getGermanGrade(rating, locale);
+
   return (
-    <div className="flex items-center space-x-0.5">
-      {[...Array(5)].map((_, i) => (
-        <svg key={i} className={`w-4 h-4 ${i < rating ? 'text-amber-400' : 'text-gray-200'}`} fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
+    <div className="flex items-center">
+      <span
+        className={`rounded-full px-2.5 py-1 text-xs font-semibold border ${grade.badgeClass}`}
+        style={grade.badgeStyle}
+      >
+        Note {grade.note} ({grade.label})
+      </span>
     </div>
   );
 };
@@ -207,7 +211,7 @@ export default function UserFeedback({ brand, feedbackKey }) {
                         {feedback.date}
                       </span>
                     </div>
-                    <StarRating rating={feedback.rating} />
+                    <StarRating rating={feedback.rating} locale={locale} />
                   </div>
                 </div>
 

@@ -1,11 +1,12 @@
 "use client";
-import { useTranslations } from "@/contexts/LanguageContext";
+import { useTranslations, useLocale } from "@/contexts/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
+import { getGermanGrade } from "@/utils/germanGrades";
 
 const treadmillsData = [
   {
@@ -64,34 +65,21 @@ const treadmillsData = [
   },
 ];
 
-const StarRating = ({ rating }) => {
-  const full = Math.floor(rating);
-  const half = rating % 1 !== 0;
-  const empty = 5 - full - (half ? 1 : 0);
+const StarRating = ({ rating, locale }) => {
+  const grade = getGermanGrade(rating, locale);
+
   return (
-    <div className="flex items-center gap-0.5">
-      {[...Array(full)].map((_, i) => (
-        <svg key={i} className="w-3.5 h-3.5 text-[#C8A96E]" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-      {half && (
-        <svg className="w-3.5 h-3.5 text-[#C8A96E] opacity-50" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      )}
-      {[...Array(empty)].map((_, i) => (
-        <svg key={i} className="w-3.5 h-3.5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-      <span className="text-[0.65rem] text-neutral-400 ml-1.5 font-semibold">{rating}</span>
+    <div className="flex items-center">
+      <span className={`rounded-full px-2.5 py-1 text-[0.65rem] font-semibold border ${grade.badgeClass}`} style={grade.badgeStyle}>
+        Note {grade.note} ({grade.label})
+      </span>
     </div>
   );
 };
 
 export default function BestTreadmills() {
   const t = useTranslations("homepage.bestTreadmills");
+  const locale = useLocale();
 
   return (
     <section id="best-treadmills" className="bg-[#F5F5F0] py-24 border-t border-neutral-200">
@@ -150,7 +138,7 @@ export default function BestTreadmills() {
                   <div className="flex-grow">
                     <p className="text-[0.6rem] font-bold tracking-[0.18em] uppercase text-neutral-400 mb-2">{item.brand}</p>
                     <h3 className="text-lg font-bold text-neutral-900 tracking-tight mb-3">{item.model}</h3>
-                    <StarRating rating={item.rating} />
+                    <StarRating rating={item.rating} locale={locale} />
                   </div>
                   <div className="mt-6 pt-5 border-t border-neutral-100">
                     <a

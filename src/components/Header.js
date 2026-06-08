@@ -19,7 +19,7 @@ const brandCategories = [
   },
   {
     name: 'Advanced Exercise Bikes',
-    nameDE: 'Advanced Walking Pads',
+    nameDE: 'Advanced-Exercise Bikes',
     slug: 'advanced',
     brands: [
       { name: 'Sportstech SX175', slug: 'SportstechSX175' },

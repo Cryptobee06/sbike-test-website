@@ -3,7 +3,9 @@ import React, { useState, useRef, useEffect, Suspense } from "react";
 import { useLocale } from "@/contexts/LanguageContext";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Star, Award } from "lucide-react";
+import { Award } from "lucide-react";
+import GermanGradeLegend from "@/components/ratings/GermanGradeLegend";
+import { getGermanGrade } from "@/utils/germanGrades";
 
 const allWalkingPadsData = [
   {
@@ -65,7 +67,7 @@ const allWalkingPadsData = [
     brand: "Nordictrack",
     model: "Bike",
     slug: "Nordictrack",
-    rating: 3.5,
+    rating: 3.4,
     category: "advanced",
     badge: { en: "", de: "" },
     badgeColor: "bg-purple-500",
@@ -119,7 +121,7 @@ const allWalkingPadsData = [
     brand: "Garmin",
     model: "Bike",
     slug: "Garmin",
-    rating: 3.9,
+    rating: 2.9,
     category: "advanced",
     badge: { en: "", de: "" },
     badgeColor: "bg-teal-500",
@@ -301,6 +303,7 @@ const featureRows = [
 // ── MOBILE CARD ──────────────────────────────────────────────────────────────
 function MobileCard({ brand, locale, isWinner, readReviewLabel, basePath, featureRowsData }) {
   const hasBadge = brand.badge?.[locale];
+  const grade = getGermanGrade(brand.rating, locale);
 
   return (
     <div
@@ -338,25 +341,10 @@ function MobileCard({ brand, locale, isWinner, readReviewLabel, basePath, featur
         <h3 className="font-bold text-[17px] text-gray-900 mb-2 leading-tight">
           {brand.brand} {brand.model}
         </h3>
-        <div className="flex items-center justify-center gap-1">
-          {[...Array(5)].map((_, i) => {
-            const filled = i < Math.floor(brand.rating);
-            const half = !filled && i < brand.rating;
-            return (
-              <span key={i} className="relative inline-block w-4 h-4">
-                <Star className="w-4 h-4 text-gray-200 absolute inset-0" />
-                {half && (
-                  <span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  </span>
-                )}
-                {filled && (
-                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 absolute inset-0" />
-                )}
-              </span>
-            );
-          })}
-          <span className="ml-1.5 text-sm font-semibold text-gray-400">{brand.rating}</span>
+        <div className="flex items-center justify-center">
+          <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold shadow-sm border ${grade.badgeClass}`} style={grade.badgeStyle}>
+            Note {grade.note} ({grade.label})
+          </span>
         </div>
       </div>
 
@@ -408,26 +396,17 @@ function ReviewsContent() {
     );
   })();
 
-  const renderStars = (rating) => (
-    <div className="flex items-center justify-center gap-1">
-      {[...Array(5)].map((_, i) => {
-        const filled = i < Math.floor(rating);
-        const half = !filled && i < rating;
-        return (
-          <span key={i} className="relative inline-block w-4 h-4">
-            <Star className="w-4 h-4 text-gray-300 absolute inset-0" />
-            {half && (
-              <span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              </span>
-            )}
-            {filled && <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 absolute inset-0" />}
-          </span>
-        );
-      })}
-      <span className="ml-1 text-sm font-semibold text-gray-400">{rating}</span>
-    </div>
-  );
+  const renderStars = (rating) => {
+    const grade = getGermanGrade(rating, locale);
+
+    return (
+      <div className="flex items-center justify-center">
+        <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold shadow-sm border ${grade.badgeClass}`} style={grade.badgeStyle}>
+          Note {grade.note} ({grade.label})
+        </span>
+      </div>
+    );
+  };
 
   const getBasePath = () => (locale === "de" ? "/de" : "");
 
@@ -504,6 +483,12 @@ function ReviewsContent() {
           </div>
         </div>
       </section>
+
+      {/* <section className="py-8 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <GermanGradeLegend locale={locale} />
+        </div>
+      </section> */}
 
       {/* Comparison Section */}
       <section className="py-8 sm:py-12">

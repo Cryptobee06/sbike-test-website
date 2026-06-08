@@ -272,7 +272,7 @@ const brandData = {
       de: "Das Sportstech X150 ist ein kompakter, klappbarer Heimtrainer für Anfänger, Gelegenheitsfahrer, Senioren und Home-User, die eine praktische Indoor-Cardio-Lösung suchen, ohne viel Wohnraum zu beanspruchen. Dieses 3-in-1-Ergometer kombiniert aufrechtes Radfahren, halb-liegenden Komfort sowie integrierte Widerstandsbänder für leichtes Oberkörpertraining.",
     },
     bannerImage:
-      "/banner/Gemini_Generated_Image_5u5y5r5u5y5r5u5y.png",
+      "/New banner/X150-Banner-image.jpg",
 
     pros: {
       en: [
@@ -677,7 +677,7 @@ const brandData = {
     },
 
     bannerImage:
-      "/banner/Gemini_Generated_Image_bjrjrpbjrjrpbjrj.jpg",
+      "/New banner/Ultrasport-Banner-image.jpg",
 
     pros: {
       en: [
@@ -1054,7 +1054,7 @@ const brandData = {
     },
 
     bannerImage:
-      "/banner/Gemini_Generated_Image_e4erzue4erzue4er.jpg",
+      "/New banner/Sportplus-Banner-image.jpg",
 
     pros: {
       en: [
@@ -1427,7 +1427,7 @@ const brandData = {
     },
 
     bannerImage:
-      "/banner/Gemini_Generated_Image_efyceyefyceyefyc.jpg",
+      "/New banner/Domyos-Banner-image.jpg",
 
     pros: {
       en: [
@@ -1573,11 +1573,11 @@ const brandData = {
  AsVIVA: {
     name: "AsVIVA",
     images: [
-      "/Assets/AsVIVA/AsVIVA-bike 1.jpg",
-      "/Assets/AsVIVA/AsVIVA-bike 2.jpg",
-      "/Assets/AsVIVA/AsVIVA-bike 3.jpg",
-      "/Assets/AsVIVA/AsVIVA-bike 4.jpg",
-      "/Assets/AsVIVA/AsVIVA-bike 5.jpg",
+      "/Assets/asviva/Asviva-bike 1.jpg",
+      "/Assets/asviva/Asviva-bike 2.jpg",
+      "/Assets/asviva/Asviva-bike 3.jpg",
+      "/Assets/asviva/Asviva-bike 4.jpg",
+      "/Assets/asviva/Asviva-bike 5.jpg",
     ],
     productDescription: {
       en: {
@@ -1807,7 +1807,7 @@ const brandData = {
       de: "Das AsVIVA H22 ist ein Heimtrainer und Ergometer der Mittelklasse von der AsVIVA Brands GmbH aus Dormagen. Mit einem 15-kg-Schwungrad, 24 computergesteuerten Widerstandsstufen und aktiver Kinomap-Integration bietet das H22 ein ruhiges, gleichmäßiges und strukturiertes Cardio-Training für Einsteiger bis Fortgeschrittene.",
     },
 
-    bannerImage: "/banner/Gemini_Generated_Image_ig84d5ig84d5ig84.jpg",
+    bannerImage: "/New banner/Asviva-Banner-image.jpg",
 
     pros: {
       en: [
@@ -2187,7 +2187,7 @@ const brandData = {
       de: "Das Peloton Cross-Training Bike+ ist ein hochwertiges vernetztes Indoor-Cycling-System für Nutzer, die ein immersives Studio-Workout-Erlebnis zu Hause suchen. Mit fortschrittlicher Widerstandstechnologie, einem drehbaren HD-Touchscreen und einem umfangreichen On-Demand-Kursangebot bietet das Bike+ ein besonders modernes und motivierendes Fitnesserlebnis.",
     },
     bannerImage:
-      "/banner/Gemini_Generated_Image_t3lwjtt3lwjtt3lw.jpg",
+      "/New banner/Peloton-Banner-image.jpg",
 
     pros: {
       en: [
@@ -2653,7 +2653,7 @@ const brandData = {
     en: "The Nordictrack New S24 Studio Bike is a modern indoor cycling machine made for users who want immersive home workouts without stepping into a commercial fitness studio. Built around a large 24-inch rotating HD touchscreen and integrated iFIT ecosystem, the bike focuses on interactive cardio training, guided coaching, and smooth magnetic resistance. Unlike aggressive competition-focused studio bikes, the S24 positions itself as a balanced solution for everyday fitness, endurance training, and structured home cardio.",
     de: "Das NordicTrack NEW S24 Studio Bike ist ein modernes Connected-Fitness-Bike mit 24-Zoll-Touchscreen, 24 Stufen Silent Magnetic Resistance und vollständiger iFIT-Integration inklusive Netflix- und Spotify-Streaming. Ideal für Heimnutzer, die ein interaktives Studio-Erlebnis mit geführtem Coaching und Entertainment suchen."
   },
-  bannerImage: "/banner/Gemini_Generated_Image_tpesoztpesoztpes.jpg",
+  bannerImage: "/New banner/Nordictrack-Banner-image.jpg",
   faq: [
     {
       question: {
@@ -2895,7 +2895,7 @@ const brandData = {
     en: "The Wahoo Fitness KICKR BIKE PRO is a premium indoor smart bike for cyclists who want a realistic road riding experience without leaving home. Built around Wahoo’s advanced electromagnetic resistance system and integrated grade simulation technology, the bike recreates outdoor climbs, descents, and shifting dynamics with impressive precision.",
     de: ""
   },
-  bannerImage: "/banner/Gemini_Generated_Image_ulc193ulc193ulc1.jpg",
+  bannerImage: "/New banner/Wahoo-Banner-image.jpg",
   faq: [
     {
       question: {
@@ -3080,7 +3080,7 @@ const brandData = {
       de: "Das CURSOR Walking Pad verbindet durchdachtes Design mit starker Leistung.Die 9 - % - Steigung macht das Training intensiver und realistischer,während die dreifache Dämpfung Laufkomfort auf Studio - Niveau bietet Der 2,75 - PS - Motor läuft leise und kraftvoll, wodurch sich das Gerät hervorragend für Wohnungen und Büros eignet Ein weiteres Highlight: Die hohen Maximalbelastung von 136 kg (Seite 3), wodurch das Gerät auch für schwerere Nutzer geeignet ist Die 114×55×11 cm Bauweise ermöglicht eine extrem platzsparende Nutzung.",
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
-    bannerImage: "/banner/Sbike home banner image.jpg",
+    bannerImage: "/New banner/Garmin-Banner-image.jpg",
     // features: {
     //   en: 'The Sportstech sWalk features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface. The advanced cushioning system reduces joint impact by up to 40%. Smart features include Bluetooth connectivity, heart rate monitoring, and compatibility with fitness apps.The Sportstech F15 features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface.The advanced cushioning system reduces joint impact by up to 40%.',
     //   de: 'Das Sportstech sWalk verfügt über einen leistungsstarken 2,5 PS Motor, 15% maximale Steigung und eine geräumige 125x40cm Lauffläche. Das fortschrittliche Dämpfungssystem reduziert die Gelenkbelastung um bis zu 40%. Smart-Features umfassen Bluetooth-Konnektivität, Herzfrequenzüberwachung und Kompatibilität mit Fitness-Apps.'
@@ -3362,7 +3362,7 @@ const brandData = {
     },
     // image: '/images/treadmills/sportstech-treadmill.jpg',
     bannerImage:
-      "/banner/Gemini_Generated_Image_m7lvr0m7lvr0m7lv.jpg",
+      "/New banner/SX 175-Banner-Image.jpg",
     // features: {
     //   en: 'The Sportstech sWalk features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface. The advanced cushioning system reduces joint impact by up to 40%. Smart features include Bluetooth connectivity, heart rate monitoring, and compatibility with fitness apps.The Sportstech F15 features a powerful 2.5 HP motor, 15% maximum incline, and a spacious 125x40cm running surface.The advanced cushioning system reduces joint impact by up to 40%.',
     //   de: 'Das Sportstech sWalk verfügt über einen leistungsstarken 2,5 PS Motor, 15% maximale Steigung und eine geräumige 125x40cm Lauffläche. Das fortschrittliche Dämpfungssystem reduziert die Gelenkbelastung um bis zu 40%. Smart-Features umfassen Bluetooth-Konnektivität, Herzfrequenzüberwachung und Kompatibilität mit Fitness-Apps.'

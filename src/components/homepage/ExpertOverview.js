@@ -1,15 +1,17 @@
 'use client';
-import { useTranslations } from '@/contexts/LanguageContext';
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
 import { BadgeCheck, Clock, Star } from 'lucide-react';
-
-const stats = [
-  { icon: Clock,      value: '1,200+', label: 'Hours Tested' },
-  { icon: Star,       value: '4.8/5',  label: 'Avg. Rating'  },
-  { icon: BadgeCheck, value: '18+',    label: 'Models Tested' },
-];
+import { getGermanGrade } from '@/utils/germanGrades';
 
 export default function ExpertOverview() {
   const t = useTranslations('homepage.expertOverview');
+  const locale = useLocale();
+  const overviewGrade = getGermanGrade(4.9, locale);
+  const stats = [
+    { icon: Clock, value: '1,200+', label: locale === 'de' ? 'Teststunden' : 'Hours Tested' },
+    { icon: Star, value: `Note ${overviewGrade.note} (${overviewGrade.label})`, label: locale === 'de' ? 'Durchschnittsnote' : 'Avg. Rating' },
+    { icon: BadgeCheck, value: '18+', label: locale === 'de' ? 'Getestete Modelle' : 'Models Tested' },
+  ];
 
   return (
     <section className="py-24 bg-primary-50 relative overflow-hidden">

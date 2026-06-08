@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { useTranslations } from '@/contexts/LanguageContext';
+import { useTranslations, useLocale } from '@/contexts/LanguageContext';
+import { getGermanGrade } from '@/utils/germanGrades';
 
 const reviewsData = [
   { id: 1, name: 'Daniel R.',   rating: 5,   review: 'Durch die detaillierten Testberichte habe ich das perfekte Laufband gefunden. Die Empfehlung des Sportstech sWalk Lite war ein Volltreffer!', avatar: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/customer/cus1.jpg' },
@@ -12,6 +13,7 @@ const reviewsData = [
 
 export default function CustomerReviews() {
   const t = useTranslations('homepage.customerReviews');
+  const locale = useLocale();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const translatedReviews = t('reviews', { returnObjects: true });
@@ -63,6 +65,7 @@ export default function CustomerReviews() {
             >
               {reviewsData.map((r, index) => {
                 const reviewText = translatedReviews?.[index]?.description || r.review;
+                const grade = getGermanGrade(r.rating, locale);
                 return (
                   <div key={r.id} className="w-full flex-shrink-0 text-center px-3 sm:px-4 md:px-16">
 
@@ -75,17 +78,13 @@ export default function CustomerReviews() {
                     </div>
 
                     {/* Stars */}
-                    <div className="flex justify-center gap-1 mb-8">
-                      {[...Array(5)].map((_, i) => (
-                        <svg
-                          key={i}
-                          className={`w-5 h-5 ${i < Math.floor(r.rating) ? 'text-[#C8A96E]' : 'text-neutral-700'}`}
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+                    <div className="flex justify-center mb-8">
+                      <span
+                        className={`rounded-full px-3 py-1 text-xs font-semibold border ${grade.badgeClass}`}
+                        style={grade.badgeStyle}
+                      >
+                        Note {grade.note} ({grade.label})
+                      </span>
                     </div>
 
                     {/* Quote text */}

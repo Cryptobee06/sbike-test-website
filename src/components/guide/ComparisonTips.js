@@ -2,7 +2,7 @@
 import { useTranslations } from '@/contexts/LanguageContext';
 import { CheckCircle } from 'lucide-react';
 
-export default function ComparisonTips() {
+export default function   ComparisonTips() {
   const t = useTranslations('guide.comparisonTips');
 
   return (
