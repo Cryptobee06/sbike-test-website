@@ -1556,11 +1556,11 @@ const brandData = {
   AsVIVA: {
     name: "AsVIVA",
     images: [
-      "/Assets/AsVIVA/AsVIVA-bike 1.jpg",
-      "/Assets/AsVIVA/AsVIVA-bike 2.jpg",
-      "/Assets/AsVIVA/AsVIVA-bike 3.jpg",
-      "/Assets/AsVIVA/AsVIVA-bike 4.jpg",
-      "/Assets/AsVIVA/AsVIVA-bike 5.jpg",
+      "/Assets/asviva/Asviva-bike 1.jpg",
+      "/Assets/asviva/Asviva-bike 2.jpg",
+      "/Assets/asviva/Asviva-bike 3.jpg",
+      "/Assets/asviva/Asviva-bike 4.jpg",
+      "/Assets/asviva/Asviva-bike 5.jpg",
     ],
     productDescription: {
       en: {
