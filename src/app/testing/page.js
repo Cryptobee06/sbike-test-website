@@ -1531,7 +1531,7 @@ export default function TestingProcessPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img
-                src="https://walkingpadassets.s3.us-east-1.amazonaws.com/images/trainer-1.jpg"
+                src="/Model/Exercise-about-4.jpg"
                 alt="Dr. James Hartwell"
                 className="rounded-lg shadow-lg w-96 h-96 object-cover"
               />
@@ -1862,7 +1862,7 @@ export default function TestingProcessPage() {
             <div className="bg-white border border-gray-100 rounded-2xl shadow-card p-6 mt-8">
               <div className="flex items-start space-x-4">
                 <img
-                  src="https://walkingpadassets.s3.us-east-1.amazonaws.com/images/trainer-1.jpg"
+                  src="/Model/Exercise-about-4.jpg"
                   alt="Dr. James Hartwell"
                   className="w-16 h-16 rounded-full object-cover ring-2 ring-primary-300"
                 />

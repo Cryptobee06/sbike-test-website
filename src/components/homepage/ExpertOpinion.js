@@ -13,7 +13,7 @@ export default function ExpertOpinion() {
       {/* Left: full-bleed image */}
       <div className="relative lg:w-1/2 h-[280px] sm:h-[380px] lg:h-auto overflow-hidden bg-neutral-200">
         <img
-          src="https://walkingpadassets.s3.us-east-1.amazonaws.com/images/trainer-1.jpg"
+          src="/Model/Exercise-about-4.jpg"
           alt="Expert Trainer"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />

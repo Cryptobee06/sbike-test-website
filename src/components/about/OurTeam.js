@@ -7,28 +7,28 @@ const teamMembers = [
     name: 'Dr. James Hartwell',
     role: { en: 'Lead Performance & Fitness Specialist', de: 'Leitender Performance- & Fitness-Spezialist' },
     description: { en: 'NASM and ACE dual-certified personal trainer with 10 years of hands-on experience testing and programming cardio fitness equipment.', de: 'NASM- und ACE-zertifizierter Personal Trainer mit 10 Jahren praktischer Erfahrung im Testen und Entwickeln von Cardio-Fitnessgeräten.' },
-    image: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/trainer-1.jpg',
+    image: '/Model/Exercise-about-4.jpg',
   },
   {
     id: 2,
     name: 'Dr. Sarah Jon',
     role: { en: 'Sports Biomechanics & Injury Prevention Expert', de: 'Expertin für Sportbiomechanik & Verletzungsprävention' },
     description: { en: 'PhD in Sports Biomechanics and research into lower-limb kinematics on stationary bikes. D', de: 'PhD in Sportwissenschaft, spezialisiert auf Ganganalyse und Verletzungsprävention.' },
-    image: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/team1.png',
+    image: '/Model/Exercise-about-3 2.jpg',
   },
   {
     id: 3,
     name: 'Carlos Mendez',
     role: { en: 'Mechanical & Structural Engineering Analyst', de: 'Analyst für Maschinenbau & Strukturtechnik' },
     description: { en: 'Mechanical engineer with 11 years of experience specialising in consumer fitness hardware.', de: 'Maschinenbauingenieur mit 11 Jahren Erfahrung, spezialisiert auf Fitnessgeräte für Endverbraucher.' },
-    image: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/team3.png',
+    image: '/Model/Trainer-exercise-bike.jpg',
   },
   {
     id: 4,
     name: 'Aisha Thompson',
     role: { en: 'Smart Technology & Connected Fitness Reviewer', de: 'Expertin für Smart-Technologie & Connected Fitness' },
     description: { en: 'Certified personal trainer and sports technology journalist with deep expertise in connected fitness platforms, including Peloton, iFIT, JRNY, and Zwift integration.', de: 'Zertifizierte Personal Trainerin und Sporttechnologie-Journalistin mit umfassender Expertise in Connected-Fitness-Plattformen wie Peloton, iFIT, JRNY und Zwift-Integration.' },
-    image: 'https://walkingpadassets.s3.us-east-1.amazonaws.com/images/team4.png',
+    image: '/Model/exercise-about-2 2.jpg',
   },
 ];
 
